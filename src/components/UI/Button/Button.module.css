@@ -1,0 +1,19 @@
+/* $goldDefault: #dcc29c;
+$beigeDefault: #f2efeb;
+$blackDefault: #2c2c2c;
+$greyDefault: #5e5e5e; */
+
+.btn {
+  width: 180px;
+  height: 60px;
+  cursor: pointer;
+  background: transparent;
+  border: 3px double #dcc29c;
+  outline: none;
+  transition: 0.3s ease-in-out;
+  text-transform: uppercase;
+}
+
+.btn:hover {
+  background: #dcc29c;
+}

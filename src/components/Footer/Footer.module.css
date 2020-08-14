@@ -59,6 +59,7 @@ $greyDefault: #5e5e5e; */
   color: white;
   letter-spacing: 0.1rem;
   font-size: 0.7rem;
+  color: white;
 }
 
 .footerLinks a:hover {
@@ -91,6 +92,7 @@ $greyDefault: #5e5e5e; */
   font-size: 0.7rem;
   letter-spacing: 0.1rem;
   padding-right: 2rem;
+  color: white;
 }
 
 .footerContactDataInner:first-child {
@@ -99,6 +101,7 @@ $greyDefault: #5e5e5e; */
 
 .footerContactDataInner div {
   font-size: 0.7rem;
+  color: white;
 }
 
 .footerContactDataInner a {
@@ -117,4 +120,5 @@ $greyDefault: #5e5e5e; */
   padding: 1rem;
   display: flex;
   justify-content: center;
+  color: white;
 }
