@@ -1,0 +1,44 @@
+.cover {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+.burger {
+  width: 4%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.924);
+}
+
+.marble {
+  width: 48%;
+  height: 100%;
+  background-color: #f2efeb;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.gold {
+  width: 48%;
+  height: 100%;
+  background-color: #dcc29ce8;
+  background-image: linear-gradient(to left bottom, #dcc29c, #e9d9c2);
+  position: relative;
+}
+
+.girl {
+  position: absolute;
+  left: -30%;
+  bottom: 0;
+  width: auto;
+  height: 80vh;
+  opacity: 100;
+}
+
+.cover .title {
+  font-family: "Kaushan Script", cursive;
+  font-size: 8rem;
+  color: #e9d9c2;
+  z-index: 100;
+}
