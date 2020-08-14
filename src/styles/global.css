@@ -20,6 +20,14 @@ body {
   height: 100%;
 }
 
+body {
+  background-image: url("../images/robert-zunikoff-ebno_NwaOns-unsplash.jpg");
+  background-attachment: fixed;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 h1 {
   font-family: "Crimson Pro", sans-serif;
   font-weight: bold;

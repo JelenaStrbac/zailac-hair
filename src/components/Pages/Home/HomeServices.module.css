@@ -4,7 +4,67 @@ $blackDefault: #2c2c2c;
 $greyDefault: #5e5e5e; */
 
 .homeServices {
-  background-image: linear-gradient(to left bottom, #f2efeb, white);
-  width: 100vw;
-  height: 100vh;
+  background-image: linear-gradient(
+    to left bottom,
+    #f2efebf8,
+    rgba(255, 255, 255, 0.959)
+  );
+  padding: 3rem;
+}
+
+.homeServicesTitleAndButton {
+  display: flex;
+  flex-direction: column;
+  padding-left: 30%;
+}
+
+.servicesGallery {
+  display: flex;
+  justify-content: center;
+}
+
+.servicesGalleryContentImagesLeft,
+.servicesGalleryContentImagesRight,
+.servicesGalleryContentImagesRightBottom,
+.servicesGalleryContentImagesLeftTop {
+  display: flex;
+  flex-direction: column;
+}
+
+.servicesGalleryContentImagesLeft {
+  padding-top: 5rem;
+}
+
+.servicesGalleryContentImagesRightBottom,
+.servicesGalleryContentImagesLeftTop {
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.homeServices img {
+  padding: 1rem;
+  transition: all 0.3s ease;
+}
+
+.servicesGalleryContentImg {
+  display: flex;
+  align-items: flex-start;
+}
+
+.servicesGalleryContentImg:hover img {
+  -webkit-filter: brightness(0.7);
+  filter: brightness(0.7);
+}
+
+.leftText {
+  writing-mode: vertical-rl;
+  transform: scale(-1);
+  text-transform: uppercase;
+  padding-bottom: 1rem;
+}
+
+.rightText {
+  writing-mode: vertical-rl;
+  text-transform: uppercase;
+  padding-top: 1rem;
 }

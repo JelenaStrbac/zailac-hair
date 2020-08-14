@@ -2,35 +2,55 @@ import React from "react"
 
 import styles from "./HomeServices.module.css"
 import Button from "../../UI/Button/Button"
-import Balayage from "../../../images/balayage.jpg"
+import Coloring from "../../../images/coloring.jpg"
+import HairLights from "../../../images/balayage.jpg"
 import HairCut from "../../../images/sisanje.jpg"
 import Styling from "../../../images/stilizovanje.jpg"
-import Extensions from "../../../images/nadogradnja.jpg"
+import Balayage from "../../../images/nadogradnja.jpg"
+import Extensions from "../../../images/extensions.jpg"
 
 const HomeServices = props => {
   return (
     <div className={styles.homeServices}>
-      <h1>Usluge</h1>
-      <h2>Usluge</h2>
-      <Button>Pogledajte sve</Button>
-      {/* <div className={styles.servicesGallery}>
-        <div>
-          <div>Balayage</div>
-          <img src={Balayage} alt="balayage" />
+      <div className={styles.homeServicesTitleAndButton}>
+        <h1>Usluge</h1>
+        <h2>Usluge</h2>
+        <Button>Pogledajte sve</Button>
+      </div>
+      <div className={styles.servicesGallery}>
+        <div className={styles.servicesGalleryContentImagesLeftTop}>
+          <div className={styles.servicesGalleryContentImg}>
+            <div className={styles.leftText}>Coloring</div>
+            <img src={Coloring} alt="coloring" />
+          </div>
         </div>
-        <div>
-          <div>Balayage</div>
-          <img src={HairCut} alt="hairCut" />
+        <div className={styles.servicesGalleryContentImagesLeft}>
+          <div className={styles.servicesGalleryContentImg}>
+            <div className={styles.leftText}>Pramenovi</div>
+            <img src={HairLights} alt="hairLights" />
+          </div>
+          <div className={styles.servicesGalleryContentImg}>
+            <div className={styles.leftText}>Šišanje</div>
+            <img src={HairCut} alt="hairCut" />
+          </div>
         </div>
-        <div>
-          <div>Balayage</div>
-          <img src={Styling} alt="styling" />
+        <div className={styles.servicesGalleryContentImagesRight}>
+          <div className={styles.servicesGalleryContentImg}>
+            <img src={Styling} alt="styling" />
+            <div className={styles.rightText}>Stilizovanje</div>
+          </div>
+          <div className={styles.servicesGalleryContentImg}>
+            <img src={Balayage} alt="balayage" />
+            <div className={styles.rightText}>Balayage</div>
+          </div>
         </div>
-        <div>
-          <div>Balayage</div>
-          <img src={Extensions} alt="extensions" />
+        <div className={styles.servicesGalleryContentImagesRightBottom}>
+          <div className={styles.servicesGalleryContentImg}>
+            <img src={Extensions} alt="extensions" />
+            <div className={styles.rightText}>Nadogradnja</div>
+          </div>
         </div>
-      </div> */}
+      </div>
     </div>
   )
 }

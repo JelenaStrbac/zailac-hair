@@ -7,10 +7,11 @@ $greyDefault: #5e5e5e; */
   display: flex;
   width: 100vw;
   height: 100vh;
-  background-image: url("../../../images/robert-zunikoff-ebno_NwaOns-unsplash.jpg");
+  /* background-image: url("../../../images/robert-zunikoff-ebno_NwaOns-unsplash.jpg");
+  background-attachment: fixed;
   background-size: contain;
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
 }
 
 .burger {
