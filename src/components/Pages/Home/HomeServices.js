@@ -8,13 +8,13 @@ import HairCut from "../../../images/sisanje.jpg"
 import Styling from "../../../images/stilizovanje.jpg"
 import Balayage from "../../../images/nadogradnja.jpg"
 import Extensions from "../../../images/extensions.jpg"
+import Headings from "../../UI/Headings/Headings"
 
 const HomeServices = props => {
   return (
     <div className={styles.homeServices}>
       <div className={styles.homeServicesTitleAndButton}>
-        <h1>Usluge</h1>
-        <h2>Usluge</h2>
+        <Headings>Naše usluge</Headings>
         <Button>Pogledajte sve</Button>
       </div>
       <div className={styles.servicesGallery}>

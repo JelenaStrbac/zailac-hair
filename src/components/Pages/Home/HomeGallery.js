@@ -5,13 +5,13 @@ import Button from "../../UI/Button/Button"
 import Before from "../../../images/before.jpeg"
 import After from "../../../images/after.jpeg"
 import ImageSlider from "react-image-comparison-slider"
+import Headings from "../../UI/Headings/Headings"
 
 const HomeGallery = props => {
   return (
     <div className={styles.homeGallery}>
       <div className={styles.homeGalleryTitle}>
-        <h1>Naši radovi</h1>
-        <h2>Naši radovi</h2>
+        <Headings>Naši radovi</Headings>
         <p>
           Frizura je jedna od najupečatljivijih formi ekspresije pojedinca koja
           ide izvan kulturnih, socijalnih i svih drugih granica. Jedinstveni i
