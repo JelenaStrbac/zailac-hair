@@ -7,6 +7,7 @@ import SEO from "../components/seo"
 import Cover from "../components/Pages/Home/Cover"
 import HomeAbout from "../components/Pages/Home/HomeAbout"
 import HomeServices from "../components/Pages/Home/HomeServices"
+import HomeGallery from "../components/Pages/Home/HomeGallery"
 
 const IndexPage = () => (
   <Layout>
@@ -14,6 +15,7 @@ const IndexPage = () => (
     <Cover />
     <HomeAbout />
     <HomeServices />
+    <HomeGallery />
     {/* <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
       <Image />
     </div>

@@ -1,0 +1,33 @@
+/* $goldDefault: #dcc29c;
+$beigeDefault: #f2efeb;
+$blackDefault: #2c2c2c;
+$greyDefault: #5e5e5e; */
+
+.homeGallery {
+  background-color: rgba(255, 255, 255, 0.972);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 6rem 8rem;
+}
+
+.homeGalleryTitle {
+  width: 50%;
+}
+
+.imageSlider {
+  width: 288px;
+  height: 589px;
+}
+
+.lace {
+  height: 1rem;
+  background: repeating-linear-gradient(
+    -55deg,
+    #dcc29ca2,
+    #dcc29ca2 2px,
+    rgba(255, 255, 255, 0.972) 2px,
+    rgba(255, 255, 255, 0.972) 4px
+  );
+  margin-bottom: 0.2rem;
+}
