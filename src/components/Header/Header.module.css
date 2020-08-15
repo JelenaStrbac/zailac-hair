@@ -1,0 +1,36 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  padding: 0.5rem 6rem;
+  z-index: 100;
+  background-color: transparent;
+  position: absolute;
+  /* top: 0; */
+  width: 100%;
+}
+
+/* .logo {
+  height: 4rem;
+  width: 4rem;
+} */
+
+.headerLinks {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.headerLinks a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 300;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: row;
+}
+
+.headerLink:hover {
+  opacity: 0.7;
+}

@@ -8,6 +8,7 @@ import Cover from "../components/Pages/Home/Cover"
 import HomeAbout from "../components/Pages/Home/HomeAbout"
 import HomeServices from "../components/Pages/Home/HomeServices"
 import HomeGallery from "../components/Pages/Home/HomeGallery"
+import HomeBlog from "../components/Pages/Home/HomeBlog"
 
 const IndexPage = () => (
   <Layout>
@@ -16,6 +17,7 @@ const IndexPage = () => (
     <HomeAbout />
     <HomeServices />
     <HomeGallery />
+    <HomeBlog />
     {/* <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
       <Image />
     </div>

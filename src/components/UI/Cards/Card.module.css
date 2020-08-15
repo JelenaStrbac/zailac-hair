@@ -1,0 +1,50 @@
+/* $goldDefault: #dcc29c;
+$beigeDefault: #f2efeb;
+$blackDefault: #2c2c2c;
+$greyDefault: #5e5e5e; */
+
+.card {
+  padding: 1rem;
+  border: 0.4rem solid #f2efeb;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+}
+
+.cardImage {
+  height: 30%;
+}
+
+.cardImage img {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.cardText {
+  height: 70%;
+}
+
+.cardLinkStyle {
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+  font-weight: 400;
+  width: 50%;
+  transition: all 0.3s ease;
+}
+
+.cardLinkStyle:before {
+  content: "";
+  flex: 1 1;
+  border-bottom: 1px solid #000;
+  margin: auto;
+}
+.cardLinkStyle:before {
+  margin-right: 10px;
+}
+
+.cardLinkStyle:hover {
+  color: #dcc29c;
+}

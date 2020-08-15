@@ -2,16 +2,38 @@ import React from "react"
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 
-import "./Header.module.scss";
+import styles from "./Header.module.css"
+import Logo from "../../images/logoBlack.png"
 
 const Header = ({ siteTitle }) => (
   <header
-    style={{
-      background: `rebeccapurple`,
-      // marginBottom: `1.45rem`,
-    }}
+    className={styles.header}
+    // style={{
+    //   background: `rebeccapurple`,
+    // }}
   >
-    <div
+    <img className={styles.logo} src={Logo} alt="zailac-hair-logo" />
+    <div className={styles.headerLinks}>
+      <Link className={styles.headerLink} to="/">
+        Početna
+      </Link>
+      <Link className={styles.headerLink} to="/about/">
+        O nama
+      </Link>
+      <Link className={styles.headerLink} to="/services/">
+        Usluge
+      </Link>
+      <Link className={styles.headerLink} to="/gallery/">
+        Galerija
+      </Link>
+      <Link className={styles.headerLink} to="/blog/">
+        Blog
+      </Link>
+      <Link className={styles.headerLink} to="/contact/">
+        Kontakt
+      </Link>
+    </div>
+    {/* <div
       style={{
         margin: `0 auto`,
         maxWidth: 960,
@@ -29,7 +51,7 @@ const Header = ({ siteTitle }) => (
           {siteTitle}
         </Link>
       </h1>
-    </div>
+    </div> */}
   </header>
 )
 

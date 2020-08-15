@@ -7,6 +7,7 @@ $greyDefault: #5e5e5e; */
   background-image: linear-gradient(
     to left bottom,
     #f2efebf8,
+    rgba(255, 255, 255, 0.959),
     rgba(255, 255, 255, 0.959)
   );
   padding: 3rem;
@@ -54,6 +55,7 @@ $greyDefault: #5e5e5e; */
 .servicesGalleryContentImg:hover img {
   -webkit-filter: brightness(0.7);
   filter: brightness(0.7);
+  cursor: zoom-in;
 }
 
 .leftText {

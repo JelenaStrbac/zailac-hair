@@ -1,0 +1,20 @@
+.homeBlog {
+  background-color: rgba(255, 255, 255, 0.972);
+  display: flex;
+  flex-direction: column;
+  padding: 6rem 10rem;
+}
+
+.homeBlogTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.homeBlogCards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 1fr;
+  justify-content: space-evenly;
+  grid-gap: 4rem;
+}

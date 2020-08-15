@@ -16,9 +16,12 @@ const HomeAbout = props => {
             postane jedan od veoma uspešnih i prepoznatih salona u Beogradu koji
             se bavi koloringom kose. Sam salon je otvoren pre svega za one koje
             odlikuje moderan i urbani stil, a koji žele istovremeno i lepu i
-            negovanu kosu. <br></br>U ZAILAC HAIR-u se možete odmoriti od
-            svakodnevih obaveza i prepustiti čarobnim rukama njegovog osnivača i
-            glavnog frizera, Mladena.
+            negovanu kosu.
+          </p>
+          <p>
+            U ZAILAC HAIR-u se možete odmoriti od svakodnevih obaveza i
+            prepustiti čarobnim rukama njegovog osnivača i glavnog frizera,
+            Mladena.
           </p>
           <Button>Saznajte više</Button>
         </div>

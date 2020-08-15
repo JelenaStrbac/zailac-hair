@@ -23,11 +23,11 @@ $greyDefault: #5e5e5e; */
 .lace {
   height: 1rem;
   background: repeating-linear-gradient(
-    -55deg,
+    to right,
     #dcc29ca2,
-    #dcc29ca2 2px,
-    rgba(255, 255, 255, 0.972) 2px,
-    rgba(255, 255, 255, 0.972) 4px
+    #dcc29ca2 1px,
+    rgba(255, 255, 255, 0.972) 1px,
+    rgba(255, 255, 255, 0.972) 8px
   );
   margin-bottom: 0.2rem;
 }
