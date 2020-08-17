@@ -1,66 +1,70 @@
 import React from "react"
 import { Link } from "gatsby"
-import PropTypes from "prop-types"
+import { globalHistory as history } from "@reach/router"
+// import PropTypes from "prop-types"
 
 import styles from "./Header.module.css"
-import Logo from "../../images/logoBlack.png"
+import LogoBlack from "../../images/logoBlack.png"
+import LogoWhite from "../../images/logo.png"
 
-const Header = ({ siteTitle }) => (
-  <header
-    className={styles.header}
-    // style={{
-    //   background: `rebeccapurple`,
-    // }}
-  >
-    <img className={styles.logo} src={Logo} alt="zailac-hair-logo" />
-    <div className={styles.headerLinks}>
-      <Link className={styles.headerLink} to="/">
-        Početna
-      </Link>
-      <Link className={styles.headerLink} to="/about/">
-        O nama
-      </Link>
-      <Link className={styles.headerLink} to="/services/">
-        Usluge
-      </Link>
-      <Link className={styles.headerLink} to="/gallery/">
-        Galerija
-      </Link>
-      <Link className={styles.headerLink} to="/blog/">
-        Blog
-      </Link>
-      <Link className={styles.headerLink} to="/contact/">
-        Kontakt
-      </Link>
-    </div>
-    {/* <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
+const Header = props => {
+  const { location } = history
+  const path = location.pathname
+  return (
+    <header className={styles.header}>
+      <img
+        className={styles.logo}
+        src={path === "/" ? LogoBlack : LogoWhite}
+        alt="zailac-hair-logo"
+      />
+      <div className={styles.headerLinks}>
         <Link
+          className={path === "/" ? styles.headerLink : styles.headerLinkSecond}
           to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
         >
-          {siteTitle}
+          Početna
         </Link>
-      </h1>
-    </div> */}
-  </header>
-)
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
+        <Link
+          className={path === "/" ? styles.headerLink : styles.headerLinkSecond}
+          to="/about/"
+        >
+          O nama
+        </Link>
+        <Link
+          className={path === "/" ? styles.headerLink : styles.headerLinkSecond}
+          to="/services/"
+        >
+          Usluge
+        </Link>
+        <Link
+          className={path === "/" ? styles.headerLink : styles.headerLinkSecond}
+          to="/gallery/"
+        >
+          Galerija
+        </Link>
+        <Link
+          className={path === "/" ? styles.headerLink : styles.headerLinkSecond}
+          to="/blog/"
+        >
+          Blog
+        </Link>
+        <Link
+          className={path === "/" ? styles.headerLink : styles.headerLinkSecond}
+          to="/contact/"
+        >
+          Kontakt
+        </Link>
+      </div>
+    </header>
+  )
 }
 
-Header.defaultProps = {
-  siteTitle: ``,
-}
+// Header.propTypes = {
+//   siteTitle: PropTypes.string,
+// }
+
+// Header.defaultProps = {
+//   siteTitle: ``,
+// }
 
 export default Header

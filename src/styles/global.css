@@ -21,7 +21,13 @@ body {
 }
 
 body {
-  background-image: url("../images/robert-zunikoff-ebno_NwaOns-unsplash.jpg");
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.918),
+      rgba(255, 255, 255, 0.918)
+    )
+    url(../images/robert-zunikoff-ebno_NwaOns-unsplash.jpg);
+  /* background-image: linear-gradient(to left bottom, #2c2c2cec, #2c2c2cec),
+    url(../../../images/salon_01.jpg); */
   background-attachment: fixed;
   background-size: contain;
   background-position: center;

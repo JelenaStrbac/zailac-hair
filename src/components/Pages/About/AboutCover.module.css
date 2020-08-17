@@ -1,0 +1,37 @@
+/* $goldDefault: #dcc29c;
+$beigeDefault: #f2efeb;
+$blackDefault: #2c2c2c;
+$greyDefault: #5e5e5e; */
+
+.aboutCover {
+  background-image: linear-gradient(to left bottom, #2c2c2cf3, #2c2c2cec),
+    url(../../../images/salon_01.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 60vh;
+  width: 100vw;
+  position: relative;
+}
+
+.zailacSalonImage {
+  width: 35%;
+  height: auto;
+  position: absolute;
+  right: 10rem;
+  bottom: -2rem;
+  border: 8px solid white;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+}
+
+/* .zailacSalonImageOutter {
+  padding: 0.5rem;
+    width: 35%;
+  height: auto;
+  position: absolute;
+  right: 10rem;
+  bottom: -2rem;
+} */
