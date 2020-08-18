@@ -1,11 +1,11 @@
 import React from "react"
 
-import styles from "./Cover.module.css"
+import styles from "./HomeCover.module.css"
 import Women from "../../../images/women-cover.png"
 import Button from "../../UI/Button/Button"
 import SocialLinks from "../../UI/SocialLinks/SocialLinks"
 
-const Cover = props => {
+const HomeCover = props => {
   return (
     <div className={styles.cover}>
       <SocialLinks />
@@ -27,4 +27,4 @@ const Cover = props => {
   )
 }
 
-export default Cover
+export default HomeCover

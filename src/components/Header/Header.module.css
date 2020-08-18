@@ -24,12 +24,18 @@
   transition: all 0.3s ease;
   display: flex;
   flex-direction: row;
+  transition: all 0.3s ease;
 }
 
 .headerLinkSecond {
   color: #fff;
+  transition: all 0.3s ease;
 }
 
 .headerLink:hover {
   opacity: 0.7;
+}
+
+.headerLinkSecond:hover {
+  color: #dcc29c;
 }

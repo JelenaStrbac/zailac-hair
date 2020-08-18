@@ -3,9 +3,9 @@ $beigeDefault: #f2efeb;
 $blackDefault: #2c2c2c;
 $greyDefault: #5e5e5e; */
 
-.aboutCover {
-  background-image: linear-gradient(to left bottom, #2c2c2cf3, #2c2c2cec),
-    url(../../../images/salon_01.jpg);
+.cover {
+  /* background-image: linear-gradient(to left bottom, #2c2c2cf3, #2c2c2cec),
+    url(../../../images/salon_01.jpg); */
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
@@ -15,7 +15,7 @@ $greyDefault: #5e5e5e; */
   position: relative;
 }
 
-.zailacSalonImage {
+.imageSmallInFrame {
   width: 35%;
   height: auto;
   position: absolute;
@@ -26,12 +26,3 @@ $greyDefault: #5e5e5e; */
   -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
   -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
 }
-
-/* .zailacSalonImageOutter {
-  padding: 0.5rem;
-    width: 35%;
-  height: auto;
-  position: absolute;
-  right: 10rem;
-  bottom: -2rem;
-} */

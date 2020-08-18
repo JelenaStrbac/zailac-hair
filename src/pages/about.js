@@ -2,15 +2,15 @@ import React from "react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import AboutCover from "../components/Pages/About/AboutCover"
 import AboutMain from "../components/Pages/About/AboutMain"
+import Cover from "../components/UI/Cover/Cover"
 
-const IndexPage = () => (
+const SecondPage = () => (
   <Layout>
     <SEO title="About" />
-    <AboutCover />
+    <Cover imageName="salon_01.jpg" />
     <AboutMain />
   </Layout>
 )
 
-export default IndexPage
+export default SecondPage

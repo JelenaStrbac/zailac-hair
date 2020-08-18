@@ -1,0 +1,90 @@
+/* $goldDefault: #dcc29c;
+$beigeDefault: #f2efeb;
+$blackDefault: #2c2c2c;
+$greyDefault: #5e5e5e; */
+
+.card {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 26rem;
+}
+
+.card__side__front {
+  height: 26rem;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  transition: all 0.8s ease;
+}
+
+.offerCardImage {
+  height: 50%;
+  width: auto;
+  background-blend-mode: screen;
+  background-size: cover;
+  background-position: center;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+.offerCardImage img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.offerCardText {
+  height: 50%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.offerCardText p {
+  color: #5e5e5e;
+  opacity: 0.8;
+}
+
+.card__side__back {
+  transform: rotateY(180deg);
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transition: all 0.8s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+}
+
+.card:hover .card__side__front {
+  transform: rotateY(-180deg);
+}
+.card:hover .card__side__back {
+  transform: rotateY(0);
+}
+
+.card_cta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card_cta p {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
