@@ -1,0 +1,11 @@
+.galleryMain {
+  padding: 6rem 8rem;
+}
+
+.galleryContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 1fr;
+  justify-content: space-evenly;
+  grid-gap: 4rem;
+}

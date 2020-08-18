@@ -3,11 +3,13 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Cover from "../components/UI/Cover/Cover"
+import GalleryMain from "../components/Pages/Gallery/GalleryMain"
 
 const GalleryPage = () => (
   <Layout>
     <SEO title="Gallery" />
-    <Cover imageName="blog_cover.jpg" />
+    <Cover imageName="cover_gallery.jpg" />
+    <GalleryMain />
   </Layout>
 )
 
