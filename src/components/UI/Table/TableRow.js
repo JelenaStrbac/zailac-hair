@@ -4,7 +4,7 @@ import styles from "./TableRow.module.css"
 
 const TableRow = props => {
   return (
-    <tr>
+    <tr className={styles.tr}>
       <td>{props.description}</td>
       <td>{props.duration}</td>
       <td>{props.price}</td>
