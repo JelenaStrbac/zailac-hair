@@ -25,8 +25,8 @@ $greyDefault: #5e5e5e; */
   filter: brightness(0.6);
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
-  -webkit-filter: grayscale(0);
-  filter: grayscale(0);
+  /* -webkit-filter: grayscale(0);
+  filter: grayscale(0); */
 }
 
 /* .overlay {
