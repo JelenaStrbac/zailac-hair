@@ -1,12 +1,24 @@
 import React from "react"
+import { graphql, useStaticQuery } from "gatsby"
 
 import styles from "./ServicesMain.module.css"
 import Headings from "../../UI/Headings/Headings"
 import OfferCard from "../../UI/OfferCards/OfferCard"
-import Table from "../../UI/Table/Table"
-import TableRow from "../../UI/Table/TableRow"
+// import Table from "../../UI/Table/Table"
+// import TableRow from "../../UI/Table/TableRow"
 
 const ServicesMain = props => {
+  const data = useStaticQuery(graphql`
+    query MyQueryOne {
+      wordpressPage(title: { eq: "Cenovnik" }) {
+        content
+        excerpt
+      }
+    }
+  `)
+  console.log(data)
+  console.log(data.wordpressPage.excerpt)
+
   return (
     <div className={styles.serviceMain}>
       <div className={styles.serviceSpecialOffersContainer}>
@@ -40,7 +52,9 @@ const ServicesMain = props => {
       </div>
       <div className={styles.servicesPriceListContainer}>
         <Headings>Cenovnik</Headings>
-        <Table headTitle="Pramenovi i preliv kose Loreal">
+        <div dangerouslySetInnerHTML={{ __html: data.wordpressPage.content }} />
+
+        {/* <Table headTitle="Pramenovi i preliv kose Loreal">
           <TableRow
             description="Balayage / pramenovi Echosline + žensko šišanje + feniranje + olaplex za negu - sve dužine kose"
             duration="240 min"
@@ -73,7 +87,7 @@ const ServicesMain = props => {
             duration="240 min"
             price="5.200"
           />
-        </Table>
+        </Table> */}
       </div>
     </div>
   )

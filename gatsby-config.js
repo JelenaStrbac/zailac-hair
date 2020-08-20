@@ -32,35 +32,35 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
-    // {
-    //   resolve: `gatsby-source-wordpress`,
-    //   options: {
-    //     baseUrl: `example23340803.wordpress.com`,
-    //     protocol: `https`,
-    //     restApiRoutePrefix: "wp-json",
-    //     hostingWPCOM: true,
-    //     auth: {
-    //       wpcom_app_clientSecret: process.env.GATSBY_WORDPRESS_CLIENT_SECRET,
-    //       wpcom_app_clientId: process.env.GATSBY_CLIENT_ID,
-    //       wpcom_user: process.env.GATSBY_USER,
-    //       wpcom_pass: process.env.GATSBY_WORDPRESS_PASSWORD,
-    //     },
-    //     includedRoutes: [
-    //       "**/categories",
-    //       "**/posts",
-    //       "**/pages",
-    //       "**/media",
-    //       "**/tags",
-    //       "**/taxonomies",
-    //       "**/users",
-    //     ],
-    //     excludedRoutes: [
-    //       "/wp/v2/users/**",
-    //       "/wp/v2/settings*",
-    //       "/wp/v2/themes*",
-    //     ],
-    //   },
-    // },
+    {
+      resolve: `gatsby-source-wordpress`,
+      options: {
+        baseUrl: `example23340803.wordpress.com`,
+        protocol: `https`,
+        restApiRoutePrefix: "wp-json",
+        hostingWPCOM: true,
+        auth: {
+          wpcom_app_clientSecret: process.env.GATSBY_WORDPRESS_CLIENT_SECRET,
+          wpcom_app_clientId: process.env.GATSBY_CLIENT_ID,
+          wpcom_user: process.env.GATSBY_USER,
+          wpcom_pass: process.env.GATSBY_WORDPRESS_PASSWORD,
+        },
+        includedRoutes: [
+          "**/categories",
+          "**/posts",
+          "**/pages",
+          "**/media",
+          "**/tags",
+          "**/taxonomies",
+          "**/users",
+        ],
+        excludedRoutes: [
+          "/wp/v2/users/**",
+          "/wp/v2/settings*",
+          "/wp/v2/themes*",
+        ],
+      },
+    },
     "gatsby-plugin-styled-components",
     {
       resolve: `gatsby-plugin-prefetch-google-fonts`,

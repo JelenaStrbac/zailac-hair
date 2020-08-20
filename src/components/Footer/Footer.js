@@ -18,11 +18,11 @@ const Footer = props => {
 
         <div className={styles.footerInnerMain}>
           <div className={styles.footerLinks}>
-            <Link to="/">O NAMA</Link>
-            <Link to="/">USLUGE I CENOVNIK</Link>
-            <Link to="/">GALERIJA</Link>
-            <Link to="/">BLOG</Link>
-            <Link to="/">KONTAKT</Link>
+            <Link to="/about/">O NAMA</Link>
+            <Link to="/services/">USLUGE I CENOVNIK</Link>
+            <Link to="/gallery/">GALERIJA</Link>
+            <Link to="/blog/">BLOG</Link>
+            <Link to="/contact/">KONTAKT</Link>
           </div>
           <div className={styles.social}>
             <a
@@ -42,12 +42,12 @@ const Footer = props => {
           </div>
           <div className={styles.footerContactData}>
             <div className={styles.footerContactDataInner}>
-              <div>RADNO VREME</div>
+              <div className={styles.footerContactDataTitle}>RADNO VREME</div>
               <div>pon - petak: 12h - 20h</div>
               <div>sub: 11h - 18h</div>
             </div>
             <div className={styles.footerContactDataInner}>
-              <div>KONTAKT</div>
+              <div className={styles.footerContactDataTitle}>KONTAKT</div>
               <div>
                 email:{" "}
                 <a href="mailto:zailacmladen480@gmail.com">

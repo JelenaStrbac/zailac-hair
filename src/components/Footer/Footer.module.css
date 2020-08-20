@@ -45,13 +45,14 @@ $greyDefault: #5e5e5e; */
   justify-items: space-between;
   width: 100%;
   margin: 1rem 0;
+  padding: 0 2rem 0 6rem;
 }
 
 .footerLinks {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding-left: 10rem;
+  /* padding-left: 10rem; */
 }
 
 .footerLinks a {
@@ -90,9 +91,12 @@ $greyDefault: #5e5e5e; */
 
 .footerContactData {
   font-size: 0.7rem;
-  letter-spacing: 0.1rem;
-  padding-right: 2rem;
+  /* padding-right: 2rem; */
   color: white;
+}
+
+.footerContactDataTitle {
+  letter-spacing: 0.1rem;
 }
 
 .footerContactDataInner:first-child {

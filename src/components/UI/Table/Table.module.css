@@ -3,14 +3,19 @@ $beigeDefault: #f2efeb;
 $blackDefault: #2c2c2c;
 $greyDefault: #5e5e5e; */
 
-.table {
+table {
   width: 100%;
   margin-bottom: 4rem;
 }
 
-th {
+th,
+table tr:first-child {
   background-color: #dcc29c;
   padding: 0.5rem;
+  font-weight: bold;
+}
+
+strong {
   font-weight: bold;
 }
 

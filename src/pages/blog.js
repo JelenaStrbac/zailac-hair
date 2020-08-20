@@ -7,7 +7,7 @@ import Cover from "../components/UI/Cover/Cover"
 const BlogPage = () => (
   <Layout>
     <SEO title="Blog" />
-    <Cover imageName="blog_cover.jpg" />
+    <Cover imageName="blog-cover.jpg" />
   </Layout>
 )
 

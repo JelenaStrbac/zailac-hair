@@ -6,9 +6,11 @@ const Table = props => {
   return (
     <table className={styles.table}>
       <thead>
-        <th>{props.headTitle}</th>
-        <th>Trajanje</th>
-        <th>Cena</th>
+        <tr>
+          <th>{props.headTitle}</th>
+          <th>Trajanje</th>
+          <th>Cena</th>
+        </tr>
       </thead>
       <tbody>{props.children}</tbody>
     </table>
