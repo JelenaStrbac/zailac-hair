@@ -10,9 +10,9 @@ const Card = props => {
         <img src={props.image} alt="zailacBlogImage" />
       </div>
       <div className={styles.cardText}>
-        <h4>{props.title}</h4>
-        <p>{props.text}</p>
-        <Link className={styles.cardLinkStyle} to={`/blogPost/`}>
+        <h4 dangerouslySetInnerHTML={{ __html: props.title }}></h4>
+        <div dangerouslySetInnerHTML={{ __html: props.text }} />
+        <Link className={styles.cardLinkStyle} to={`/blog/${props.slug}/`}>
           Pročitajte više
         </Link>
       </div>

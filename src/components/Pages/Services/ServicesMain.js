@@ -4,8 +4,6 @@ import { graphql, useStaticQuery } from "gatsby"
 import styles from "./ServicesMain.module.css"
 import Headings from "../../UI/Headings/Headings"
 import OfferCard from "../../UI/OfferCards/OfferCard"
-// import Table from "../../UI/Table/Table"
-// import TableRow from "../../UI/Table/TableRow"
 
 const ServicesMain = props => {
   const data = useStaticQuery(graphql`
@@ -53,41 +51,6 @@ const ServicesMain = props => {
       <div className={styles.servicesPriceListContainer}>
         <Headings>Cenovnik</Headings>
         <div dangerouslySetInnerHTML={{ __html: data.wordpressPage.content }} />
-
-        {/* <Table headTitle="Pramenovi i preliv kose Loreal">
-          <TableRow
-            description="Balayage / pramenovi Echosline + žensko šišanje + feniranje + olaplex za negu - sve dužine kose"
-            duration="240 min"
-            price="5.200"
-          />
-          <TableRow
-            description="Balayage / pramenovi Echosline + žensko šišanje + feniranje + olaplex za negu - sve dužine kose"
-            duration="240 min"
-            price="5.200"
-          />
-          <TableRow
-            description="Balayage / pramenovi Echosline + žensko šišanje + feniranje + olaplex za negu - sve dužine kose"
-            duration="240 min"
-            price="5.200"
-          />
-        </Table>
-        <Table headTitle="Pramenovi i preliv kose Loreal">
-          <TableRow
-            description="Balayage / pramenovi Echosline + žensko šišanje + feniranje + olaplex za negu - sve dužine kose"
-            duration="240 min"
-            price="5.200"
-          />
-          <TableRow
-            description="Balayage / pramenovi Echosline + žensko šišanje + feniranje + olaplex za negu - sve dužine kose"
-            duration="240 min"
-            price="5.200"
-          />
-          <TableRow
-            description="Balayage / pramenovi Echosline + žensko šišanje + feniranje + olaplex za negu - sve dužine kose"
-            duration="240 min"
-            price="5.200"
-          />
-        </Table> */}
       </div>
     </div>
   )
