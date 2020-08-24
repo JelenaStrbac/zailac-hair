@@ -22,12 +22,8 @@ $greyDefault: #5e5e5e; */
 }
 
 .blogImageOutter {
-  width: 40%;
-}
-
-.blogTextOutter {
-  padding-left: 2rem;
-  width: 60%;
+  width: 100%;
+  height: 400px;
 }
 
 .authorAndName {
@@ -40,20 +36,21 @@ $greyDefault: #5e5e5e; */
   fill: #afadad;
 }
 
-.cardLinkStyle {
-  color: royalblue;
-  font-size: 0.9rem;
+.blogMain p {
+  font-size: 1rem;
+}
+
+.blogMain hr {
+  border-color: #e0e0e0;
+  border: 0;
+  margin: 2rem 0 0 0;
+  width: 100%;
+  height: 1px;
+  background: #e0e0e0;
 }
 
 .postsLeft {
   width: 60%;
-}
-
-.postsLeftBorder {
-  border: 10px solid #f2efeb;
-  padding: 1rem;
-  margin-bottom: 3rem;
-  display: flex;
 }
 
 .postsRight {
@@ -66,9 +63,4 @@ $greyDefault: #5e5e5e; */
   color: royalblue;
   text-decoration: none;
   padding-bottom: 1rem;
-}
-
-.postsLeft .card {
-  display: flex;
-  flex-direction: row;
 }

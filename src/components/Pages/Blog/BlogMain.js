@@ -9,7 +9,7 @@ import Headings from "../../UI/Headings/Headings"
 const BlogMain = props => {
   const data = useStaticQuery(graphql`
     query {
-      allWordpressPost {
+      allWordpressPost(sort: { fields: [date], order: DESC }) {
         edges {
           node {
             content
@@ -28,7 +28,7 @@ const BlogMain = props => {
       }
     }
   `)
-  console.log(data)
+
   return (
     <div className={styles.blogMain}>
       <Headings>Blog</Headings>
@@ -37,7 +37,7 @@ const BlogMain = props => {
         <div className={styles.postsLeft}>
           {data.allWordpressPost.edges.map((el, i) => {
             return (
-              <div key={i}>
+              <div key={i} className={styles.postsLeftBorder}>
                 <div className={styles.blogImageOutter}>
                   <img
                     className={styles.blogImage}
@@ -45,15 +45,22 @@ const BlogMain = props => {
                     alt="zailacBlogImage"
                   />
                 </div>
-                <h3 dangerouslySetInnerHTML={{ __html: el.node.title }}></h3>
-                <div className={styles.authorAndName}>
-                  <FontAwesomeIcon icon={faUser} className={styles.icon} />{" "}
-                  {el.node.author.name} |{" "}
-                  <FontAwesomeIcon icon={faClock} className={styles.icon} />{" "}
-                  {el.node.date}
+                <div className={styles.blogTextOutter}>
+                  <h3 dangerouslySetInnerHTML={{ __html: el.node.title }}></h3>
+                  <div className={styles.authorAndName}>
+                    <FontAwesomeIcon icon={faUser} className={styles.icon} />{" "}
+                    {el.node.author.name} |{" "}
+                    <FontAwesomeIcon icon={faClock} className={styles.icon} />{" "}
+                    {el.node.date}
+                  </div>
+                  <div dangerouslySetInnerHTML={{ __html: el.node.excerpt }} />
+                  <Link
+                    className={styles.cardLinkStyle}
+                    to={`/blog/${el.node.slug}/`}
+                  >
+                    Pročitajte više
+                  </Link>
                 </div>
-                <div dangerouslySetInnerHTML={{ __html: el.node.content }} />
-                <hr></hr>
               </div>
             )
           })}

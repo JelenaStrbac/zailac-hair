@@ -10,7 +10,7 @@ import Card from "../../UI/Cards/Card"
 const HomeBlog = props => {
   const data = useStaticQuery(graphql`
     query {
-      allWordpressPost {
+      allWordpressPost(sort: { fields: [date], order: DESC }) {
         edges {
           node {
             slug

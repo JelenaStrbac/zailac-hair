@@ -4,25 +4,25 @@ import styles from "./HomeAbout.module.css"
 import Tools from "../../../images/tools.png"
 import Button from "../../UI/Button/Button"
 import Headings from "../../UI/Headings/Headings"
+import { useStaticQuery, graphql } from "gatsby"
 
 const HomeAbout = props => {
+  const data = useStaticQuery(graphql`
+    query {
+      wordpressPage(title: { eq: "Zailac Hair" }) {
+        content
+        excerpt
+      }
+    }
+  `)
   return (
     <div className={styles.about}>
       <div className={styles.homeAboutLeft}>
         <Headings>O nama</Headings>
         <div className={styles.homeAboutMain}>
-          <p>
-            ZAILAC HAIR je osnovan pre vise od dve godine, a danas pretenduje da
-            postane jedan od veoma uspešnih i prepoznatih salona u Beogradu koji
-            se bavi koloringom kose. Sam salon je otvoren pre svega za one koje
-            odlikuje moderan i urbani stil, a koji žele istovremeno i lepu i
-            negovanu kosu.
-          </p>
-          <p>
-            U ZAILAC HAIR-u se možete odmoriti od svakodnevih obaveza i
-            prepustiti čarobnim rukama njegovog osnivača i glavnog frizera,
-            Mladena.
-          </p>
+          <div
+            dangerouslySetInnerHTML={{ __html: data.wordpressPage.excerpt }}
+          />
           <Button>Saznajte više</Button>
         </div>
       </div>
