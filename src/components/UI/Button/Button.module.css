@@ -4,16 +4,25 @@ $blackDefault: #2c2c2c;
 $greyDefault: #5e5e5e; */
 
 .btn {
-  width: 180px;
-  height: 60px;
   cursor: pointer;
-  background: transparent;
-  border: 3px double #dcc29c;
-  outline: none;
-  transition: 0.3s ease-in-out;
-  text-transform: uppercase;
+  width: 160px;
+  height: 50px;
+  background-color: #e0caa9;
+  border: none;
+  transition: all 0.5s ease;
+}
+
+.btnOutter {
+  display: flex;
+  padding: 0.2rem;
+  border: 1px solid #e0caa9;
+  transition: all 0.5s ease;
+}
+
+.btnOutter:hover {
+  transform: translateY(3px);
 }
 
 .btn:hover {
-  background: #dcc29c;
+  background-color: #dcc29c;
 }

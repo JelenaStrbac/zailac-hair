@@ -22,4 +22,7 @@ $greyDefault: #5e5e5e; */
   background-color: #f2efeb;
   clip-path: polygon(0 25%, 100% 0%, 99% 75%, 0% 100%);
   padding: 10rem 5rem 5rem 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
