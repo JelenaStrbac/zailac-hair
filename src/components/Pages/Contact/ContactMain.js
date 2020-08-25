@@ -1,10 +1,27 @@
 import React from "react"
+import { graphql, useStaticQuery } from "gatsby"
 
 import styles from "./ContactMain.module.css"
 import Headings from "../../UI/Headings/Headings"
 import Form from "./Form"
 
 const ContactMain = props => {
+  const data = useStaticQuery(graphql`
+    query {
+      telefon: wordpressPage(title: { eq: "Telefon" }) {
+        content
+      }
+      email: wordpressPage(title: { eq: "Email" }) {
+        content
+      }
+      radnoVreme: wordpressPage(title: { eq: "Radno vreme" }) {
+        content
+      }
+      adresa: wordpressPage(title: { eq: "Adresa" }) {
+        content
+      }
+    }
+  `)
   return (
     <div className={styles.contactMain}>
       <Headings>Kontakt</Headings>
@@ -13,19 +30,18 @@ const ContactMain = props => {
           <div className={styles.contactData}>
             <div className={styles.contactDataItem}>
               <h4>Adresa</h4>
-              <div>Bulevar Kralja Aleksandra 171, lokal 38</div>
-              <div>11000, Zvezdara, Beograd</div>
+              <div dangerouslySetInnerHTML={{ __html: data.adresa.content }} />
             </div>
             <div className={styles.contactDataItem}>
               <h4>Kontakt podaci</h4>
-              <div>zailacmladen480@gmail.com</div>
-              <div>+381 60 3230 250</div>
+              <div dangerouslySetInnerHTML={{ __html: data.email.content }} />
+              <div dangerouslySetInnerHTML={{ __html: data.telefon.content }} />
             </div>
             <div className={styles.contactDataItem}>
               <h4>Radno vreme</h4>
-              <div>pon - petak: 12h - 20h</div>
-              <div>sub: 11h - 18h</div>
-              <div>ned: neradna</div>
+              <div
+                dangerouslySetInnerHTML={{ __html: data.radnoVreme.content }}
+              />
             </div>
           </div>
 

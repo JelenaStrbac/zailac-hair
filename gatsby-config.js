@@ -37,6 +37,7 @@ module.exports = {
       options: {
         baseUrl: `example23340803.wordpress.com`,
         protocol: `https`,
+        useACF: false,
         restApiRoutePrefix: "wp-json",
         hostingWPCOM: true,
         auth: {

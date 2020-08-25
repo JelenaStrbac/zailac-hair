@@ -14,8 +14,6 @@ const ServicesMain = props => {
       }
     }
   `)
-  console.log(data)
-  console.log(data.wordpressPage.excerpt)
 
   return (
     <div className={styles.serviceMain}>

@@ -1,12 +1,33 @@
 import React from "react"
-import { Link } from "gatsby"
+import { graphql, useStaticQuery, Link } from "gatsby"
 
 import styles from "./Footer.module.css"
 import Logo from "../../images/logo.png"
 import zailacFB from "../../images/social-facebook-icon.svg"
 import zailacIG from "../../images/social-instagram-icon.svg"
+import { getAnchroFromParsedDOM, removeHtml } from "../../helper/helper"
 
 const Footer = props => {
+  const data = useStaticQuery(graphql`
+    query {
+      telefon: wordpressPage(title: { eq: "Telefon" }) {
+        content
+      }
+      email: wordpressPage(title: { eq: "Email" }) {
+        content
+      }
+      radnoVreme: wordpressPage(title: { eq: "Radno vreme" }) {
+        content
+      }
+      fb: wordpressPage(title: { eq: "Facebook link" }) {
+        content
+      }
+      ig: wordpressPage(title: { eq: "Instagram link" }) {
+        content
+      }
+    }
+  `)
+  console.log(data)
   return (
     <div className={styles.footer}>
       <div className={styles.footerInner}>
@@ -28,14 +49,14 @@ const Footer = props => {
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="https://www.facebook.com/pages/category/Hair-Salon/Zailac-Hair-823673054501131/"
+              href={getAnchroFromParsedDOM(data.fb.content)}
             >
               <img className="facebook" src={zailacFB} alt="zailac-fb" />
             </a>
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="https://www.instagram.com/zailachair/?hl=en"
+              href={getAnchroFromParsedDOM(data.ig.content)}
             >
               <img className="instagram" src={zailacIG} alt="zailac-ig" />
             </a>
@@ -43,18 +64,19 @@ const Footer = props => {
           <div className={styles.footerContactData}>
             <div className={styles.footerContactDataInner}>
               <div className={styles.footerContactDataTitle}>RADNO VREME</div>
-              <div>pon - petak: 12h - 20h</div>
-              <div>sub: 11h - 18h</div>
+              <div
+                dangerouslySetInnerHTML={{ __html: data.radnoVreme.content }}
+              />
             </div>
             <div className={styles.footerContactDataInner}>
               <div className={styles.footerContactDataTitle}>KONTAKT</div>
               <div>
                 email:{" "}
-                <a href="mailto:zailacmladen480@gmail.com">
-                  zailacmladen480@gmail.com
+                <a href={`mailto:${removeHtml(data.email.content)}`}>
+                  {removeHtml(data.email.content)}
                 </a>
                 <br></br>
-                tel: +381 60 3230 250
+                tel: {removeHtml(data.telefon.content) || "+381 60 3230 250"}
               </div>
             </div>
           </div>
