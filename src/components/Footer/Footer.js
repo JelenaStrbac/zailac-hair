@@ -27,7 +27,6 @@ const Footer = props => {
       }
     }
   `)
-  console.log(data)
   return (
     <div className={styles.footer}>
       <div className={styles.footerInner}>

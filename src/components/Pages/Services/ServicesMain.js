@@ -7,14 +7,24 @@ import OfferCard from "../../UI/OfferCards/OfferCard"
 
 const ServicesMain = props => {
   const data = useStaticQuery(graphql`
-    query MyQueryOne {
-      wordpressPage(title: { eq: "Cenovnik" }) {
+    query {
+      cenovnik: wordpressPage(title: { eq: "Cenovnik" }) {
         content
-        excerpt
+      }
+      spOne: wordpressPage(title: { eq: "SP1" }) {
+        content
+      }
+      spTwo: wordpressPage(title: { eq: "SP2" }) {
+        content
+      }
+      spThree: wordpressPage(title: { eq: "SP2" }) {
+        content
+      }
+      telefon: wordpressPage(title: { eq: "Telefon" }) {
+        content
       }
     }
   `)
-
   return (
     <div className={styles.serviceMain}>
       <div className={styles.serviceSpecialOffersContainer}>
@@ -24,31 +34,28 @@ const ServicesMain = props => {
             color="#f2efeb"
             colorTwo="#9b8465"
             image="coloring.jpg"
-            title="Balayage / pramenovi Echosline + žensko šišanje + feniranje + olaplex za negu - sve dužine kose"
-            duration="240 min"
-            price="RSD 5.200"
+            content={data.spOne.content}
+            phone={data.telefon.content}
           />
           <OfferCard
             color="#C0C0C0"
             colorTwo="#858585"
             image="balayage.jpg"
-            title="CADIVEU Keratinsko ispravljanje kose + žensko šišanje - sve dužine"
-            duration="180 min"
-            price="RSD 7.500"
+            content={data.spTwo.content}
+            phone={data.telefon.content}
           />
           <OfferCard
             color="#dcc29c"
             colorTwo="#bd8c44"
             image="stilizovanje.jpg"
-            title="Balayage / pramenovi + šišanje + feniranje + gratis tretman prowermix Loreal - ekstra duga kosa"
-            duration="240 min"
-            price="RSD 10.699"
+            content={data.spThree.content}
+            phone={data.telefon.content}
           />
         </div>
       </div>
       <div className={styles.servicesPriceListContainer}>
         <Headings>Cenovnik</Headings>
-        <div dangerouslySetInnerHTML={{ __html: data.wordpressPage.content }} />
+        <div dangerouslySetInnerHTML={{ __html: data.cenovnik.content }} />
       </div>
     </div>
   )

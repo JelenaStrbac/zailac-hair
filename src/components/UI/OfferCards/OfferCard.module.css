@@ -48,8 +48,14 @@ $greyDefault: #5e5e5e; */
   justify-content: space-between;
 }
 
-.offerCardText p {
+.offerCardText p:first-child {
   color: #5e5e5e;
+  opacity: 0.8;
+}
+
+.offerCardText p:nth-child(2) {
+  color: black;
+  font-size: 1rem;
   opacity: 0.8;
 }
 

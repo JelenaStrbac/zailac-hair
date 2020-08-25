@@ -11,15 +11,9 @@ const OfferCard = props => {
           style={{
             backgroundImage: `linear-gradient(to left top, ${props.color}, ${props.colorTwo}), url("/${props.image}")`,
           }}
-        >
-          {/* <img src={props.image} alt="zailacBlogSpecialOffer" /> */}
-        </div>
+        ></div>
         <div className={styles.offerCardText}>
-          <h4>{props.title}</h4>
-          <div>
-            <p>{props.duration}</p>
-            <div>{props.price}</div>
-          </div>
+          <div dangerouslySetInnerHTML={{ __html: props.content }} />
         </div>
       </div>
       <div
@@ -29,9 +23,8 @@ const OfferCard = props => {
         }}
       >
         <div className={styles.card_cta}>
-          <p>
-            Rezervacija na <br></br>060 3230 250
-          </p>
+          <p>Rezervacija na</p>
+          <div dangerouslySetInnerHTML={{ __html: props.phone }} />
           <p>vaš Zailac Hair</p>
         </div>
       </div>
