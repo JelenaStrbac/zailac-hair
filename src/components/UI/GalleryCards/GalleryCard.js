@@ -4,9 +4,12 @@ import styles from "./GalleryCard.module.css"
 
 const GalleryCards = props => {
   return (
-    <div className={styles.galleryCards}>
+    <div
+      className={styles.galleryCards}
+      role="presentation"
+      onClick={e => props.galleryHandler(e)}
+    >
       <img src={props.image} alt="gallery zailac" />
-      <div className={styles.overlay}></div>
     </div>
   )
 }
