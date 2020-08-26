@@ -4,7 +4,7 @@ import styles from "./HomeAbout.module.css"
 import Tools from "../../../images/tools.png"
 import Button from "../../UI/Button/Button"
 import Headings from "../../UI/Headings/Headings"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 
 const HomeAbout = props => {
   const data = useStaticQuery(graphql`
@@ -23,7 +23,9 @@ const HomeAbout = props => {
           <div
             dangerouslySetInnerHTML={{ __html: data.wordpressPage.excerpt }}
           />
-          <Button>Saznajte više</Button>
+          <Button>
+            <Link to="/about/">Saznajte više</Link>
+          </Button>
         </div>
       </div>
       <img src={Tools} alt="hairdresser-tools" />

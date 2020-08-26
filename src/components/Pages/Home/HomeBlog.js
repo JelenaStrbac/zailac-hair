@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery, Link } from "gatsby"
 
 import styles from "./HomeBlog.module.css"
 import Headings from "../../UI/Headings/Headings"
@@ -28,7 +28,9 @@ const HomeBlog = props => {
     <div className={styles.homeBlog}>
       <div className={styles.homeBlogTitle}>
         <Headings>Blog</Headings>
-        <Button>Pogledajte sve</Button>
+        <Button>
+          <Link to="/blog/">Pogledajte sve</Link>
+        </Button>
       </div>
       <div className={styles.homeBlogCards}>
         {data.allWordpressPost.edges.map((el, idx) => (

@@ -47,7 +47,10 @@ const AboutMain = props => {
     <div className={styles.aboutMain}>
       <div className={styles.aboutWhy}>
         <Headings>Zašto Zailac Hair?</Headings>
-        <div dangerouslySetInnerHTML={{ __html: data.salon.content }} />
+        <div
+          dangerouslySetInnerHTML={{ __html: data.salon.content }}
+          className={styles.aboutWhyText}
+        />
       </div>
       <div className={styles.aboutHairDresser}>
         <div>

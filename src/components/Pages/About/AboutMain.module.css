@@ -8,26 +8,40 @@ $greyDefault: #5e5e5e; */
 .aboutBrands {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 6rem 8rem;
 }
 
-.aboutHairDresserImageOutter,
-.aboutHairDresserImageOutterLarge {
-  border-radius: 50%;
+.aboutWhy div:first-child {
+  width: 40%;
 }
 
-.aboutHairDresserImageOutter {
-  padding: 0.3rem;
-  background-color: #dcc29c;
+.aboutWhyText {
+  padding-top: 2rem;
+  width: 60%;
+}
+
+.aboutHairDresserImageOutterLarge,
+.aboutHairDresserImageOutter,
+.aboutHairDresserImageInner {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
 }
 
 .aboutHairDresserImageOutterLarge {
   padding: 0.1rem;
   background-color: #f2efeb;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
-  -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
-  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
   margin-bottom: 2rem;
+}
+
+.aboutHairDresserImageOutter {
+  padding: 0.3rem;
+  background-color: #dcc29c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .aboutHairDresserImageInner {
@@ -50,7 +64,7 @@ $greyDefault: #5e5e5e; */
 }
 
 .aboutHairDresserText {
-  margin-left: 6rem;
+  width: 60%;
 }
 
 .signature {

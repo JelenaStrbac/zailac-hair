@@ -64,22 +64,17 @@ module.exports = {
     },
     "gatsby-plugin-styled-components",
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          {
-            family: `Crimson Pro`,
-            variants: [`200`, `300`, `400`, `500`],
-          },
-          {
-            family: `Lato`,
-            variants: [`100`, `300`, `400`],
-          },
-          {
-            family: "Kaushan Script",
-            variants: [`400`],
-          },
+          `Raleway`,
+          `Roboto`,
+          `Lato`,
+          `Crimson Pro`,
+          `Kaushan Script`,
+          `source sans pro\:100,200,300,400,500,700`, // you can also specify font weights and styles
         ],
+        display: "swap",
       },
     },
     {
