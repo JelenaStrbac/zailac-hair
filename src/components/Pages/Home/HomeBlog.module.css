@@ -11,6 +11,16 @@
   align-items: center;
 }
 
+.homeBlogTitlePaginationAndButton {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.homeBlogpagination {
+  margin-right: 2rem;
+}
+
 .homeBlogCards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

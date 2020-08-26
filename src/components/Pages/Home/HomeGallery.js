@@ -6,6 +6,7 @@ import Before from "../../../images/before.jpeg"
 import After from "../../../images/after.jpeg"
 import ImageSlider from "react-image-comparison-slider"
 import Headings from "../../UI/Headings/Headings"
+import { Link } from "gatsby"
 
 const HomeGallery = props => {
   return (
@@ -18,7 +19,9 @@ const HomeGallery = props => {
           upečatljiv stil će uvek povezivati ljude, izražavanjem emocija,
           senzualnosti, i pre svega empatije.
         </p>
-        <Button>Pogledajte sve</Button>
+        <Button>
+          <Link to="/gallery/">Pogledajte sve</Link>
+        </Button>
       </div>
       <div className={styles.imageSlider}>
         <div className={styles.lace}></div>

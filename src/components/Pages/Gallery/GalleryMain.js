@@ -1,27 +1,18 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import { graphql, useStaticQuery } from "gatsby"
 
 import styles from "./GalleryMain.module.css"
 import Headings from "../../UI/Headings/Headings"
 import GalleryCard from "../../UI/GalleryCards/GalleryCard"
-
-// import One from "../../../images/01.jpg"
-// import Two from "../../../images/02.jpg"
-// import Three from "../../../images/03.jpg"
-// import Four from "../../../images/04.jpg"
-// import Five from "../../../images/05.jpg"
-// import Six from "../../../images/06.jpg"
-// import Seven from "../../../images/07.jpg"
-// import Eight from "../../../images/08.jpg"
-// import Nine from "../../../images/09.jpg"
-// import Ten from "../../../images/10.jpg"
-// import Eleven from "../../../images/11.jpg"
-// import Twelve from "../../../images/12.jpg"
+import Pagination from "../../UI/Pagination/Pagination"
 
 const GalleryMain = props => {
   const data = useStaticQuery(graphql`
     query MyQuery {
-      allWordpressWpMedia(filter: { alt_text: { eq: "galerija" } }) {
+      allWordpressWpMedia(
+        filter: { alt_text: { eq: "galerija" } }
+        sort: { fields: [date], order: ASC }
+      ) {
         edges {
           node {
             source_url
@@ -37,30 +28,56 @@ const GalleryMain = props => {
   console.log(data.allWordpressWpMedia.edges)
   console.log(data.allWordpressWpMedia.edges[0])
 
+  const [paginationDetails, setPaginationDetails] = useState({
+    offset: 0,
+    data: [],
+    perPage: 6,
+    currentPage: 0,
+    pageCount: 0,
+  })
+
+  const handlePageClick = e => {
+    const selectedPage = e.selected
+    const offset = selectedPage * paginationDetails.perPage
+
+    setPaginationDetails({
+      ...paginationDetails,
+      currentPage: selectedPage,
+      offset: offset,
+    })
+  }
+  useEffect(() => {
+    setPaginationDetails(currentPaginatedResult => ({
+      ...currentPaginatedResult,
+      data: data.allWordpressWpMedia.edges,
+      pageCount: Math.ceil(
+        data.allWordpressWpMedia.edges.length / currentPaginatedResult.perPage
+      ),
+    }))
+  }, [data])
+
+  const slice = data.allWordpressWpMedia.edges.slice(
+    paginationDetails.offset,
+    paginationDetails.offset + paginationDetails.perPage
+  )
+
+  let gallery = null
+  if (slice) {
+    gallery = slice.map((el, i) => (
+      <GalleryCard image={el.node.source_url} key={i} />
+    ))
+  }
+
   return (
     <div className={styles.galleryMain}>
       <Headings>Pre & Posle</Headings>
-      <div className={styles.galleryContainer}>
-        {data.allWordpressWpMedia.edges.map((el, i) => (
-          <GalleryCard image={el.node.source_url} key={i} />
-        ))}
-
-        {/* <GalleryCard image={Two} />
-        <GalleryCard image={Three} />
-        <GalleryCard image={Four} />
-        <GalleryCard image={Five} />
-        <GalleryCard image={Six} />
-        <GalleryCard image={Seven} />
-        <GalleryCard image={Eight} />
-        <GalleryCard image={Nine} />
-        <GalleryCard image={Ten} />
-        <GalleryCard image={Eleven} />
-        <GalleryCard image={Twelve} />
-        <GalleryCard image={One} />
-        <GalleryCard image={Two} />
-        <GalleryCard image={Three} />
-        <GalleryCard image={Four} /> */}
+      <div className={styles.gallerypagination}>
+        <Pagination
+          pageCount={paginationDetails.pageCount}
+          handlePageClick={handlePageClick}
+        />
       </div>
+      <div className={styles.galleryContainer}>{gallery}</div>
     </div>
   )
 }

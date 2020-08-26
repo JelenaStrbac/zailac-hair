@@ -54,6 +54,11 @@ $greyDefault: #5e5e5e; */
   padding: 1rem;
   margin-bottom: 3rem;
   display: flex;
+  transition: all 0.3s ease;
+}
+
+.postsLeftBorder:hover {
+  border: 10px solid #dcc29c;
 }
 
 .postsRight {
@@ -68,7 +73,15 @@ $greyDefault: #5e5e5e; */
   padding-bottom: 1rem;
 }
 
+.postsRight h3 {
+  margin-top: 0;
+}
+
 .postsLeft .card {
   display: flex;
   flex-direction: row;
+}
+
+.blogpagination {
+  margin-bottom: 2rem;
 }
