@@ -15,12 +15,14 @@
   transform: scale(-1);
   text-transform: uppercase;
   text-decoration: none;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
+  display: flex;
   transition: all 0.3s ease;
 }
 
 .socialNetworks:hover,
-.burgerIcon:hover path {
+.burgerIcon:hover path,
+.socialNetworks:hover .icons path {
   color: #dcc29c;
 }
 
@@ -33,4 +35,12 @@
 .burgerIcon svg:hover svg {
   cursor: pointer;
   fill: #dcc29c;
+}
+
+.socialNetworks svg {
+  transform: rotate(90deg);
+  font-size: 1.3rem;
+  margin-bottom: 0.3rem;
+  transition: all 0.3s ease;
+  /* margin-top: 0.5rem; */
 }
