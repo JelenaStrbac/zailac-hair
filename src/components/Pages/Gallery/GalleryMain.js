@@ -9,6 +9,7 @@ import styles from "./GalleryMain.module.css"
 import Headings from "../../UI/Headings/Headings"
 import GalleryCard from "../../UI/GalleryCards/GalleryCard"
 import Pagination from "../../UI/Pagination/Pagination"
+import GalleryVideos from "./GalleryVideos"
 
 const GalleryMain = props => {
   const data = useStaticQuery(graphql`
@@ -28,9 +29,7 @@ const GalleryMain = props => {
       }
     }
   `)
-  // console.log(data)
   const photos = data.allWordpressWpMedia.edges.map(el => el.node.source_url)
-  // console.log(photos)
   const [isOpen, setIsOpen] = useState(false)
   const [currImg, setCurrImg] = useState(0)
 
@@ -87,7 +86,6 @@ const GalleryMain = props => {
   return (
     <div className={styles.galleryMain}>
       <Headings>Pre & Posle</Headings>
-      {/* <GalleryImages PHOTOS={photos} /> */}
       <ReactBnbGallery
         show={isOpen}
         activePhotoIndex={currImg}
@@ -102,6 +100,7 @@ const GalleryMain = props => {
         />
       </div>
       <div className={styles.galleryContainer}>{gallery}</div>
+      <GalleryVideos />
     </div>
   )
 }
