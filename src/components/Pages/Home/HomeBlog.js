@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react"
-import { graphql, useStaticQuery, Link } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 import styles from "./HomeBlog.module.css"
 import Headings from "../../UI/Headings/Headings"
 import Button from "../../UI/Button/Button"
 import Card from "../../UI/Cards/Card"
 import Pagination from "../../UI/Pagination/Pagination"
-// import Styling from "../../../images/blog-orange.jpg"
 
 const HomeBlog = props => {
   const data = useStaticQuery(graphql`
@@ -71,7 +71,6 @@ const HomeBlog = props => {
     ))
   }
 
-  console.log(data)
   return (
     <div className={styles.homeBlog}>
       <div className={styles.homeBlogTitle}>
@@ -84,23 +83,12 @@ const HomeBlog = props => {
             />
           </div>
 
-          <Link to="/blog/">
+          <AniLink swipe top="exit" direction="left" to="/blog/">
             <Button>Pogledajte sve</Button>
-          </Link>
+          </AniLink>
         </div>
       </div>
-      <div className={styles.homeBlogCards}>
-        {blogPosts}
-        {/* {data.allWordpressPost.edges.map((el, idx) => (
-          <Card
-            key={idx}
-            title={el.node.title}
-            image={el.node.featured_media.source_url}
-            text={el.node.excerpt}
-            slug={el.node.slug}
-          />
-        ))} */}
-      </div>
+      <div className={styles.homeBlogCards}>{blogPosts}</div>
     </div>
   )
 }

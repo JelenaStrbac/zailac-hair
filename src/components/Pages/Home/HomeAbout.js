@@ -1,10 +1,11 @@
 import React from "react"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 import styles from "./HomeAbout.module.css"
 import Tools from "../../../images/tools.png"
 import Button from "../../UI/Button/Button"
 import Headings from "../../UI/Headings/Headings"
-import { useStaticQuery, graphql, Link } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 
 const HomeAbout = props => {
   const data = useStaticQuery(graphql`
@@ -23,9 +24,9 @@ const HomeAbout = props => {
           <div
             dangerouslySetInnerHTML={{ __html: data.wordpressPage.excerpt }}
           />
-          <Link to="/about/">
+          <AniLink swipe top="exit" direction="left" to="/about/">
             <Button>Saznajte više</Button>
-          </Link>
+          </AniLink>
         </div>
       </div>
       <img src={Tools} alt="hairdresser-tools" />

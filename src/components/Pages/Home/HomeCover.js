@@ -1,10 +1,11 @@
 import React from "react"
+// import { Link } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 import styles from "./HomeCover.module.css"
 import Women from "../../../images/women-cover.png"
 import Button from "../../UI/Button/Button"
 import SocialLinks from "../../UI/SocialLinks/SocialLinks"
-import { Link } from "gatsby"
 
 const HomeCover = props => {
   return (
@@ -18,9 +19,15 @@ const HomeCover = props => {
         <p className={styles.bottomParagraph}>
           #coloring #balayage #nadogradnja kose
         </p>
-        <Link to="/services/">
+        <AniLink
+          cover
+          bg="url(/aniLinkOne.jpg)"
+          direction="left"
+          duration={2}
+          to="/services/"
+        >
           <Button>Naše usluge</Button>
-        </Link>
+        </AniLink>
       </div>
 
       <div className={styles.gold}>

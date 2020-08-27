@@ -1,12 +1,13 @@
 import React from "react"
+import ImageSlider from "react-image-comparison-slider"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 import styles from "./HomeGallery.module.css"
 import Button from "../../UI/Button/Button"
 import Before from "../../../images/before.jpeg"
 import After from "../../../images/after.jpeg"
-import ImageSlider from "react-image-comparison-slider"
 import Headings from "../../UI/Headings/Headings"
-import { Link } from "gatsby"
+// import { Link } from "gatsby"
 
 const HomeGallery = props => {
   return (
@@ -19,9 +20,9 @@ const HomeGallery = props => {
           upečatljiv stil će uvek povezivati ljude, izražavanjem emocija,
           senzualnosti, i pre svega empatije.
         </p>
-        <Link to="/gallery/">
+        <AniLink swipe top="exit" direction="right" to="/gallery/">
           <Button>Pogledajte sve</Button>
-        </Link>
+        </AniLink>
       </div>
       <div className={styles.imageSlider}>
         <div className={styles.lace}></div>
