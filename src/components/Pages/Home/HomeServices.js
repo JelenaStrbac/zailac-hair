@@ -9,13 +9,16 @@ import Styling from "../../../images/stilizovanje.jpg"
 import Balayage from "../../../images/nadogradnja.jpg"
 import Extensions from "../../../images/extensions.jpg"
 import Headings from "../../UI/Headings/Headings"
+import { Link } from "gatsby"
 
 const HomeServices = props => {
   return (
     <div className={styles.homeServices}>
       <div className={styles.homeServicesTitleAndButton}>
         <Headings>Naše usluge</Headings>
-        <Button>Pogledajte sve</Button>
+        <Link to="/services/">
+          <Button>Pogledajte sve</Button>
+        </Link>
       </div>
       <div className={styles.servicesGallery}>
         <div className={styles.servicesGalleryContentImagesLeftTop}>

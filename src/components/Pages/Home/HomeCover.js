@@ -4,6 +4,7 @@ import styles from "./HomeCover.module.css"
 import Women from "../../../images/women-cover.png"
 import Button from "../../UI/Button/Button"
 import SocialLinks from "../../UI/SocialLinks/SocialLinks"
+import { Link } from "gatsby"
 
 const HomeCover = props => {
   return (
@@ -17,7 +18,9 @@ const HomeCover = props => {
         <p className={styles.bottomParagraph}>
           #coloring #balayage #nadogradnja kose
         </p>
-        <Button>Naše usluge</Button>
+        <Link to="/services/">
+          <Button>Naše usluge</Button>
+        </Link>
       </div>
 
       <div className={styles.gold}>

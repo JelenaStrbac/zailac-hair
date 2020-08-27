@@ -23,9 +23,9 @@ const HomeAbout = props => {
           <div
             dangerouslySetInnerHTML={{ __html: data.wordpressPage.excerpt }}
           />
-          <Button>
-            <Link to="/about/">Saznajte više</Link>
-          </Button>
+          <Link to="/about/">
+            <Button>Saznajte više</Button>
+          </Link>
         </div>
       </div>
       <img src={Tools} alt="hairdresser-tools" />

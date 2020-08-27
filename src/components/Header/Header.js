@@ -12,11 +12,13 @@ const Header = props => {
   const path = location.pathname
   return (
     <header className={styles.header}>
-      <img
-        className={styles.logo}
-        src={path === "/" ? LogoBlack : LogoWhite}
-        alt="zailac-hair-logo"
-      />
+      <Link to="/">
+        <img
+          className={styles.logo}
+          src={path === "/" ? LogoBlack : LogoWhite}
+          alt="zailac-hair-logo"
+        />
+      </Link>
       <div className={styles.headerLinks}>
         <Link
           className={path === "/" ? styles.headerLink : styles.headerLinkSecond}

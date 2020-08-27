@@ -19,9 +19,9 @@ const HomeGallery = props => {
           upečatljiv stil će uvek povezivati ljude, izražavanjem emocija,
           senzualnosti, i pre svega empatije.
         </p>
-        <Button>
-          <Link to="/gallery/">Pogledajte sve</Link>
-        </Button>
+        <Link to="/gallery/">
+          <Button>Pogledajte sve</Button>
+        </Link>
       </div>
       <div className={styles.imageSlider}>
         <div className={styles.lace}></div>

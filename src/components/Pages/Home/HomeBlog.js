@@ -83,9 +83,10 @@ const HomeBlog = props => {
               handlePageClick={handlePageClick}
             />
           </div>
-          <Button>
-            <Link to="/blog/">Pogledajte sve</Link>
-          </Button>
+
+          <Link to="/blog/">
+            <Button>Pogledajte sve</Button>
+          </Link>
         </div>
       </div>
       <div className={styles.homeBlogCards}>
