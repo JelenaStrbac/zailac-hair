@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   color: #fff;
-  padding: 0.5rem 6rem;
+  padding: 1rem 6rem;
   z-index: 2;
   background-color: transparent;
   position: absolute;
@@ -12,19 +12,21 @@
 }
 
 .headerLinks {
-  width: 50%;
+  width: 55%;
   display: flex;
   justify-content: space-between;
 }
 
 .headerLinks a {
-  text-decoration: none;
+  /* text-decoration: underline; */
   text-transform: uppercase;
-  font-weight: 300;
+  font-weight: 400;
   transition: all 0.3s ease;
   display: flex;
   flex-direction: row;
   transition: all 0.3s ease;
+  /* font-size: 1.1rem; */
+  /* letter-spacing: 0.1rem; */
 }
 
 .headerLinkSecond {
@@ -32,10 +34,38 @@
   transition: all 0.3s ease;
 }
 
-.headerLink:hover {
+.active {
+  /* color: black; */
   opacity: 0.7;
 }
 
-.headerLinkSecond:hover {
-  color: #dcc29c;
+.headerLinks a,
+.headerLinks a:after,
+.headerLinks a:before {
+  transition: all 0.5s;
+}
+
+/* stroke */
+.headerLinks a {
+  position: relative;
+}
+.headerLinks a:after {
+  position: absolute;
+  bottom: -0.4rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: ".";
+  color: transparent;
+  background: #bc5b5d;
+  height: 3px;
+}
+.headerLinks a:hover:after {
+  width: 100%;
+}
+
+.logo {
+  /* height: 6rem; */
+  width: 6rem;
 }

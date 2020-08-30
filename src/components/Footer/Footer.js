@@ -2,7 +2,7 @@ import React from "react"
 import { graphql, useStaticQuery, Link } from "gatsby"
 
 import styles from "./Footer.module.css"
-import Logo from "../../images/logo.png"
+import Logo from "../../images/logo_white.png"
 import zailacFB from "../../images/social-facebook-icon.svg"
 import zailacIG from "../../images/social-instagram-icon.svg"
 import { getAnchroFromParsedDOM, removeHtml } from "../../helper/helper"

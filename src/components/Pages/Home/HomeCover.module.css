@@ -28,6 +28,7 @@ $greyDefault: #5e5e5e; */
   width: 48%;
   height: 100%;
   background-color: #f2efebf8;
+  background-attachment: fixed;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -39,14 +40,17 @@ $greyDefault: #5e5e5e; */
   height: 100%;
   background-color: #dcc29ce8;
   background-image: linear-gradient(to bottom, #dcc29ced, #eee1ceef);
+  background-attachment: fixed;
   position: relative;
 }
 
 .girl {
   position: absolute;
   left: -28%;
+  /* left: -40%; */
   bottom: 0;
   width: auto;
+  /* height: 80vh; */
   height: 100vh;
   opacity: 100;
 }

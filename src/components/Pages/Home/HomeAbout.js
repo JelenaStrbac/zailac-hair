@@ -24,7 +24,7 @@ const HomeAbout = props => {
           <div
             dangerouslySetInnerHTML={{ __html: data.wordpressPage.excerpt }}
           />
-          <AniLink swipe top="exit" direction="left" to="/about/">
+          <AniLink fade to="/about/">
             <Button>Saznajte više</Button>
           </AniLink>
         </div>

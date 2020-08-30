@@ -68,7 +68,9 @@ module.exports = {
       options: {
         fonts: [
           `Raleway`,
-          `Roboto`,
+          `lato\:100,200,300,400,700`,
+          `Roboto\:100,200,300,400,500,700`,
+          `roboto\:100,200,300,400,500,700`,
           `Lato`,
           `Crimson Pro`,
           `Kaushan Script`,

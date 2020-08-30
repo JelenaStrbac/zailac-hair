@@ -9,10 +9,12 @@ import HomeAbout from "../components/Pages/Home/HomeAbout"
 import HomeServices from "../components/Pages/Home/HomeServices"
 import HomeGallery from "../components/Pages/Home/HomeGallery"
 import HomeBlog from "../components/Pages/Home/HomeBlog"
+// import Test from "../components/Pages/Home/Test"
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
+    {/* <Test /> */}
     <HomeCover />
     <HomeAbout />
     <HomeServices />

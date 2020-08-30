@@ -1,0 +1,78 @@
+/* $goldDefault: #dcc29c;
+$beigeDefault: #f2efeb;
+$blackDefault: #2c2c2c;
+$greyDefault: #5e5e5e; */
+
+.cover {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  /* background-image: url("../../../images/robert-zunikoff-ebno_NwaOns-unsplash.jpg");
+    background-attachment: fixed;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat; */
+}
+
+.cover p {
+  color: white;
+}
+
+.burger {
+  width: 4%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.924);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.marble {
+  width: 96%;
+  height: 100%;
+  background-color: #2c2c2c;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../../../images/lokne.jpg");
+  background-attachment: fixed;
+  background-size: contain;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+/* .gold {
+  width: 48%;
+  height: 100%;
+  background-color: #dcc29ce8;
+  background-image: linear-gradient(to bottom, #dcc29ced, #eee1ceef);
+  position: relative;
+} */
+
+.cover .title {
+  font-family: "Kaushan Script", cursive;
+  font-size: 8rem;
+  color: #e9d9c2;
+  z-index: 100;
+  line-height: 85%;
+  margin-bottom: 2rem;
+}
+
+.bottomParagraph {
+  margin-bottom: 5rem;
+}
+
+.cover .socialNetworks {
+  writing-mode: vertical-rl;
+  transform: scale(-1);
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-bottom: 4rem;
+  transition: all 0.3s ease;
+}
+
+.cover .socialNetworks:hover {
+  color: #dcc29c;
+}

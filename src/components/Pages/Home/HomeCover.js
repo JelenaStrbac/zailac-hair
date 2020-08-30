@@ -4,6 +4,9 @@ import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 import styles from "./HomeCover.module.css"
 import Women from "../../../images/women-cover.png"
+// import TEST from "../../../images/TESTL.png"
+// import Test from "../../../images/goll.png"
+// import TestTwo from "../../../images/goldwellHigh.png"
 import Button from "../../UI/Button/Button"
 import SocialLinks from "../../UI/SocialLinks/SocialLinks"
 
@@ -16,6 +19,7 @@ const HomeCover = props => {
         <p>
           Dobrodošli u Zailac hair, mesto gde vaša kosa dobija najbolju negu.
         </p>
+        {/* <img src={TEST} alt="test" /> */}
         <p className={styles.bottomParagraph}>
           #coloring #balayage #nadogradnja kose
         </p>

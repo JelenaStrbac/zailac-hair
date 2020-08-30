@@ -4,8 +4,8 @@ import { globalHistory as history } from "@reach/router"
 // import PropTypes from "prop-types"
 
 import styles from "./Header.module.css"
-import LogoBlack from "../../images/logoBlack.png"
-import LogoWhite from "../../images/logo.png"
+import LogoBlack from "../../images/logo_test.png"
+import LogoWhite from "../../images/logo_white.png"
 
 const Header = props => {
   const { location } = history
@@ -22,36 +22,42 @@ const Header = props => {
       <div className={styles.headerLinks}>
         <Link
           className={path === "/" ? styles.headerLink : styles.headerLinkSecond}
+          activeClassName={styles.active}
           to="/"
         >
           Početna
         </Link>
         <Link
           className={path === "/" ? styles.headerLink : styles.headerLinkSecond}
+          activeClassName={styles.active}
           to="/about/"
         >
           O nama
         </Link>
         <Link
           className={path === "/" ? styles.headerLink : styles.headerLinkSecond}
+          activeClassName={styles.active}
           to="/services/"
         >
           Usluge
         </Link>
         <Link
           className={path === "/" ? styles.headerLink : styles.headerLinkSecond}
+          activeClassName={styles.active}
           to="/gallery/"
         >
           Galerija
         </Link>
         <Link
           className={path === "/" ? styles.headerLink : styles.headerLinkSecond}
+          activeClassName={styles.active}
           to="/blog/"
         >
           Blog
         </Link>
         <Link
           className={path === "/" ? styles.headerLink : styles.headerLinkSecond}
+          activeClassName={styles.active}
           to="/contact/"
         >
           Kontakt
