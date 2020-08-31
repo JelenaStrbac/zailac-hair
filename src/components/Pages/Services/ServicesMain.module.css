@@ -58,4 +58,11 @@ td {
 
 tr td:first-child {
   text-align: left;
+  width: 80%;
+}
+tr td:nth-child(2) {
+  width: 10%;
+}
+tr td:nth-child(3) {
+  width: 10%;
 }

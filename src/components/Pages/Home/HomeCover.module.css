@@ -80,3 +80,25 @@ $greyDefault: #5e5e5e; */
 .cover .socialNetworks:hover {
   color: #dcc29c;
 }
+
+/* .frame {
+  width: 15rem;
+}
+
+.frameOutter {
+  display: flex;
+  align-items: center;
+  padding: 2rem 5rem;
+} */
+
+.cover p {
+  padding: 4rem 0;
+  font-family: "Raleway";
+}
+
+.zailac {
+  color: black;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: "Raleway";
+}

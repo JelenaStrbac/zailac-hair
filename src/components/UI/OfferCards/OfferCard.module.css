@@ -8,6 +8,7 @@ $greyDefault: #5e5e5e; */
   -moz-perspective: 150rem;
   position: relative;
   height: 26rem;
+  background-color: white;
 }
 
 .card__side__front {
@@ -93,4 +94,8 @@ $greyDefault: #5e5e5e; */
 .card_cta p {
   font-size: 1.2rem;
   font-weight: 400;
+}
+
+.frame {
+  width: 14rem;
 }

@@ -4,6 +4,8 @@ import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 import styles from "./HomeCover.module.css"
 import Women from "../../../images/women-cover.png"
+// import Frame from "../../../images/frameL.png"
+// import Frame from "../../../images/zailac.png"
 // import TEST from "../../../images/TESTL.png"
 // import Test from "../../../images/goll.png"
 // import TestTwo from "../../../images/goldwellHigh.png"
@@ -16,13 +18,20 @@ const HomeCover = props => {
       <SocialLinks />
       <div className={styles.marble}>
         <div className={styles.title}>Inspiracija vašom kosom</div>
-        <p>
-          Dobrodošli u Zailac hair, mesto gde vaša kosa dobija najbolju negu.
-        </p>
+        {/* <img src={Frame} className={styles.frame} alt="frame" /> */}
+        {/* <p>
+          Dobrodošli u <span className={styles.zailac}>Zailac hair</span>, mesto
+          gde vaša kosa dobija najbolju negu.
+        </p> */}
+        {/* <div className={styles.frameOutter}>
+          Dobrodošli u
+          <img src={Frame} className={styles.frame} alt="frame" />
+          Mesto gde vaša kosa dobija najbolju negu.
+        </div> */}
         {/* <img src={TEST} alt="test" /> */}
-        <p className={styles.bottomParagraph}>
+        {/* <p className={styles.bottomParagraph}>
           #coloring #balayage #nadogradnja kose
-        </p>
+        </p> */}
         <AniLink
           cover
           bg="url(/aniLinkOne.jpg)"

@@ -2,7 +2,9 @@ import React from "react"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 import styles from "./HomeAbout.module.css"
-import Tools from "../../../images/tools.png"
+// import Tools from "../../../images/tools.png"
+import Gold from "../../../images/goldMakeUp.png"
+// import Scissors from "../../../images/scissors.png"
 import Button from "../../UI/Button/Button"
 import Headings from "../../UI/Headings/Headings"
 import { useStaticQuery, graphql } from "gatsby"
@@ -19,6 +21,7 @@ const HomeAbout = props => {
   return (
     <div className={styles.about}>
       <div className={styles.homeAboutLeft}>
+        {/* <img src={Scissors} alt="hairdresser-tools" /> */}
         <Headings>O nama</Headings>
         <div className={styles.homeAboutMain}>
           <div
@@ -29,7 +32,8 @@ const HomeAbout = props => {
           </AniLink>
         </div>
       </div>
-      <img src={Tools} alt="hairdresser-tools" />
+      <img src={Gold} alt="hairdresser-tools" />
+      {/* <img src={Tools} alt="hairdresser-tools" /> */}
     </div>
   )
 }

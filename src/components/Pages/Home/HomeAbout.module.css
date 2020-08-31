@@ -4,9 +4,10 @@ $blackDefault: #2c2c2c;
 $greyDefault: #5e5e5e; */
 
 .about {
-  background-color: rgba(255, 255, 255, 0.972);
+  /* background-color: rgba(255, 255, 255, 0.972); */
   display: flex;
   justify-content: flex-end;
+  padding: 6rem 0;
 }
 
 .homeAboutLeft {

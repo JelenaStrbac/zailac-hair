@@ -7,6 +7,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import styles from "./AboutMain.module.css"
 import Headings from "../../UI/Headings/Headings"
 // import Mladen from "../../../images/mladen.jpg"
+import GoldAbout from "../../../images/goldAbout.png"
 import Cadiveu from "../../../images/cadiveu_logo.jpg"
 import Echosline from "../../../images/echosline_logo.png"
 import Loreal from "../../../images/loreal_logo.jpg"
@@ -27,7 +28,6 @@ const AboutMain = props => {
       }
     }
   `)
-  console.log(data)
   // const data = useStaticQuery(graphql`
   //   query MyQuery {
   //     allFile(filter: { relativeDirectory: { eq: "brands" } }) {
@@ -51,6 +51,9 @@ const AboutMain = props => {
           dangerouslySetInnerHTML={{ __html: data.salon.content }}
           className={styles.aboutWhyText}
         />
+      </div>
+      <div className={styles.goldAbout}>
+        <img src={GoldAbout} alt="gold" />
       </div>
       <div className={styles.aboutHairDresser}>
         <div>
