@@ -12,7 +12,7 @@ import SocialLinks from "../../UI/SocialLinks/SocialLinks"
 
 const HomeCover = props => {
   return (
-    <div className={styles.cover}>
+    <div className={styles.cover} id="HomeCover">
       <SocialLinks />
       <div className={styles.marble}>
         <div className={styles.title}>Inspiracija vašom kosom</div>
