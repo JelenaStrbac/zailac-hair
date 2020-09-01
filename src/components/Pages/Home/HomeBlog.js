@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
+import Fade from "react-reveal/Fade"
 
 import styles from "./HomeBlog.module.css"
 import Headings from "../../UI/Headings/Headings"
@@ -73,22 +74,24 @@ const HomeBlog = props => {
 
   return (
     <div className={styles.homeBlog}>
-      <div className={styles.homeBlogTitle}>
-        <Headings>Blog</Headings>
-        <div className={styles.homeBlogTitlePaginationAndButton}>
-          <div className={styles.homeBlogpagination}>
-            <Pagination
-              pageCount={paginationDetails.pageCount}
-              handlePageClick={handlePageClick}
-            />
-          </div>
+      <Fade up>
+        <div className={styles.homeBlogTitle}>
+          <Headings>Blog</Headings>
+          <div className={styles.homeBlogTitlePaginationAndButton}>
+            <div className={styles.homeBlogpagination}>
+              <Pagination
+                pageCount={paginationDetails.pageCount}
+                handlePageClick={handlePageClick}
+              />
+            </div>
 
-          <AniLink swipe top="exit" direction="left" to="/blog/">
-            <Button>Pogledajte sve</Button>
-          </AniLink>
+            <AniLink swipe top="exit" direction="left" to="/blog/">
+              <Button>Pogledajte sve</Button>
+            </AniLink>
+          </div>
         </div>
-      </div>
-      <div className={styles.homeBlogCards}>{blogPosts}</div>
+        <div className={styles.homeBlogCards}>{blogPosts}</div>
+      </Fade>
     </div>
   )
 }

@@ -1,9 +1,10 @@
 import React from "react"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
+import Fade from "react-reveal/Fade"
 
 import styles from "./HomeAbout.module.css"
-// import Tools from "../../../images/tools.png"
-import Gold from "../../../images/goldMakeUp.png"
+import Tools from "../../../images/ToolsTwoTest.png"
+// import Gold from "../../../images/goldMakeUp.png"
 // import Scissors from "../../../images/scissors.png"
 import Button from "../../UI/Button/Button"
 import Headings from "../../UI/Headings/Headings"
@@ -20,20 +21,24 @@ const HomeAbout = props => {
   `)
   return (
     <div className={styles.about}>
-      <div className={styles.homeAboutLeft}>
-        {/* <img src={Scissors} alt="hairdresser-tools" /> */}
-        <Headings>O nama</Headings>
-        <div className={styles.homeAboutMain}>
-          <div
-            dangerouslySetInnerHTML={{ __html: data.wordpressPage.excerpt }}
-          />
-          <AniLink fade to="/about/">
-            <Button>Saznajte više</Button>
-          </AniLink>
+      <Fade up>
+        <div className={styles.homeAboutLeft}>
+          {/* <img src={Scissors} alt="hairdresser-tools" /> */}
+          <Headings>O nama</Headings>
+          <div className={styles.homeAboutMain}>
+            <div
+              dangerouslySetInnerHTML={{ __html: data.wordpressPage.excerpt }}
+            />
+            <AniLink fade to="/about/">
+              <Button>Saznajte više</Button>
+            </AniLink>
+          </div>
         </div>
-      </div>
-      <img src={Gold} alt="hairdresser-tools" />
-      {/* <img src={Tools} alt="hairdresser-tools" /> */}
+        {/* <img src={Gold} alt="hairdresser-tools" /> */}
+        <div className={styles.tools}>
+          <img src={Tools} alt="hairdresser-tools" />
+        </div>
+      </Fade>
     </div>
   )
 }

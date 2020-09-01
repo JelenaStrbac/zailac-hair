@@ -2,12 +2,14 @@ import React from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faQuoteRight } from "@fortawesome/free-solid-svg-icons"
 import { graphql, useStaticQuery } from "gatsby"
+import Fade from "react-reveal/Fade"
 // import Img from "gatsby-image"
 
 import styles from "./AboutMain.module.css"
 import Headings from "../../UI/Headings/Headings"
 // import Mladen from "../../../images/mladen.jpg"
-import GoldAbout from "../../../images/goldAbout.png"
+// import Gold from "../../../images/goldMakeUp.png"
+// import GoldAbout from "../../../images/goldAbout.png"
 import Cadiveu from "../../../images/cadiveu_logo.jpg"
 import Echosline from "../../../images/echosline_logo.png"
 import Loreal from "../../../images/loreal_logo.jpg"
@@ -45,45 +47,46 @@ const AboutMain = props => {
   // `)
   return (
     <div className={styles.aboutMain}>
-      <div className={styles.aboutWhy}>
-        <Headings>Zašto Zailac Hair?</Headings>
-        <div
-          dangerouslySetInnerHTML={{ __html: data.salon.content }}
-          className={styles.aboutWhyText}
-        />
-      </div>
-      <div className={styles.goldAbout}>
-        <img src={GoldAbout} alt="gold" />
-      </div>
-      <div className={styles.aboutHairDresser}>
-        <div>
-          <div className={styles.aboutHairDresserImageOutterLarge}>
-            <div className={styles.aboutHairDresserImageOutter}>
-              <img
-                className={styles.aboutHairDresserImageInner}
-                src={data.mladenImg.source_url}
-                alt="Mladen Zailac"
+      <Fade>
+        <div className={styles.aboutWhy}>
+          <Headings>Zašto Zailac Hair?</Headings>
+          <div
+            dangerouslySetInnerHTML={{ __html: data.salon.content }}
+            className={styles.aboutWhyText}
+          />
+        </div>
+        <div className={styles.aboutHairDresser}>
+          <div>
+            <div className={styles.aboutHairDresserImageOutterLarge}>
+              <div className={styles.aboutHairDresserImageOutter}>
+                <img
+                  className={styles.aboutHairDresserImageInner}
+                  src={data.mladenImg.source_url}
+                  alt="Mladen Zailac"
+                />
+              </div>
+            </div>
+            <div className={styles.quotation}>
+              <FontAwesomeIcon
+                icon={faQuoteRight}
+                className={styles.quoteMark}
               />
+              <div
+                className={styles.q}
+                dangerouslySetInnerHTML={{ __html: data.mladen.excerpt }}
+              ></div>
             </div>
           </div>
-          <div className={styles.quotation}>
-            <FontAwesomeIcon icon={faQuoteRight} className={styles.quoteMark} />
-            <div
-              className={styles.q}
-              dangerouslySetInnerHTML={{ __html: data.mladen.excerpt }}
-            ></div>
+          <div className={styles.aboutHairDresserText}>
+            <Headings>Frizer</Headings>
+            <div dangerouslySetInnerHTML={{ __html: data.mladen.content }} />
+            <p className={styles.signature}>Mladen</p>
           </div>
         </div>
-        <div className={styles.aboutHairDresserText}>
-          <Headings>Frizer</Headings>
-          <div dangerouslySetInnerHTML={{ __html: data.mladen.content }} />
-          <p className={styles.signature}>Mladen</p>
-        </div>
-      </div>
-      <div className={styles.aboutBrands}>
-        <Headings>Preparati</Headings>
-        <div className={styles.aboutBrandsInner}>
-          {/* {data.allFile.edges.map(el => (
+        <div className={styles.aboutBrands}>
+          <Headings>Preparati</Headings>
+          <div className={styles.aboutBrandsInner}>
+            {/* {data.allFile.edges.map(el => (
             <div
               key={el.node.childImageSharp.fluid.src}
               style={{ width: "25%", padding: "4rem" }}
@@ -91,12 +94,13 @@ const AboutMain = props => {
               <Img fluid={el.node.childImageSharp.fluid} />
             </div>
           ))} */}
-          <img src={Cadiveu} alt="Cadiveu" />
-          <img src={Echosline} alt="Echosline" />
-          <img src={Loreal} alt="Loreal" />
-          <img src={Olaplex} alt="Olaplex" />
+            <img src={Cadiveu} alt="Cadiveu" />
+            <img src={Echosline} alt="Echosline" />
+            <img src={Loreal} alt="Loreal" />
+            <img src={Olaplex} alt="Olaplex" />
+          </div>
         </div>
-      </div>
+      </Fade>
     </div>
   )
 }

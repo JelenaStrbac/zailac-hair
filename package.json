@@ -40,6 +40,7 @@
     "react-helmet": "^6.1.0",
     "react-image-comparison-slider": "^1.8.4",
     "react-paginate": "^6.3.2",
+    "react-reveal": "^1.2.2",
     "styled-components": "^5.1.1"
   },
   "devDependencies": {

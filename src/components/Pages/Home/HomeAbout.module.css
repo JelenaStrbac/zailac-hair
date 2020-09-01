@@ -6,8 +6,11 @@ $greyDefault: #5e5e5e; */
 .about {
   /* background-color: rgba(255, 255, 255, 0.972); */
   display: flex;
-  justify-content: flex-end;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: flex-end; */
   padding: 6rem 0;
+  position: relative;
 }
 
 .homeAboutLeft {
@@ -16,7 +19,7 @@ $greyDefault: #5e5e5e; */
   justify-content: center;
   align-items: center;
   width: 50%;
-  padding: 1rem 0 2rem 0;
+  padding: 1rem 0 8rem 0;
 }
 
 .homeAboutMain {
@@ -26,4 +29,12 @@ $greyDefault: #5e5e5e; */
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+}
+
+.tools {
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  bottom: 0;
+  right: 0;
 }

@@ -51,6 +51,7 @@ $greyDefault: #5e5e5e; */
 
 .postsLeftBorder {
   border: 10px solid #f2efeb;
+  background-color: white;
   padding: 1rem;
   margin-bottom: 3rem;
   display: flex;

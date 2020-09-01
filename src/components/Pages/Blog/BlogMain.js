@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faUser, faClock } from "@fortawesome/free-solid-svg-icons"
+import Fade from "react-reveal/Fade"
 
 import styles from "./BlogMain.module.css"
 import Headings from "../../UI/Headings/Headings"
@@ -97,30 +98,32 @@ const BlogMain = props => {
 
   return (
     <div className={styles.blogMain}>
-      <Headings>Blog</Headings>
+      <Fade up>
+        <Headings>Blog</Headings>
 
-      <div className={styles.blogMainInner}>
-        <div className={styles.postsLeft}>
-          <div className={styles.blogpagination}>
-            <Pagination
-              pageCount={paginationDetails.pageCount}
-              handlePageClick={handlePageClick}
-            />
+        <div className={styles.blogMainInner}>
+          <div className={styles.postsLeft}>
+            <div className={styles.blogpagination}>
+              <Pagination
+                pageCount={paginationDetails.pageCount}
+                handlePageClick={handlePageClick}
+              />
+            </div>
+            {blogPosts}
           </div>
-          {blogPosts}
-        </div>
 
-        <div className={styles.postsRight}>
-          <h3>Sve objave</h3>
-          {data.allWordpressPost.edges.map((el, i) => (
-            <Link
-              to={`/blog/${el.node.slug}/`}
-              key={i}
-              dangerouslySetInnerHTML={{ __html: el.node.title }}
-            ></Link>
-          ))}
+          <div className={styles.postsRight}>
+            <h3>Sve objave</h3>
+            {data.allWordpressPost.edges.map((el, i) => (
+              <Link
+                to={`/blog/${el.node.slug}/`}
+                key={i}
+                dangerouslySetInnerHTML={{ __html: el.node.title }}
+              ></Link>
+            ))}
+          </div>
         </div>
-      </div>
+      </Fade>
     </div>
   )
 }

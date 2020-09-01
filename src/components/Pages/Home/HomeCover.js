@@ -4,6 +4,8 @@ import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 import styles from "./HomeCover.module.css"
 import Women from "../../../images/women-cover.png"
+import WomenTwo from "../../../images/WomenTwoTest.png"
+import WomenThree from "../../../images/WomenThreeTest.png"
 // import Frame from "../../../images/frameL.png"
 // import Frame from "../../../images/zailac.png"
 // import TEST from "../../../images/TESTL.png"
@@ -17,6 +19,11 @@ const HomeCover = props => {
     <div className={styles.cover} id="HomeCover">
       <SocialLinks />
       <div className={styles.marble}>
+        {/* <img
+          className={styles.girl}
+          src={WomenThree}
+          alt="women-with-curly-hair"
+        /> */}
         <div className={styles.title}>Inspiracija vašom kosom</div>
         {/* <img src={Frame} className={styles.frame} alt="frame" /> */}
         {/* <p>
@@ -44,7 +51,12 @@ const HomeCover = props => {
       </div>
 
       <div className={styles.gold}>
-        <img className={styles.girl} src={Women} alt="women-with-curly-hair" />
+        {/* <div className={styles.title}>Inspiracija vašom kosom</div> */}
+        <img
+          className={styles.girl}
+          src={WomenTwo}
+          alt="women-with-curly-hair"
+        />
       </div>
     </div>
   )

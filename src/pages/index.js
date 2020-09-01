@@ -1,4 +1,5 @@
 import React from "react"
+import Fade from "react-reveal/Fade"
 // import { Link } from "gatsby"
 
 import Layout from "../components/layout"
@@ -15,11 +16,13 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     {/* <Test /> */}
+    {/* <Fade up> */}
     <HomeCover />
     <HomeAbout />
     <HomeServices />
     <HomeGallery />
     <HomeBlog />
+    {/* </Fade> */}
     {/* <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
       <Image />
     </div>
