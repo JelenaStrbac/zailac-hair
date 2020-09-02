@@ -7,13 +7,11 @@ $greyDefault: #5e5e5e; */
   display: flex;
   width: 100vw;
   height: 100vh;
-  /* background-image: url("../../../images/WomenTwoTest.png"),
-    linear-gradient(#dcc29c, #dcc29c);
+  background-image: url("../../../images/background-cover.jpg");
   background-attachment: fixed;
-  background-size: contain;
-  background-position: right;
+  background-size: cover;
+  background-position: center top;
   background-repeat: no-repeat;
-  opacity: 10000; */
 }
 
 .burger {
@@ -27,59 +25,13 @@ $greyDefault: #5e5e5e; */
 }
 
 .marble {
-  width: 48%;
+  width: 96%;
   height: 100%;
-  /* background-color: #dcc29c; */
-  background-color: #f2efebf8;
-  background-attachment: fixed;
+  padding: 6rem 3rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
-  position: relative;
-}
-
-.gold {
-  width: 48%;
-  height: 100%;
-  /* clip-path: polygon(
-    50% 0%,
-    90% 20%,
-    100% 60%,
-    75% 100%,
-    25% 100%,
-    0% 60%,
-    10% 20%
-  ); */
-  background-color: #dcc29ce8;
-  /* background-image: url("../../../images/WomenTwoTest.png"),
-    linear-gradient(to bottom, #dcc29ced, #dcc29ced); */
-  /* background-image: url("../../../images/WomenTwoTest.png"),
-    linear-gradient(to bottom, #f2efeb, #f2efeb); */
-  /* background-size: cover; */
-  background-position: right;
-  background-repeat: no-repeat;
-  /* background-image: linear-gradient(to bottom, #dcc29ced, #eee1ceef); */
-  background-attachment: fixed;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.girl {
-  position: absolute;
-  /* left: -28%; */
-  /* left: -40%; */
-  bottom: 0;
-  /* left: 1%; */
-  right: 0;
-  width: auto;
-  /* height: 80vh; */
-  height: 94vh;
-  opacity: 1000;
-  z-index: 99;
 }
 
 .cover .title {
@@ -88,11 +40,7 @@ $greyDefault: #5e5e5e; */
   color: #e9d9c2;
   z-index: 100;
   line-height: 85%;
-  margin-bottom: 2rem;
-}
-
-.bottomParagraph {
-  margin-bottom: 5rem;
+  margin-bottom: 4rem;
 }
 
 .cover .socialNetworks {
@@ -106,26 +54,4 @@ $greyDefault: #5e5e5e; */
 
 .cover .socialNetworks:hover {
   color: #dcc29c;
-}
-
-/* .frame {
-  width: 15rem;
-}
-
-.frameOutter {
-  display: flex;
-  align-items: center;
-  padding: 2rem 5rem;
-} */
-
-.cover p {
-  padding: 4rem 0;
-  font-family: "Raleway";
-}
-
-.zailac {
-  color: black;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-family: "Raleway";
 }

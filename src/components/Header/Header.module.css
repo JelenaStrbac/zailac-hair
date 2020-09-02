@@ -20,6 +20,7 @@
 .headerLinks a {
   /* text-decoration: underline; */
   text-transform: uppercase;
+  color: #fff;
   font-weight: 400;
   transition: all 0.3s ease;
   display: flex;
