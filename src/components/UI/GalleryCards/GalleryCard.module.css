@@ -14,18 +14,10 @@ $greyDefault: #5e5e5e; */
   height: 100%;
   width: 100%;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
-  /* -webkit-transform: scale(1);
-  transform: scale(1); */
-  /* -webkit-filter: grayscale(100%);
-  filter: grayscale(100%); */
   transition: all 0.3s ease-in;
 }
 
 .galleryCards:hover img {
   -webkit-filter: brightness(0.6);
   filter: brightness(0.6);
-  /* -webkit-transform: scale(1.1);
-  transform: scale(1.1); */
-  /* -webkit-filter: grayscale(0);
-  filter: grayscale(0); */
 }

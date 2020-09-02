@@ -54,7 +54,6 @@ const ContactMain = props => {
             style={{ border: 0 }}
             allowFullScreen={false}
             aria-hidden="false"
-            //   tabIndex="0"
           ></iframe>
         </div>
 

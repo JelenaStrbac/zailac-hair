@@ -89,10 +89,3 @@ $greyDefault: #5e5e5e; */
   width: auto;
   height: auto;
 }
-
-.goldAbout {
-  display: flex;
-  justify-content: flex-end;
-  height: auto;
-  width: 100%;
-}

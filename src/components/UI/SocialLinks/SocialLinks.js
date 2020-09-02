@@ -1,6 +1,5 @@
 import React from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-// import { faBars } from "@fortawesome/free-solid-svg-icons"
 import {
   faFacebookSquare,
   faInstagramSquare,
@@ -24,9 +23,7 @@ const SocialLinks = props => {
   `)
   return (
     <div className={styles.burger} id="burger">
-      {/* <FontAwesomeIcon icon={faBars} className={styles.burgerIcon} /> */}
       <Sidebar pageWrapId={"page-wrap"} outerContainexrId={"burger"} />
-      {/* <Sidebar pageWrapId={"page-wrap"} outerContainexrId={"App"} /> */}
 
       <div id="page-wrap">
         <a

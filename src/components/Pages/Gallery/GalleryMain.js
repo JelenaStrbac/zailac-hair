@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react"
 import { graphql, useStaticQuery } from "gatsby"
 
 import "react-bnb-gallery/dist/style.css"
-// import React, { useState } from "react"
 import ReactBnbGallery from "react-bnb-gallery"
 
 import styles from "./GalleryMain.module.css"

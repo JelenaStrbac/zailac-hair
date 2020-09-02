@@ -27,7 +27,6 @@ const OfferCard = props => {
           <p>Rezervacija na</p>
           <div dangerouslySetInnerHTML={{ __html: props.phone }} />
           <img src={Frame} alt="zailac-frame" className={styles.frame} />
-          {/* <p>vaš Zailac Hair</p> */}
         </div>
       </div>
     </div>

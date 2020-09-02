@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
-import { graphql, useStaticQuery } from "gatsby"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
+import { graphql, useStaticQuery, Link } from "gatsby"
+// import AniLink from "gatsby-plugin-transition-link/AniLink"
 import Fade from "react-reveal/Fade"
 
 import styles from "./HomeBlog.module.css"
@@ -85,9 +85,9 @@ const HomeBlog = props => {
               />
             </div>
 
-            <AniLink swipe top="exit" direction="left" to="/blog/">
+            <Link to="/blog/">
               <Button>Pogledajte sve</Button>
-            </AniLink>
+            </Link>
           </div>
         </div>
         <div className={styles.homeBlogCards}>{blogPosts}</div>

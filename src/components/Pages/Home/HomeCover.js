@@ -1,6 +1,6 @@
 import React from "react"
-// import { Link } from "gatsby"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
+import { Link } from "gatsby"
+// import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 import styles from "./HomeCover.module.css"
 import Button from "../../UI/Button/Button"
@@ -10,9 +10,12 @@ const HomeCover = props => {
   return (
     <div className={styles.cover} id="HomeCover">
       <SocialLinks />
-      <div className={styles.marble}>
+      <div className={styles.main}>
         <div className={styles.title}>Inspiracija vašom kosom</div>
-        <AniLink
+        <Link to="/services/">
+          <Button>Naše usluge</Button>
+        </Link>
+        {/* <AniLink
           cover
           bg="url(/aniLinkOne.jpg)"
           direction="left"
@@ -20,7 +23,7 @@ const HomeCover = props => {
           to="/services/"
         >
           <Button>Naše usluge</Button>
-        </AniLink>
+        </AniLink> */}
       </div>
     </div>
   )
