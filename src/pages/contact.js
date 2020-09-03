@@ -7,7 +7,7 @@ import ContactMain from "../components/Pages/Contact/ContactMain"
 
 const ContactPage = () => (
   <Layout>
-    <SEO title="Contact" />
+    <SEO title="Kontakt" />
     <Cover imageName="salon_02.jpg" />
     <ContactMain />
   </Layout>

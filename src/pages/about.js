@@ -7,7 +7,7 @@ import Cover from "../components/UI/Cover/Cover"
 
 const SecondPage = () => (
   <Layout>
-    <SEO title="About" />
+    <SEO title="O nama" />
     <Cover imageName="salon_01.jpg" />
     <AboutMain />
   </Layout>

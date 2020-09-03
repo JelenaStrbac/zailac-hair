@@ -4,7 +4,7 @@ import { globalHistory as history } from "@reach/router"
 // import PropTypes from "prop-types"
 
 import styles from "./Header.module.css"
-import LogoBlack from "../../images/logo_test.png"
+import LogoBlack from "../../images/logo_black.png"
 import LogoWhite from "../../images/logo_white.png"
 
 const Header = props => {

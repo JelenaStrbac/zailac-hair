@@ -7,7 +7,7 @@ import GalleryMain from "../components/Pages/Gallery/GalleryMain"
 
 const GalleryPage = () => (
   <Layout>
-    <SEO title="Gallery" />
+    <SEO title="Galerija" />
     <Cover imageName="cover_gallery.jpg" />
     <GalleryMain />
   </Layout>

@@ -7,7 +7,7 @@ import ServicesMain from "../components/Pages/Services/ServicesMain"
 
 const ThirdPage = () => (
   <Layout>
-    <SEO title="Services" />
+    <SEO title="Usluge" />
     <Cover imageName="services_cover.jpg" />
     <ServicesMain />
   </Layout>
