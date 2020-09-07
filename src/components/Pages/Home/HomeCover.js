@@ -1,12 +1,22 @@
 import React from "react"
-import { Link } from "gatsby"
+import { graphql, useStaticQuery, Link } from "gatsby"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faPhone } from "@fortawesome/free-solid-svg-icons"
 // import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 import styles from "./HomeCover.module.css"
 import Button from "../../UI/Button/Button"
 import SocialLinks from "../../UI/SocialLinks/SocialLinks"
+import { removeHtml } from "../../../helper/helper"
 
 const HomeCover = props => {
+  const data = useStaticQuery(graphql`
+    query {
+      telefon: wordpressPage(title: { eq: "Telefon" }) {
+        content
+      }
+    }
+  `)
   return (
     <div className={styles.cover} id="HomeCover">
       <SocialLinks />
@@ -15,6 +25,11 @@ const HomeCover = props => {
         <Link to="/services/">
           <Button>Naše usluge</Button>
         </Link>
+        <div className={styles.reservation}>
+          <FontAwesomeIcon icon={faPhone} className={styles.icons} />{" "}
+          Rezervacije na{" "}
+          {removeHtml(data.telefon.content) || "+381 60 3230 250"}
+        </div>
         {/* <AniLink
           cover
           bg="url(/aniLinkOne.jpg)"

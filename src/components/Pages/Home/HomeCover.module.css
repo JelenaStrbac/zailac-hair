@@ -14,16 +14,6 @@ $greyDefault: #5e5e5e; */
   background-repeat: no-repeat;
 }
 
-.burger {
-  width: 4%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.924);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 .main {
   width: 96%;
   height: 100%;
@@ -32,11 +22,13 @@ $greyDefault: #5e5e5e; */
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
+  position: relative;
 }
 
 .cover .title {
   font-family: "Kaushan Script", cursive;
   font-size: 8rem;
+  text-align: center;
   color: #e9d9c2;
   z-index: 100;
   line-height: 85%;
@@ -54,4 +46,30 @@ $greyDefault: #5e5e5e; */
 
 .cover .socialNetworks:hover {
   color: #dcc29c;
+}
+
+.reservation {
+  color: white;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+.reservation .icons path {
+  fill: white;
+}
+
+@media only screen and (max-width: 992px) {
+  .burger {
+    display: none;
+    width: 0%;
+  }
+  .main {
+    width: 100%;
+  }
+  .cover .title {
+    font-size: 5rem;
+  }
 }

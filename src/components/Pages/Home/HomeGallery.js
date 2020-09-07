@@ -35,19 +35,22 @@ const HomeGallery = props => {
             <Button>Pogledajte sve</Button>
           </Link>
         </div>
-        <div className={styles.imageSlider}>
-          <div className={styles.lace}></div>
-          <ImageSlider
-            image1={After}
-            image2={Before}
-            sliderColor="#dcc29c"
-            handleColor="#dcc29c"
-            leftLabelText="Pre"
-            rightLabelText="Posle"
-            onSlide={() => {
-              console.log("sliding")
-            }}
-          />
+        <div className={styles.imageSliderOutter}>
+          <div className={styles.imageSlider}>
+            <div className={styles.lace}></div>
+            <ImageSlider
+              image1={After}
+              image2={Before}
+              sliderColor="#dcc29c"
+              handleColor="#dcc29c"
+              leftLabelText="Pre"
+              rightLabelText="Posle"
+              onSlide={() => {
+                console.log("sliding")
+              }}
+            />
+          </div>
+          <div className={styles.scrollText}>scroll levo / desno</div>
         </div>
       </Fade>
     </div>

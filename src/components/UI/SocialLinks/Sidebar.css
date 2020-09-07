@@ -95,3 +95,18 @@ $greyDefault: #5e5e5e; */
 .bm-overlay {
   background: rgba(0, 0, 0, 0.3);
 }
+
+@media only screen and (max-width: 992px) {
+  .bm-burger-bars {
+    background: white;
+  }
+
+  .bm-burger-button:hover span {
+    background: rgba(255, 255, 255, 0.794);
+  }
+
+  .bm-burger-button {
+    left: 1rem;
+    top: 1rem;
+  }
+}

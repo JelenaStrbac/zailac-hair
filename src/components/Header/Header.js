@@ -1,7 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
 import { globalHistory as history } from "@reach/router"
-// import PropTypes from "prop-types"
 
 import styles from "./Header.module.css"
 import LogoBlack from "../../images/logo_black.png"
@@ -21,42 +20,42 @@ const Header = props => {
       </Link>
       <div className={styles.headerLinks}>
         <Link
-          className={path === "/" ? styles.headerLink : styles.headerLinkSecond}
+          className={styles.headerLink}
           activeClassName={styles.active}
           to="/"
         >
           Početna
         </Link>
         <Link
-          className={path === "/" ? styles.headerLink : styles.headerLinkSecond}
+          className={styles.headerLink}
           activeClassName={styles.active}
           to="/about/"
         >
           O nama
         </Link>
         <Link
-          className={path === "/" ? styles.headerLink : styles.headerLinkSecond}
+          className={styles.headerLink}
           activeClassName={styles.active}
           to="/services/"
         >
           Usluge
         </Link>
         <Link
-          className={path === "/" ? styles.headerLink : styles.headerLinkSecond}
+          className={styles.headerLink}
           activeClassName={styles.active}
           to="/gallery/"
         >
           Galerija
         </Link>
         <Link
-          className={path === "/" ? styles.headerLink : styles.headerLinkSecond}
+          className={styles.headerLink}
           activeClassName={styles.active}
           to="/blog/"
         >
           Blog
         </Link>
         <Link
-          className={path === "/" ? styles.headerLink : styles.headerLinkSecond}
+          className={styles.headerLink}
           activeClassName={styles.active}
           to="/contact/"
         >
@@ -66,13 +65,5 @@ const Header = props => {
     </header>
   )
 }
-
-// Header.propTypes = {
-//   siteTitle: PropTypes.string,
-// }
-
-// Header.defaultProps = {
-//   siteTitle: ``,
-// }
 
 export default Header

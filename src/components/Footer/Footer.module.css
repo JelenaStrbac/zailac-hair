@@ -28,7 +28,6 @@ $greyDefault: #5e5e5e; */
 }
 
 .footerLogo .logo {
-  /* height: 6rem; */
   width: 6rem;
   margin: 1rem 1rem;
 }
@@ -52,7 +51,6 @@ $greyDefault: #5e5e5e; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* padding-left: 10rem; */
 }
 
 .footerLinks a {
@@ -91,7 +89,6 @@ $greyDefault: #5e5e5e; */
 
 .footerContactData {
   font-size: 0.7rem;
-  /* padding-right: 2rem; */
   color: white;
 }
 
@@ -132,4 +129,25 @@ $greyDefault: #5e5e5e; */
   display: flex;
   justify-content: center;
   color: white;
+}
+
+@media only screen and (max-width: 768px) {
+  .footerInner {
+    margin: 0 2rem;
+  }
+  .footerInnerMain {
+    padding: 0;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footerLinks,
+  .social {
+    display: none;
+  }
+  .footerContactData {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 100%;
+  }
 }
