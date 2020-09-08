@@ -53,7 +53,7 @@ const AboutMain = props => {
           />
         </div>
         <div className={styles.aboutHairDresser}>
-          <div>
+          <div className={styles.aboutHairDresserImgContainer}>
             <div className={styles.aboutHairDresserImageOutterLarge}>
               <div className={styles.aboutHairDresserImageOutter}>
                 <img
@@ -91,8 +91,10 @@ const AboutMain = props => {
               <Img fluid={el.node.childImageSharp.fluid} />
             </div>
           ))} */}
+
             <img src={Cadiveu} alt="Cadiveu" />
             <img src={Echosline} alt="Echosline" />
+
             <img src={Loreal} alt="Loreal" />
             <img src={Olaplex} alt="Olaplex" />
           </div>

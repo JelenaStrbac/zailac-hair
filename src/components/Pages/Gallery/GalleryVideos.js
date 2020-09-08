@@ -14,7 +14,7 @@ const GalleryVideos = props => {
   `)
   return (
     <div className={styles.galleryVideos}>
-      <Headings>Follow & like</Headings>
+      <Headings>Follow us</Headings>
       <div>
         Pratite nas na FB & IG i pogledajte još naših video transformacija
         <span role="img" aria-label="arm" style={{ fontSize: "1.5rem" }}>

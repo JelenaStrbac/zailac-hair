@@ -77,3 +77,81 @@ textarea {
 .error {
   color: red;
 }
+
+@media only screen and (max-width: 480px) {
+  .contactMain {
+    padding: 6rem 1rem 10rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .contactContainer {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .contactData {
+    flex-direction: column-reverse;
+  }
+  .form {
+    padding: 2rem;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  .contactMain iframe {
+    width: 100%;
+    height: 300px;
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .contactMain {
+    padding: 6rem 3rem 10rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .contactContainer {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+  .form {
+    padding: 2rem;
+    width: 70%;
+    margin-bottom: 2rem;
+  }
+  .contactContainerLeft {
+    align-items: center;
+  }
+  .contactData {
+    flex-direction: column-reverse;
+  }
+  .contactMain iframe {
+    width: 480px;
+    height: 400px;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .contactMain {
+    padding: 6rem 3rem 10rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .contactContainer {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+  .form {
+    padding: 2rem;
+    width: 50%;
+    margin-bottom: 2rem;
+  }
+}

@@ -99,3 +99,9 @@ $greyDefault: #5e5e5e; */
 .frame {
   width: 14rem;
 }
+
+@media only screen and (max-width: 480px) {
+  .offerCardText {
+    padding-top: 0;
+  }
+}

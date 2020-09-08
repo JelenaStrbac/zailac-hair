@@ -55,11 +55,11 @@ const ServicesMain = props => {
             />
           </div>
         </div>
-        <div className={styles.servicesPriceListContainer}>
-          <Headings>Cenovnik</Headings>
-          <div dangerouslySetInnerHTML={{ __html: data.cenovnik.content }} />
-        </div>
       </Fade>
+      <div className={styles.servicesPriceListContainer}>
+        <Headings>Cenovnik</Headings>
+        <div dangerouslySetInnerHTML={{ __html: data.cenovnik.content }} />
+      </div>
     </div>
   )
 }

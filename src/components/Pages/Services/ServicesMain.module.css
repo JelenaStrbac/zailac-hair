@@ -66,3 +66,48 @@ tr td:nth-child(2) {
 tr td:nth-child(3) {
   width: 10%;
 }
+
+@media only screen and (max-width: 480px) {
+  .serviceSpecialOffers {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 3rem;
+  }
+  .serviceSpecialOffersContainer,
+  .servicesPriceListContainer {
+    padding: 3rem 1rem;
+  }
+  td {
+    font-size: 0.9rem;
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .serviceSpecialOffers {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 3rem;
+  }
+  .serviceSpecialOffersContainer {
+    padding: 4rem 5rem;
+  }
+  .servicesPriceListContainer {
+    padding: 3rem 4rem;
+  }
+  td {
+    font-size: 0.9rem;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .serviceSpecialOffers {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 3rem;
+  }
+  .serviceSpecialOffersContainer {
+    padding: 8rem 10rem;
+  }
+  .servicesPriceListContainer {
+    padding: 3rem 4rem;
+  }
+  td {
+    font-size: 0.9rem;
+  }
+}

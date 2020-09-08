@@ -89,3 +89,80 @@ $greyDefault: #5e5e5e; */
   width: auto;
   height: auto;
 }
+
+@media only screen and (max-width: 480px) {
+  .aboutWhy,
+  .aboutBrands {
+    flex-direction: column;
+    justify-content: center;
+    padding: 6rem 1rem;
+  }
+  .aboutWhy div:first-child,
+  .aboutHairDresserText {
+    width: 100%;
+  }
+
+  .aboutWhyText {
+    padding-top: 0;
+    width: 100%;
+  }
+  .aboutHairDresser {
+    flex-direction: column-reverse;
+    padding: 0rem 1rem;
+  }
+  .aboutHairDresserImgContainer {
+    padding: 2rem;
+  }
+  .aboutBrandsInner {
+    flex-direction: column;
+  }
+  .aboutBrandsInner img {
+    padding-top: 2rem;
+  }
+  /* .aboutBrands h1 {
+    word-wrap: break-word;
+    font-size: 4.7rem;
+  } */
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .aboutWhy,
+  .aboutBrands {
+    flex-direction: column;
+    justify-content: center;
+    padding: 6rem 5rem;
+  }
+  .aboutWhy div:first-child,
+  .aboutHairDresserText {
+    width: 100%;
+  }
+
+  .aboutWhyText {
+    padding-top: 0;
+    width: 100%;
+  }
+  .aboutHairDresser {
+    flex-direction: column-reverse;
+    padding: 0rem 5rem;
+  }
+  .aboutBrandsInner {
+    flex-direction: column;
+  }
+  .aboutBrandsInner img {
+    padding-top: 2rem;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .aboutWhy,
+  .aboutBrands {
+    padding: 6rem 3rem;
+  }
+  .aboutHairDresser {
+    padding: 0rem 3rem;
+  }
+  .aboutWhyText,
+  .aboutHairDresserText {
+    padding-left: 2rem;
+  }
+}

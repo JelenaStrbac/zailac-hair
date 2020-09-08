@@ -5,7 +5,26 @@ import { Link } from "gatsby"
 import "./Sidebar.css"
 
 const Sidebar = props => {
+  // const [headerColor, setHeaderColor] = useState("white")
+
+  // const { location } = history
+  // const path = location.pathname
+  // const height = path === "/" ? window.innerHeight : 250
+  // // console.log(height)
+  // const listenScrollEvent = () => {
+  //   window.scrollY > height ? setHeaderColor("#555") : setHeaderColor("white")
+  // }
+  // useEffect(() => {
+  //   window.addEventListener("scroll", listenScrollEvent)
+  // })
+
+  // const styles = {
+  //   bmBurgerBars: {
+  //     background: headerColor,
+  //   },
+  // }
   return (
+    // <Menu {...props} styles={styles}>
     <Menu {...props}>
       <Link to="/">Početna</Link>
       <Link to="/about/">O nama</Link>

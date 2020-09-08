@@ -18,6 +18,8 @@ $greyDefault: #5e5e5e; */
 .imageSmallInFrame {
   width: 35%;
   height: auto;
+  /* max-height: 30vh;
+  max-width: auto; */
   position: absolute;
   right: 10rem;
   bottom: -2rem;
@@ -25,4 +27,37 @@ $greyDefault: #5e5e5e; */
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
   -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
   -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+}
+
+@media only screen and (max-width: 480px) {
+  .cover {
+    height: 40vh;
+  }
+  .imageSmallInFrame {
+    width: 70%;
+    right: 1rem;
+    bottom: -2rem;
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .cover {
+    height: 40vh;
+  }
+  .imageSmallInFrame {
+    width: 50%;
+    right: 2rem;
+    bottom: -2rem;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .cover {
+    height: 50vh;
+  }
+  .imageSmallInFrame {
+    width: 40%;
+    right: 2rem;
+    bottom: -2rem;
+  }
 }

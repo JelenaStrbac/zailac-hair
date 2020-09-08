@@ -86,3 +86,48 @@ $greyDefault: #5e5e5e; */
 .blogpagination {
   margin-bottom: 2rem;
 }
+
+@media only screen and (max-width: 768px) {
+  .blogMain {
+    padding: 6rem 1rem;
+  }
+
+  .blogMainInner {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+  }
+  .postsLeft {
+    width: 100%;
+  }
+  .postsRight {
+    width: 100%;
+    padding-left: 0;
+  }
+  .postsLeftBorder {
+    flex-direction: column;
+  }
+  .blogImageOutter {
+    width: 100%;
+  }
+
+  .blogTextOutter {
+    padding-left: 0;
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .postsLeftBorder {
+    flex-direction: column;
+  }
+  .blogImageOutter {
+    width: 100%;
+  }
+
+  .blogTextOutter {
+    padding-left: 0;
+    width: 100%;
+  }
+}

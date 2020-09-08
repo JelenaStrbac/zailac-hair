@@ -13,3 +13,29 @@
 .gallerypagination {
   margin-bottom: 2rem;
 }
+
+@media only screen and (max-width: 480px) {
+  .galleryMain {
+    padding: 6rem 1rem 0 1rem;
+  }
+  .galleryContainer {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 3rem;
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .galleryMain {
+    padding: 6rem 3rem 0 3rem;
+  }
+  .galleryContainer {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .galleryContainer {
+    grid-gap: 1rem;
+  }
+}
