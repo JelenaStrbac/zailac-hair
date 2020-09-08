@@ -96,6 +96,15 @@ $greyDefault: #5e5e5e; */
   background: rgba(0, 0, 0, 0.3);
 }
 
+.bm-menu .socialNetworksContainer {
+  display: none;
+}
+
+.bm-menu .socialNetworks {
+  writing-mode: horizontal-tb;
+  transform: scale(-1);
+}
+
 @media only screen and (max-width: 992px) {
   .bm-burger-bars {
     background: white;
@@ -109,4 +118,13 @@ $greyDefault: #5e5e5e; */
     left: 1rem;
     top: 1rem;
   }
+
+  /* .bm-item-list .socialNetworksContainer {
+    display: block;
+  }
+
+  .bm-item-list .socialNetworks {
+    writing-mode: horizontal-tb;
+    transform: scale(-1);
+  } */
 }

@@ -1,0 +1,48 @@
+.socialNetworks {
+  writing-mode: vertical-rl;
+  transform: scale(-1);
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-bottom: 3rem;
+  display: flex;
+  transition: all 0.3s ease;
+}
+
+.socialNetworks:hover,
+.socialNetworks:hover .icons path {
+  color: #dcc29c;
+}
+
+.socialNetworks svg {
+  transform: rotate(90deg);
+  font-size: 1.3rem;
+  margin-bottom: 0.3rem;
+  transition: all 0.3s ease;
+}
+
+.socialNetworksText {
+  display: none;
+}
+
+@media only screen and (max-width: 992px) {
+  .socialNetworks {
+    writing-mode: horizontal-tb;
+    transform: scale(1);
+    margin-bottom: 0rem;
+  }
+  .socialNetworks svg {
+    transform: rotate(0deg);
+    margin-right: 0.4rem;
+  }
+  .socialNetworks path {
+    fill: #d1d1d1;
+  }
+  .socialNetworks {
+    color: #d1d1d1;
+  }
+  .socialNetworksText {
+    display: block;
+    color: #d1d1d1;
+    margin-bottom: 0.4rem;
+  }
+}
