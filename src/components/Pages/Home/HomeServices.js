@@ -12,7 +12,7 @@ import Balayage from "../../../images/nadogradnja.jpg"
 import Extensions from "../../../images/extensions.jpg"
 import Headings from "../../UI/Headings/Headings"
 import { Link } from "gatsby"
-// import Image from "../../image"
+import ServiceImageCard from "../../UI/ServiceImageCards/ServiceImageCard"
 
 const HomeServices = props => {
   return (
@@ -28,47 +28,43 @@ const HomeServices = props => {
           <div className={styles.servicesGalleryInner}>
             <div className={styles.servicesGalleryContentImagesLeftTop}>
               <div className={styles.servicesGalleryContentImgReverse}>
-                <div className={styles.leftText}>Coloring</div>
-                <div className={styles.container}>
-                  {/* <Image imgName={"balayage.jpg"} /> */}
-                  <img src={Coloring} alt="coloring" />
-                  <div className={styles.overlay}>
-                    <div className={styles.text}>
-                      Bilo da želite da osvežite Vašu prirodnu boju, da
-                      prekrijete sede ili da drastično promenite boju svoje
-                      kose, tu smo za sve eksperimente za koje ste spremne.
-                    </div>
-                  </div>
-                </div>
+                <ServiceImageCard
+                  image={Coloring}
+                  text="Bilo da želite da osvežite Vašu prirodnu boju, da
+                  prekrijete sede ili da drastično promenite boju svoje
+                  kose, tu smo za sve eksperimente za koje ste spremne."
+                  // price="Farbanje izrastka + feniranje - sve dužine - RSD 1.700"
+                  title="Coloring"
+                  right={false}
+                  left={true}
+                />
               </div>
             </div>
 
             <div className={styles.servicesGalleryContentImagesLeft}>
               <div className={styles.servicesGalleryContentImgReverse}>
-                <div className={styles.leftText}>Pramenovi</div>
-                <div className={styles.container}>
-                  <img src={HairLights} alt="hairLights" />
-                  <div className={styles.overlay}>
-                    <div className={styles.text}>
-                      Iznijansirana kosa, pramenovi koji Vašoj kosi mogu dati
-                      volumen, tonovi umerenih ili intenzivnih boja koji mogu
-                      itekako obogatiti Vašu kosu su naša specijalnost.
-                    </div>
-                  </div>
-                </div>
+                <ServiceImageCard
+                  image={HairLights}
+                  text="Iznijansirana kosa, pramenovi koji Vašoj kosi mogu dati
+                  volumen, tonovi umerenih ili intenzivnih boja koji mogu
+                  itekako obogatiti Vašu kosu su naša specijalnost."
+                  // price="Balayage / pramenovi Loreal + žensko šišanje + feniranje + olaplex za negu - kosa srednje dužine - RSD 8.499"
+                  title="Pramenovi"
+                  right={false}
+                  left={true}
+                />
               </div>
 
               <div className={styles.servicesGalleryContentImgReverse}>
-                <div className={styles.leftText}>Šišanje</div>
-                <div className={styles.container}>
-                  <img src={HairCut} alt="hairCut" />
-                  <div className={styles.overlay}>
-                    <div className={styles.text}>
-                      Ostavite utisak dame koja drži do frizure, lepe i negovane
-                      kose.
-                    </div>
-                  </div>
-                </div>
+                <ServiceImageCard
+                  image={HairCut}
+                  text="Ostavite utisak dame koja drži do frizure, lepe i negovane
+                  kose."
+                  // price="Žensko šišanje + feniranje na ravno / lokne - sve dužine kose - RSD 1.100"
+                  title="Šišanje"
+                  right={false}
+                  left={true}
+                />
               </div>
             </div>
           </div>
@@ -76,45 +72,42 @@ const HomeServices = props => {
           <div className={styles.servicesGalleryInner}>
             <div className={styles.servicesGalleryContentImagesRight}>
               <div className={styles.servicesGalleryContentImg}>
-                <div className={styles.container}>
-                  <img src={Styling} alt="styling" />
-                  <div className={styles.overlay}>
-                    <div className={styles.text}>
-                      Feniranje na ravno ili lokne u zavisnosti od Vaše želje.
-                    </div>
-                  </div>
-                </div>
-                <div className={styles.rightText}>Stilizovanje</div>
+                <ServiceImageCard
+                  image={Styling}
+                  text="Feniranje na ravno ili lokne u zavisnosti od Vaše želje."
+                  // price="Feniranje sve dužine kose RSD 500"
+                  title="Stilizovanje"
+                  right={true}
+                  left={false}
+                />
               </div>
 
               <div className={styles.servicesGalleryContentImg}>
-                <div className={styles.container}>
-                  <img src={Balayage} alt="balayage" />
-                  <div className={styles.overlay}>
-                    <div className={styles.text}>
-                      Zdrava, negovana, lepo ošišana, perfektno obojena,
-                      lepršava i živahna su reči kojima se može opisati Vaša
-                      kosa nakon ove usluge koja je može potpuno promeniti od
-                      korena do vrhova.
-                    </div>
-                  </div>
-                </div>
-                <div className={styles.rightText}>Balayage</div>
+                <ServiceImageCard
+                  image={Balayage}
+                  text="  Zdrava, negovana, lepo ošišana, perfektno obojena,
+                  lepršava i živahna su reči kojima se može opisati Vaša
+                  kosa nakon ove usluge koja je može potpuno promeniti od
+                  korena do vrhova."
+                  // price="Balayage / pramenovi Echosline + žensko šišanje + feniranje + olaplex za negu - sve dužine kose RSD 5.200"
+                  title="Balayage"
+                  right={true}
+                  left={false}
+                />
               </div>
             </div>
 
             <div className={styles.servicesGalleryContentImagesRightBottom}>
               <div className={styles.servicesGalleryContentImg}>
-                <div className={styles.container}>
-                  <img src={Extensions} alt="extensions" />
-                  <div className={styles.overlay}>
-                    <div className={styles.text}>
-                      Prepustite profesionalcima da Vašu kosu srede onako kako
-                      zaslužuje svaka dama.
-                    </div>
-                  </div>
-                </div>
-                <div className={styles.rightText}>Nadogradnja</div>
+                <ServiceImageCard
+                  image={Extensions}
+                  text="Prepustite profesionalcima da Vašu kosu srede onako kako
+                zaslužuje svaka dama."
+                  // price="Nadogradnja kose po pramenu RSD 400"
+                  title="Nadogradnja"
+                  right={true}
+                  left={false}
+                />
               </div>
             </div>
           </div>

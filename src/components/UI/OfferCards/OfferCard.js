@@ -1,7 +1,7 @@
 import React from "react"
 
 import styles from "./OfferCard.module.css"
-import Frame from "../../../images/FrameL.png"
+import Logo from "../../../images/logo_black.png"
 
 const OfferCard = props => {
   return (
@@ -26,7 +26,7 @@ const OfferCard = props => {
         <div className={styles.card_cta}>
           <p>Rezervacija na</p>
           <div dangerouslySetInnerHTML={{ __html: props.phone }} />
-          <img src={Frame} alt="zailac-frame" className={styles.frame} />
+          <img src={Logo} alt="zailac-logo" className={styles.frame} />
         </div>
       </div>
     </div>

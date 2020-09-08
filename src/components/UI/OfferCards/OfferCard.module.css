@@ -49,6 +49,13 @@ $greyDefault: #5e5e5e; */
   justify-content: space-between;
 }
 
+.offerCardText div:first-child {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .offerCardText p:first-child {
   color: #5e5e5e;
   opacity: 0.8;
@@ -97,7 +104,7 @@ $greyDefault: #5e5e5e; */
 }
 
 .frame {
-  width: 14rem;
+  width: 8rem;
 }
 
 @media only screen and (max-width: 480px) {
