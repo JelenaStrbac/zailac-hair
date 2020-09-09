@@ -31,7 +31,7 @@
 
 @media only screen and (max-width: 480px) {
   .homeBlog {
-    padding: 2rem 2rem;
+    padding: 2rem 1rem;
   }
 
   .homeBlogTitle {

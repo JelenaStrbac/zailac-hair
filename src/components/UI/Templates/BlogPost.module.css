@@ -64,3 +64,26 @@ $greyDefault: #5e5e5e; */
   text-decoration: none;
   padding-bottom: 1rem;
 }
+
+@media only screen and (max-width: 480px) {
+  .blogMain {
+    padding: 6rem 1rem;
+  }
+
+  .blogMainInner {
+    flex-direction: column;
+  }
+
+  .postsLeft {
+    width: 100%;
+  }
+
+  .postsRight {
+    width: 100%;
+    padding-left: 0rem;
+  }
+
+  .blogMain img {
+    max-width: 100%;
+  }
+}

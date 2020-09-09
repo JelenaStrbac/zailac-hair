@@ -53,10 +53,21 @@ $greyDefault: #5e5e5e; */
 
 @media only screen and (min-width: 769px) and (max-width: 992px) {
   .cover {
-    height: 50vh;
+    height: 40vh;
   }
   .imageSmallInFrame {
     width: 40%;
+    right: 2rem;
+    bottom: -2rem;
+  }
+}
+
+@media only screen and (max-width: 768px) and (orientation: landscape) {
+  .cover {
+    height: 40vh;
+  }
+  .imageSmallInFrame {
+    width: 30%;
     right: 2rem;
     bottom: -2rem;
   }

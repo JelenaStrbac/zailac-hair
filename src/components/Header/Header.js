@@ -13,7 +13,7 @@ const Header = props => {
   const path = location.pathname
 
   const [isHeaderSticky, setIsHeaderSticky] = useState(false)
-  const height = path === "/" ? window.innerHeight : 250
+  const height = path === "/" ? window.innerHeight : window.innerHeight * 0.4
 
   const listenScrollEvent = () => {
     window.scrollY > height ? setIsHeaderSticky(true) : setIsHeaderSticky(false)

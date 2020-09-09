@@ -5,7 +5,6 @@ import Fade from "react-reveal/Fade"
 import styles from "./ServicesMain.module.css"
 import Headings from "../../UI/Headings/Headings"
 import OfferCard from "../../UI/OfferCards/OfferCard"
-import ServicesImg from "../../../images/services_hair.png"
 
 const ServicesMain = props => {
   const data = useStaticQuery(graphql`
@@ -60,9 +59,6 @@ const ServicesMain = props => {
       <div className={styles.servicesPriceListContainer}>
         <Headings>Cenovnik</Headings>
         <div dangerouslySetInnerHTML={{ __html: data.cenovnik.content }} />
-      </div>
-      <div className={styles.servicesImg}>
-        <img src={ServicesImg} alt="hair" />
       </div>
     </div>
   )

@@ -6,7 +6,7 @@ $greyDefault: #5e5e5e; */
 #page-wrap {
   text-align: center;
 
-  overflow: auto;
+  /* overflow: auto; */
   top: 15%;
   left: 1.15%;
   position: fixed;

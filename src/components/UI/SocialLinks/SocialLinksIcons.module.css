@@ -1,10 +1,18 @@
 .socialNetworks {
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
   writing-mode: vertical-rl;
+  -webkit-transform: scale(-1);
+  -ms-transform: scale(-1);
   transform: scale(-1);
   text-transform: uppercase;
   text-decoration: none;
   margin-bottom: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
@@ -14,9 +22,13 @@
 }
 
 .socialNetworks svg {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
   transform: rotate(90deg);
   font-size: 1.3rem;
   margin-bottom: 0.3rem;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
@@ -26,11 +38,17 @@
 
 @media only screen and (max-width: 992px) {
   .socialNetworks {
+    -webkit-writing-mode: horizontal-tb;
+    -ms-writing-mode: lr-tb;
     writing-mode: horizontal-tb;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
     transform: scale(1);
     margin-bottom: 0rem;
   }
   .socialNetworks svg {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
     transform: rotate(0deg);
     margin-right: 0.4rem;
   }

@@ -1,6 +1,8 @@
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
+const autoprefixer = require(`autoprefixer`)
+const browserslist = require("browserslist")
 
 const {
   NODE_ENV,
@@ -87,15 +89,20 @@ module.exports = {
     },
     "gatsby-plugin-styled-components",
     {
+      resolve: `gatsby-plugin-postcss`,
+      options: {
+        postCssPlugins: [
+          require(`postcss-preset-env`)({ stage: 0 }),
+          autoprefixer({ browsers: browserslist() }),
+        ],
+      },
+    },
+    {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          `Raleway`,
-          `lato\:100,200,300,400,700`,
           `Roboto\:100,200,300,400,500,700`,
           `roboto\:100,200,300,400,500,700`,
-          `Lato`,
-          `Crimson Pro`,
           `Kaushan Script`,
           `source sans pro\:100,200,300,400,500,700`, // you can also specify font weights and styles
         ],
