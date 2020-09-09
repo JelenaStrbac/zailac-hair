@@ -1,6 +1,5 @@
 import React from "react"
 import ImageSlider from "react-image-comparison-slider"
-// import AniLink from "gatsby-plugin-transition-link/AniLink"
 import Fade from "react-reveal/Fade"
 
 import styles from "./HomeGallery.module.css"
@@ -8,7 +7,7 @@ import Button from "../../UI/Button/Button"
 import Before from "../../../images/before.jpeg"
 import After from "../../../images/after.jpeg"
 import Headings from "../../UI/Headings/Headings"
-import { Link } from "gatsby"
+import FadeLink from "../../UI/FadeLink/FadeLink"
 
 const HomeGallery = props => {
   return (
@@ -31,9 +30,9 @@ const HomeGallery = props => {
             frizuru koja će udahnuti novi život kako kosi, tako i Vama, mi smo
             tu da Vam pomognemo - pronadjite inspiraciju u našoj galeriji.
           </p>
-          <Link to="/gallery/">
+          <FadeLink to="/gallery/">
             <Button>Pogledajte sve</Button>
-          </Link>
+          </FadeLink>
         </div>
         <div className={styles.imageSliderOutter}>
           <div className={styles.imageSlider}>

@@ -1,11 +1,12 @@
 import React from "react"
-import { graphql, useStaticQuery, Link } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 
 import styles from "./Footer.module.css"
 import Logo from "../../images/logo_white.png"
 import zailacFB from "../../images/social-facebook-icon.svg"
 import zailacIG from "../../images/social-instagram-icon.svg"
 import { getAnchroFromParsedDOM, removeHtml } from "../../helper/helper"
+import FadeLink from "../UI/FadeLink/FadeLink"
 
 const Footer = props => {
   const data = useStaticQuery(graphql`
@@ -38,11 +39,11 @@ const Footer = props => {
 
         <div className={styles.footerInnerMain}>
           <div className={styles.footerLinks}>
-            <Link to="/about/">O NAMA</Link>
-            <Link to="/services/">USLUGE I CENOVNIK</Link>
-            <Link to="/gallery/">GALERIJA</Link>
-            <Link to="/blog/">BLOG</Link>
-            <Link to="/contact/">KONTAKT</Link>
+            <FadeLink to="/about/">O NAMA</FadeLink>
+            <FadeLink to="/services/">USLUGE I CENOVNIK</FadeLink>
+            <FadeLink to="/gallery/">GALERIJA</FadeLink>
+            <FadeLink to="/blog/">BLOG</FadeLink>
+            <FadeLink to="/contact/">KONTAKT</FadeLink>
           </div>
           <div className={styles.social}>
             <a

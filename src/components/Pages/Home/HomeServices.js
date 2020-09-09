@@ -1,5 +1,4 @@
 import React from "react"
-// import AniLink from "gatsby-plugin-transition-link/AniLink"
 import Fade from "react-reveal/Fade"
 
 import styles from "./HomeServices.module.css"
@@ -11,8 +10,8 @@ import Styling from "../../../images/stilizovanje.jpg"
 import Balayage from "../../../images/nadogradnja.jpg"
 import Extensions from "../../../images/extensions.jpg"
 import Headings from "../../UI/Headings/Headings"
-import { Link } from "gatsby"
 import ServiceImageCard from "../../UI/ServiceImageCards/ServiceImageCard"
+import FadeLink from "../../UI/FadeLink/FadeLink"
 
 const HomeServices = props => {
   return (
@@ -20,9 +19,9 @@ const HomeServices = props => {
       <Fade up>
         <div className={styles.homeServicesTitleAndButton}>
           <Headings>Naše usluge</Headings>
-          <Link to="/services/">
+          <FadeLink to="/services/">
             <Button>Pogledajte sve</Button>
-          </Link>
+          </FadeLink>
         </div>
         <div className={styles.servicesGallery}>
           <div className={styles.servicesGalleryInner}>

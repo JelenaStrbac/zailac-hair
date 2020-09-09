@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react"
-import { Link } from "gatsby"
 import { globalHistory as history } from "@reach/router"
 import classNames from "classnames"
 
@@ -7,6 +6,7 @@ import styles from "./Header.module.css"
 import "./HeaderSticky.css"
 import LogoBlack from "../../images/logo_black.png"
 import LogoWhite from "../../images/logo_white.png"
+import FadeLink from "../UI/FadeLink/FadeLink"
 
 const Header = props => {
   const { location } = history
@@ -28,56 +28,56 @@ const Header = props => {
         stickyHeader: isHeaderSticky,
       })}
     >
-      <Link to="/">
+      <FadeLink to="/">
         <img
           className={styles.logo}
           src={path === "/" && !isHeaderSticky ? LogoBlack : LogoWhite}
           alt="zailac-hair-logo"
         />
-      </Link>
+      </FadeLink>
       <div className={styles.headerLinks}>
-        <Link
+        <FadeLink
           className={styles.headerLink}
-          activeClassName={styles.active}
+          activeClass={styles.active}
           to="/"
         >
           Početna
-        </Link>
-        <Link
+        </FadeLink>
+        <FadeLink
           className={styles.headerLink}
-          activeClassName={styles.active}
+          activeClass={styles.active}
           to="/about/"
         >
           O nama
-        </Link>
-        <Link
+        </FadeLink>
+        <FadeLink
           className={styles.headerLink}
-          activeClassName={styles.active}
+          activeClass={styles.active}
           to="/services/"
         >
           Usluge
-        </Link>
-        <Link
+        </FadeLink>
+        <FadeLink
           className={styles.headerLink}
-          activeClassName={styles.active}
+          activeClass={styles.active}
           to="/gallery/"
         >
           Galerija
-        </Link>
-        <Link
+        </FadeLink>
+        <FadeLink
           className={styles.headerLink}
-          activeClassName={styles.active}
+          activeClass={styles.active}
           to="/blog/"
         >
           Blog
-        </Link>
-        <Link
+        </FadeLink>
+        <FadeLink
           className={styles.headerLink}
-          activeClassName={styles.active}
+          activeClass={styles.active}
           to="/contact/"
         >
           Kontakt
-        </Link>
+        </FadeLink>
       </div>
     </header>
   )

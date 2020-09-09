@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react"
-import { graphql, useStaticQuery, Link } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faUser, faClock } from "@fortawesome/free-solid-svg-icons"
 import Fade from "react-reveal/Fade"
@@ -7,6 +7,7 @@ import Fade from "react-reveal/Fade"
 import styles from "./BlogMain.module.css"
 import Headings from "../../UI/Headings/Headings"
 import Pagination from "../../UI/Pagination/Pagination"
+import FadeLink from "../../UI/FadeLink/FadeLink"
 
 const BlogMain = props => {
   const data = useStaticQuery(graphql`
@@ -84,12 +85,12 @@ const BlogMain = props => {
               {el.node.date}
             </div>
             <div dangerouslySetInnerHTML={{ __html: el.node.excerpt }} />
-            <Link
+            <FadeLink
               className={styles.cardLinkStyle}
               to={`/blog/${el.node.slug}/`}
             >
               Pročitajte više
-            </Link>
+            </FadeLink>
           </div>
         </div>
       )
@@ -115,11 +116,11 @@ const BlogMain = props => {
           <div className={styles.postsRight}>
             <h3>Sve objave</h3>
             {data.allWordpressPost.edges.map((el, i) => (
-              <Link
+              <FadeLink
                 to={`/blog/${el.node.slug}/`}
                 key={i}
                 dangerouslySetInnerHTML={{ __html: el.node.title }}
-              ></Link>
+              ></FadeLink>
             ))}
           </div>
         </div>

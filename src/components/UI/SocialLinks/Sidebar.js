@@ -1,9 +1,10 @@
 import React from "react"
 import { stack as Menu } from "react-burger-menu"
-import { Link } from "gatsby"
 
 import "./Sidebar.css"
 import SocialLinksIcons from "./SocialLinksIcons"
+// import FadeLink from "../FadeLink/FadeLink"
+import { Link } from "gatsby"
 
 const Sidebar = props => {
   return (

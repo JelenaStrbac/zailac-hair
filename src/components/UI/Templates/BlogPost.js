@@ -1,11 +1,12 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faUser, faClock } from "@fortawesome/free-solid-svg-icons"
 
 import styles from "./BlogPost.module.css"
 import Layout from "../../layout"
 import Cover from "../Cover/Cover"
+import FadeLink from "../FadeLink/FadeLink"
 
 const BlogPost = ({ data }) => {
   const post = data.wordpressPost
@@ -36,11 +37,11 @@ const BlogPost = ({ data }) => {
           <div className={styles.postsRight}>
             <h3>Sve objave</h3>
             {data.allWordpressPost.edges.map((el, i) => (
-              <Link
+              <FadeLink
                 to={`/blog/${el.node.slug}/`}
                 key={i}
                 dangerouslySetInnerHTML={{ __html: el.node.title }}
-              ></Link>
+              ></FadeLink>
             ))}
           </div>
         </div>

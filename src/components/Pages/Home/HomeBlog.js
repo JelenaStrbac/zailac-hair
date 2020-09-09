@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react"
-import { graphql, useStaticQuery, Link } from "gatsby"
-// import AniLink from "gatsby-plugin-transition-link/AniLink"
+import { graphql, useStaticQuery } from "gatsby"
 import Fade from "react-reveal/Fade"
 
 import styles from "./HomeBlog.module.css"
@@ -8,6 +7,7 @@ import Headings from "../../UI/Headings/Headings"
 import Button from "../../UI/Button/Button"
 import Card from "../../UI/Cards/Card"
 import Pagination from "../../UI/Pagination/Pagination"
+import FadeLink from "../../UI/FadeLink/FadeLink"
 
 const HomeBlog = props => {
   const data = useStaticQuery(graphql`
@@ -85,9 +85,9 @@ const HomeBlog = props => {
               />
             </div>
 
-            <Link to="/blog/">
+            <FadeLink to="/blog/">
               <Button>Pogledajte sve</Button>
-            </Link>
+            </FadeLink>
           </div>
         </div>
         <div className={styles.homeBlogCards}>{blogPosts}</div>
