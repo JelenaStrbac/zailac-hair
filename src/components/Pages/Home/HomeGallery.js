@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useState } from "react"
 import ImageSlider from "react-image-comparison-slider"
 import Fade from "react-reveal/Fade"
 
@@ -10,9 +10,10 @@ import Headings from "../../UI/Headings/Headings"
 import FadeLink from "../../UI/FadeLink/FadeLink"
 
 const HomeGallery = props => {
+  const [hasDocument, setHasDocument] = useState(false)
   useEffect(() => {
-    if (typeof window === "undefined" || !window.document) {
-      return
+    if (typeof window !== "undefined" && window.document) {
+      setHasDocument(true)
     }
   }, [])
 
@@ -43,7 +44,7 @@ const HomeGallery = props => {
         <div className={styles.imageSliderOutter}>
           <div className={styles.imageSlider}>
             <div className={styles.lace}></div>
-            {typeof window !== "undefined" ? (
+            {typeof window !== "undefined" && hasDocument ? (
               <ImageSlider
                 image1={After}
                 image2={Before}
