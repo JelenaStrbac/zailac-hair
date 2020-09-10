@@ -135,71 +135,71 @@ module.exports = {
       },
     },
     `gatsby-plugin-transition-link`,
-    {
-      resolve: `gatsby-plugin-advanced-sitemap`,
-      options: {
-        query: `
-          {
-            allWordpressPost {
-                  edges {
-                      node {
-                          id
-                          slug
-                          updated_at
-                          feature_image
-                      }
-                  }
-              }
-              allSitePage {
-                  edges {
-                      node {
-                          id
-                          slug
-                          updated_at
-                          feature_image
-                      }
-                  }
-              }
-          }`,
-        mapping: {
-          allGhostPost: {
-            sitemap: `posts`,
-          },
-          allGhostPage: {
-            sitemap: `pages`,
-          },
-        },
-        exclude: [
-          `/dev-404-page`,
-          `/404`,
-          `/404.html`,
-          `/offline-plugin-app-shell-fallback`,
-        ],
-        createLinkInHead: true, // optional: create a link in the `<head>` of your site
-        addUncaughtPages: true, // optional: will fill up pages that are not caught by queries and mapping and list them under `sitemap-pages.xml`
-      },
-    },
-    {
-      resolve: "gatsby-plugin-robots-txt",
-      options: {
-        resolveEnv: () => NETLIFY_ENV,
-        env: {
-          production: {
-            policy: [{ userAgent: "*" }],
-          },
-          "branch-deploy": {
-            policy: [{ userAgent: "*", disallow: ["/"] }],
-            sitemap: null,
-            host: null,
-          },
-          "deploy-preview": {
-            policy: [{ userAgent: "*", disallow: ["/"] }],
-            sitemap: null,
-            host: null,
-          },
-        },
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-advanced-sitemap`,
+    //   options: {
+    //     query: `
+    //       {
+    //         allWordpressPost {
+    //               edges {
+    //                   node {
+    //                       id
+    //                       slug
+    //                       updated_at
+    //                       feature_image
+    //                   }
+    //               }
+    //           }
+    //           allSitePage {
+    //               edges {
+    //                   node {
+    //                       id
+    //                       slug
+    //                       updated_at
+    //                       feature_image
+    //                   }
+    //               }
+    //           }
+    //       }`,
+    //     mapping: {
+    //       allGhostPost: {
+    //         sitemap: `posts`,
+    //       },
+    //       allGhostPage: {
+    //         sitemap: `pages`,
+    //       },
+    //     },
+    //     exclude: [
+    //       `/dev-404-page`,
+    //       `/404`,
+    //       `/404.html`,
+    //       `/offline-plugin-app-shell-fallback`,
+    //     ],
+    //     createLinkInHead: true, // optional: create a link in the `<head>` of your site
+    //     addUncaughtPages: true, // optional: will fill up pages that are not caught by queries and mapping and list them under `sitemap-pages.xml`
+    //   },
+    // },
+    // {
+    //   resolve: "gatsby-plugin-robots-txt",
+    //   options: {
+    //     resolveEnv: () => NETLIFY_ENV,
+    //     env: {
+    //       production: {
+    //         policy: [{ userAgent: "*" }],
+    //       },
+    //       "branch-deploy": {
+    //         policy: [{ userAgent: "*", disallow: ["/"] }],
+    //         sitemap: null,
+    //         host: null,
+    //       },
+    //       "deploy-preview": {
+    //         policy: [{ userAgent: "*", disallow: ["/"] }],
+    //         sitemap: null,
+    //         host: null,
+    //       },
+    //     },
+    //   },
+    // },
 
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
