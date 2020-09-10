@@ -9,11 +9,11 @@ $greyDefault: #5e5e5e; */
   display: flex;
   width: 100vw;
   height: 100vh;
-  background-image: url("../../../images/background-cover.jpg");
+  /* background-image: url("../../../images/background-cover.jpg");
   background-attachment: fixed;
   background-size: cover;
   background-position: center top;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
 }
 
 .main {
