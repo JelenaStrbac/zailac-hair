@@ -1,0 +1,11 @@
+.burger {
+  width: 4%;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+}
+
+@media only screen and (max-width: 992px) {
+  .burger {
+    width: 0%;
+  }
+}

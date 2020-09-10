@@ -1,0 +1,138 @@
+/* $goldDefault: #dcc29c;
+$beigeDefault: #f2efeb;
+$blackDefault: #2c2c2c;
+$greyDefault: #5e5e5e; */
+
+.homeServices {
+  background-image: linear-gradient(
+    to left bottom,
+    #f2efebf8,
+    rgba(255, 255, 255, 0.918),
+    rgba(255, 255, 255, 0.9)
+  );
+  padding: 4rem;
+}
+
+.homeServicesTitleAndButton {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 30%;
+}
+
+.servicesGallery {
+  display: flex;
+  justify-content: center;
+  padding: 4rem;
+}
+
+.servicesGalleryInner {
+  display: flex;
+}
+
+.servicesGalleryContentImagesLeft,
+.servicesGalleryContentImagesRight,
+.servicesGalleryContentImagesRightBottom,
+.servicesGalleryContentImagesLeftTop {
+  display: flex;
+  flex-direction: column;
+}
+
+.servicesGalleryContentImagesLeft {
+  padding-top: 5rem;
+}
+
+.servicesGalleryContentImagesRightBottom,
+.servicesGalleryContentImagesLeftTop {
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.homeServices img {
+  padding: 1rem;
+  transition: all 0.3s ease;
+}
+
+.servicesGalleryContentImg,
+.servicesGalleryContentImgReverse {
+  display: flex;
+  align-items: flex-start;
+}
+
+.servicesGalleryContentImg:hover img,
+.servicesGalleryContentImgReverse:hover img {
+  -webkit-filter: brightness(0.7);
+  filter: brightness(0.3);
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 480px) {
+  .homeServices {
+    padding: 3rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .homeServicesTitleAndButton {
+    padding-left: 0%;
+    padding: 2rem;
+  }
+  .servicesGallery {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+  }
+  .servicesGalleryInner {
+    flex-direction: column;
+  }
+  .servicesGalleryContentImagesLeft {
+    padding-top: 0;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  .servicesGalleryContentImg {
+    width: 100%;
+  }
+
+  .servicesGalleryContentImagesRightBottom,
+  .servicesGalleryContentImagesLeftTop {
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  .servicesGalleryContentImgReverse {
+    flex-direction: row-reverse;
+  }
+  .leftText {
+    transform: scale(1);
+    padding-top: 1rem;
+    padding-bottom: 0;
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .homeServices {
+    padding: 1rem;
+  }
+  .servicesGallery {
+    padding: 2rem;
+  }
+  .servicesGalleryInner {
+    flex-direction: column;
+  }
+  .servicesGalleryContentImagesLeft {
+    padding-top: 0;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .servicesGalleryInner {
+    flex-direction: column;
+  }
+  .servicesGalleryContentImagesLeft {
+    padding-top: 0;
+  }
+}

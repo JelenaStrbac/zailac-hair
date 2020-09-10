@@ -1,0 +1,116 @@
+/* $goldDefault: #dcc29c;
+$beigeDefault: #f2efeb;
+$blackDefault: #2c2c2c;
+$greyDefault: #5e5e5e; */
+
+.serviceSpecialOffersContainer,
+.servicesPriceListContainer {
+  padding: 6rem 8rem;
+}
+
+.serviceSpecialOffers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 1fr;
+  justify-content: space-evenly;
+  grid-gap: 6rem;
+  padding: 2rem 2rem 0 2rem;
+}
+
+table {
+  width: 100%;
+  margin-bottom: 4rem;
+}
+
+th,
+table tr:first-child {
+  background-color: #dcc29c;
+  padding: 0.5rem;
+  font-weight: bold;
+}
+
+strong {
+  font-weight: bold;
+}
+
+thead th:first-child {
+  text-align: left;
+}
+
+th,
+td {
+  border-bottom: 1px solid #ddd;
+}
+
+tr {
+  background-color: white;
+}
+
+tr:hover {
+  background-color: #f5f5f5;
+}
+
+td {
+  border-bottom: 1px solid #ddd;
+  padding: 0.8rem;
+  text-align: center;
+}
+
+tr td:first-child {
+  text-align: left;
+  width: 80%;
+}
+tr td:nth-child(2) {
+  width: 10%;
+}
+tr td:nth-child(3) {
+  width: 10%;
+}
+
+@media only screen and (max-width: 480px) {
+  .serviceSpecialOffers {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 3rem;
+  }
+  .serviceSpecialOffersContainer {
+    padding: 3rem 1rem;
+  }
+
+  .servicesPriceListContainer {
+    padding: 3rem 1rem 0 1rem;
+  }
+  td {
+    font-size: 0.9rem;
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .serviceSpecialOffers {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 3rem;
+  }
+  .serviceSpecialOffersContainer {
+    padding: 4rem 5rem;
+  }
+  .servicesPriceListContainer {
+    padding: 3rem 4rem;
+  }
+  td {
+    font-size: 0.9rem;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .serviceSpecialOffers {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 3rem;
+  }
+  .serviceSpecialOffersContainer {
+    padding: 8rem 10rem;
+  }
+  .servicesPriceListContainer {
+    padding: 3rem 4rem;
+  }
+  td {
+    font-size: 0.9rem;
+  }
+}

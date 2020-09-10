@@ -1,0 +1,60 @@
+/* $goldDefault: #dcc29c;
+$beigeDefault: #f2efeb;
+$blackDefault: #2c2c2c;
+$greyDefault: #5e5e5e; */
+
+.card {
+  padding: 1rem;
+  border: 0.4rem solid #f2efeb;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  transition: all 0.5s ease;
+}
+
+.card:hover {
+  border: 0.4rem solid #dcc29c;
+}
+
+.cardImage {
+  width: 100%;
+  /* height: 100%; */
+  height: 14rem;
+}
+
+.cardImage img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.cardText {
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cardLinkStyle {
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+  font-weight: bold;
+  width: 50%;
+  transition: all 0.3s ease;
+}
+
+.cardLinkStyle:before {
+  content: "";
+  flex: 1 1;
+  border-bottom: 1px solid #000;
+  margin: auto;
+}
+.cardLinkStyle:before {
+  margin-right: 10px;
+}
+
+.cardLinkStyle:hover {
+  color: #dcc29c;
+}

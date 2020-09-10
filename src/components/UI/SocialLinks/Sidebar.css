@@ -1,0 +1,121 @@
+/* $goldDefault: #dcc29c;
+$beigeDefault: #f2efeb;
+$blackDefault: #2c2c2c;
+$greyDefault: #5e5e5e; */
+
+#page-wrap {
+  text-align: center;
+
+  /* overflow: auto; */
+  top: 15%;
+  left: 1.15%;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* Individual item */
+.bm-item {
+  display: inline-block;
+
+  /* Our sidebar item styling */
+  text-decoration: none;
+  margin-bottom: 1rem;
+  color: #d1d1d1;
+  transition: color 0.2s;
+  outline: none;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+/* Change color on hover */
+.bm-item:hover {
+  color: white;
+}
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: fixed;
+  width: 26px;
+  height: 20px;
+  left: 1.1%;
+  top: 26px;
+  outline: none;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #555;
+  outline: none;
+}
+
+/* Color/shape of burger icon bars on hover*/
+.bm-burger-button:hover span {
+  background: #dcc29c;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+  outline: none;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #bdc3c7;
+  outline: none;
+}
+
+.bm-cross-button:hover .bm-cross {
+  background: white;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: #2c2c2c;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.bm-menu .socialNetworksContainer {
+  display: none;
+}
+
+.bm-menu .socialNetworks {
+  writing-mode: horizontal-tb;
+  transform: scale(-1);
+}
+
+@media only screen and (max-width: 992px) {
+  .bm-burger-bars {
+    background: white;
+  }
+
+  .bm-burger-button:hover span {
+    background: rgba(255, 255, 255, 0.794);
+  }
+
+  .bm-burger-button {
+    left: 1rem;
+    top: 1rem;
+  }
+}

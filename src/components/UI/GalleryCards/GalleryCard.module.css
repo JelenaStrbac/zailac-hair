@@ -1,0 +1,23 @@
+/* $goldDefault: #dcc29c;
+$beigeDefault: #f2efeb;
+$blackDefault: #2c2c2c;
+$greyDefault: #5e5e5e; */
+
+.galleryCards {
+  overflow: auto;
+  position: relative;
+  cursor: pointer;
+}
+
+.galleryCards img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease-in;
+}
+
+.galleryCards:hover img {
+  -webkit-filter: brightness(0.6);
+  filter: brightness(0.6);
+}

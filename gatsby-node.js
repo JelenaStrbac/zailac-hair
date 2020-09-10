@@ -1,7 +1,25 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
+const path = require(`path`)
 
-// You can delete this file if you're not using it
+exports.createPages = ({ graphql, actions }) => {
+  const { createPage } = actions
+  return graphql(`
+    {
+      allWordpressPost {
+        nodes {
+          slug
+        }
+      }
+    }
+  `).then(result => {
+    result.data.allWordpressPost.nodes.forEach(node => {
+      createPage({
+        path: `/blog/${node.slug}/`,
+        component: path.resolve("./src/components/UI/Templates/BlogPost.js"),
+        // component: path.resolve("./src/pages/blog.js"),
+        context: {
+          slug: node.slug,
+        },
+      })
+    })
+  })
+}

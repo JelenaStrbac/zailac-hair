@@ -1,0 +1,95 @@
+/* $goldDefault: #dcc29c;
+$beigeDefault: #f2efeb;
+$blackDefault: #2c2c2c;
+$greyDefault: #5e5e5e; */
+
+.cover {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../../../images/background-cover.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+.main {
+  width: 96%;
+  height: 100%;
+  padding: 6rem 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+}
+
+.cover .title {
+  font-family: "Kaushan Script", cursive;
+  font-size: 8rem;
+  text-align: center;
+  color: #e9d9c2;
+  z-index: 100;
+  line-height: 85%;
+  margin-bottom: 4rem;
+}
+
+.cover .socialNetworks {
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  -webkit-transform: scale(-1);
+  -ms-transform: scale(-1);
+  transform: scale(-1);
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-bottom: 4rem;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.cover .socialNetworks:hover {
+  color: #dcc29c;
+}
+
+.reservation {
+  color: white;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+.reservation .icons path {
+  fill: white;
+}
+
+@media only screen and (max-width: 992px) {
+  .cover {
+    background-attachment: scroll;
+  }
+  .burger {
+    display: none;
+    width: 0%;
+  }
+  .main {
+    width: 100%;
+  }
+  .cover .title {
+    font-size: 5rem;
+  }
+}
