@@ -140,7 +140,7 @@ module.exports = {
       options: {
         query: `
           {
-              allGhostPost {
+            allWordpressPost {
                   edges {
                       node {
                           id
@@ -150,7 +150,7 @@ module.exports = {
                       }
                   }
               }
-              allGhostPage {
+              allSitePage {
                   edges {
                       node {
                           id
