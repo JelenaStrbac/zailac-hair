@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import ImageSlider from "react-image-comparison-slider"
 import Fade from "react-reveal/Fade"
 
@@ -10,6 +10,12 @@ import Headings from "../../UI/Headings/Headings"
 import FadeLink from "../../UI/FadeLink/FadeLink"
 
 const HomeGallery = props => {
+  useEffect(() => {
+    if (typeof window === "undefined" || !window.document) {
+      return
+    }
+  }, [])
+
   return (
     <div className={styles.homeGallery}>
       <Fade up>
@@ -37,17 +43,21 @@ const HomeGallery = props => {
         <div className={styles.imageSliderOutter}>
           <div className={styles.imageSlider}>
             <div className={styles.lace}></div>
-            <ImageSlider
-              image1={After}
-              image2={Before}
-              sliderColor="#dcc29c"
-              handleColor="#dcc29c"
-              leftLabelText="Pre"
-              rightLabelText="Posle"
-              onSlide={() => {
-                console.log("sliding")
-              }}
-            />
+            {typeof window !== "undefined" ? (
+              <ImageSlider
+                image1={After}
+                image2={Before}
+                sliderColor="#dcc29c"
+                handleColor="#dcc29c"
+                leftLabelText="Pre"
+                rightLabelText="Posle"
+                onSlide={() => {
+                  console.log("sliding")
+                }}
+              />
+            ) : (
+              <div>Loading</div>
+            )}
           </div>
           <div className={styles.scrollText}>scroll levo / desno</div>
         </div>
