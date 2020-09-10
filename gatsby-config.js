@@ -93,7 +93,7 @@ module.exports = {
       options: {
         postCssPlugins: [
           require(`postcss-preset-env`)({ stage: 0 }),
-          autoprefixer({ browsers: browserslist() }),
+          autoprefixer(),
         ],
       },
     },

@@ -4,6 +4,8 @@ $blackDefault: #2c2c2c;
 $greyDefault: #5e5e5e; */
 
 .cover {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 100vw;
   height: 100vh;
@@ -18,9 +20,18 @@ $greyDefault: #5e5e5e; */
   width: 96%;
   height: 100%;
   padding: 6rem 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
   justify-content: flex-end;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   position: relative;
 }
@@ -36,11 +47,17 @@ $greyDefault: #5e5e5e; */
 }
 
 .cover .socialNetworks {
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
   writing-mode: vertical-rl;
+  -webkit-transform: scale(-1);
+  -ms-transform: scale(-1);
   transform: scale(-1);
   text-transform: uppercase;
   text-decoration: none;
   margin-bottom: 4rem;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
@@ -62,6 +79,9 @@ $greyDefault: #5e5e5e; */
 }
 
 @media only screen and (max-width: 992px) {
+  .cover {
+    background-attachment: scroll;
+  }
   .burger {
     display: none;
     width: 0%;

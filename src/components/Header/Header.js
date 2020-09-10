@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useState, useRef } from "react"
 import { globalHistory as history } from "@reach/router"
 import classNames from "classnames"
 
@@ -11,16 +11,32 @@ import FadeLink from "../UI/FadeLink/FadeLink"
 const Header = props => {
   const { location } = history
   const path = location.pathname
-
+  const pathRef = useRef(path)
   const [isHeaderSticky, setIsHeaderSticky] = useState(false)
-  const height = path === "/" ? window.innerHeight : window.innerHeight * 0.4
 
-  const listenScrollEvent = () => {
-    window.scrollY > height ? setIsHeaderSticky(true) : setIsHeaderSticky(false)
-  }
   useEffect(() => {
+    const listenScrollEvent = () => {
+      const height =
+        pathRef.current === "/" ? window.innerHeight : window.innerHeight * 0.4
+      setIsHeaderSticky(window.scrollY > height)
+    }
     window.addEventListener("scroll", listenScrollEvent)
-  })
+    return () => {
+      window.removeEventListener("scroll", listenScrollEvent)
+    }
+  }, [])
+
+  // const height = path === "/" ? window.innerHeight : window.innerHeight * 0.4
+
+  // const listenScrollEvent = () => {
+  //   window.scrollY > height ? setIsHeaderSticky(true) : setIsHeaderSticky(false)
+  // }
+  // useEffect(() => {
+  //   window.addEventListener("scroll", listenScrollEvent)
+  //   return () => {
+  //     window.removeEventListener("scroll", listenScrollEvent)
+  //   }
+  // }, [])
 
   return (
     <header

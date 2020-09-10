@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { graphql, useStaticQuery } from "gatsby"
 
 import styles from "./GalleryVideos.module.css"
@@ -12,6 +12,9 @@ const GalleryVideos = props => {
       }
     }
   `)
+  useEffect(() => {
+    if (window.instgrm) window.instgrm.Embeds.process()
+  }, [])
   return (
     <div className={styles.galleryVideos}>
       <Headings>Follow us</Headings>

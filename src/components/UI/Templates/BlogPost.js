@@ -1,17 +1,24 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faUser, faClock } from "@fortawesome/free-solid-svg-icons"
 
 import styles from "./BlogPost.module.css"
 import Layout from "../../layout"
 import Cover from "../Cover/Cover"
-import FadeLink from "../FadeLink/FadeLink"
+import SEO from "../../seo"
+// import FadeLink from "../FadeLink/FadeLink"
 
 const BlogPost = ({ data }) => {
   const post = data.wordpressPost
   return (
     <Layout>
+      <SEO
+        title={post.title}
+        description={post.excerpt}
+        image={{ src: post.featured_media.source_url, width: 300, height: 300 }}
+        keywords={post.categories.map(res => res.name).join(", ")}
+      />
       <Cover imageName="blog_cover.jpg" />
       <div className={styles.blogMain}>
         <div className={styles.blogMainInner}>
@@ -37,11 +44,11 @@ const BlogPost = ({ data }) => {
           <div className={styles.postsRight}>
             <h3>Sve objave</h3>
             {data.allWordpressPost.edges.map((el, i) => (
-              <FadeLink
+              <Link
                 to={`/blog/${el.node.slug}/`}
                 key={i}
                 dangerouslySetInnerHTML={{ __html: el.node.title }}
-              ></FadeLink>
+              ></Link>
             ))}
           </div>
         </div>
