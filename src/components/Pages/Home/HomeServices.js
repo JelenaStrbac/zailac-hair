@@ -1,19 +1,60 @@
 import React from "react"
 import Fade from "react-reveal/Fade"
+import { useStaticQuery, graphql } from "gatsby"
 
 import styles from "./HomeServices.module.css"
 import Button from "../../UI/Button/Button"
-import Coloring from "../../../images/coloring.jpg"
-import HairLights from "../../../images/balayage.jpg"
-import HairCut from "../../../images/sisanje.jpg"
-import Styling from "../../../images/stilizovanje.jpg"
-import Balayage from "../../../images/nadogradnja.jpg"
-import Extensions from "../../../images/extensions.jpg"
 import Headings from "../../UI/Headings/Headings"
 import ServiceImageCard from "../../UI/ServiceImageCards/ServiceImageCard"
 import FadeLink from "../../UI/FadeLink/FadeLink"
 
 const HomeServices = props => {
+  const data = useStaticQuery(graphql`
+    query {
+      coloring: file(relativePath: { eq: "home-services-coloring.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 320, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      hairLights: file(relativePath: { eq: "home-services-hairLights.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 320, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      hairCut: file(relativePath: { eq: "home-services-hairCut.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 300, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      styling: file(relativePath: { eq: "home-services-styling.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 300, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      balayage: file(relativePath: { eq: "home-services-balayage.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 300, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      extensions: file(relativePath: { eq: "home-services-extensions.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 300, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
   return (
     <div className={styles.homeServices}>
       <Fade up>
@@ -28,11 +69,10 @@ const HomeServices = props => {
             <div className={styles.servicesGalleryContentImagesLeftTop}>
               <div className={styles.servicesGalleryContentImgReverse}>
                 <ServiceImageCard
-                  image={Coloring}
+                  fluid={data.coloring.childImageSharp.fluid}
                   text="Bilo da želite da osvežite Vašu prirodnu boju, da
                   prekrijete sede ili da drastično promenite boju svoje
                   kose, tu smo za sve eksperimente za koje ste spremne."
-                  // price="Farbanje izrastka + feniranje - sve dužine - RSD 1.700"
                   title="Coloring"
                   right={false}
                   left={true}
@@ -43,11 +83,10 @@ const HomeServices = props => {
             <div className={styles.servicesGalleryContentImagesLeft}>
               <div className={styles.servicesGalleryContentImgReverse}>
                 <ServiceImageCard
-                  image={HairLights}
+                  fluid={data.hairLights.childImageSharp.fluid}
                   text="Iznijansirana kosa, pramenovi koji Vašoj kosi mogu dati
                   volumen, tonovi umerenih ili intenzivnih boja koji mogu
                   itekako obogatiti Vašu kosu su naša specijalnost."
-                  // price="Balayage / pramenovi Loreal + žensko šišanje + feniranje + olaplex za negu - kosa srednje dužine - RSD 8.499"
                   title="Pramenovi"
                   right={false}
                   left={true}
@@ -56,10 +95,9 @@ const HomeServices = props => {
 
               <div className={styles.servicesGalleryContentImgReverse}>
                 <ServiceImageCard
-                  image={HairCut}
+                  fluid={data.hairCut.childImageSharp.fluid}
                   text="Ostavite utisak dame koja drži do frizure, lepe i negovane
                   kose."
-                  // price="Žensko šišanje + feniranje na ravno / lokne - sve dužine kose - RSD 1.100"
                   title="Šišanje"
                   right={false}
                   left={true}
@@ -72,9 +110,8 @@ const HomeServices = props => {
             <div className={styles.servicesGalleryContentImagesRight}>
               <div className={styles.servicesGalleryContentImg}>
                 <ServiceImageCard
-                  image={Styling}
+                  fluid={data.styling.childImageSharp.fluid}
                   text="Feniranje na ravno ili lokne u zavisnosti od Vaše želje."
-                  // price="Feniranje sve dužine kose RSD 500"
                   title="Stilizovanje"
                   right={true}
                   left={false}
@@ -83,12 +120,11 @@ const HomeServices = props => {
 
               <div className={styles.servicesGalleryContentImg}>
                 <ServiceImageCard
-                  image={Balayage}
+                  fluid={data.balayage.childImageSharp.fluid}
                   text="  Zdrava, negovana, lepo ošišana, perfektno obojena,
                   lepršava i živahna su reči kojima se može opisati Vaša
                   kosa nakon ove usluge koja je može potpuno promeniti od
                   korena do vrhova."
-                  // price="Balayage / pramenovi Echosline + žensko šišanje + feniranje + olaplex za negu - sve dužine kose RSD 5.200"
                   title="Balayage"
                   right={true}
                   left={false}
@@ -99,10 +135,9 @@ const HomeServices = props => {
             <div className={styles.servicesGalleryContentImagesRightBottom}>
               <div className={styles.servicesGalleryContentImg}>
                 <ServiceImageCard
-                  image={Extensions}
+                  fluid={data.extensions.childImageSharp.fluid}
                   text="Prepustite profesionalcima da Vašu kosu srede onako kako
                 zaslužuje svaka dama."
-                  // price="Nadogradnja kose po pramenu RSD 400"
                   title="Nadogradnja"
                   right={true}
                   left={false}

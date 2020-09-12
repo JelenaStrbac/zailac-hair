@@ -128,7 +128,7 @@ $greyDefault: #5e5e5e; */
   }
 }
 
-@media only screen and (min-width: 769px) and (max-width: 992px) {
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
   .servicesGalleryInner {
     flex-direction: column;
   }

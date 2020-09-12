@@ -2,6 +2,7 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faUser, faClock } from "@fortawesome/free-solid-svg-icons"
+import Img from "gatsby-image"
 
 import styles from "./BlogPost.module.css"
 import Layout from "../../layout"
@@ -24,11 +25,16 @@ const BlogPost = ({ data }) => {
         <div className={styles.blogMainInner}>
           <div className={styles.postsLeft}>
             <div className={styles.blogImageOutter}>
-              <img
+              <Img
+                style={{ width: "100%", height: "100%" }}
+                fluid={post.featured_media.localFile.childImageSharp.fluid}
+                imgStyle={{ objectFit: "cover" }}
+              />
+              {/* <img
                 className={styles.blogImage}
                 src={post.featured_media.source_url}
                 alt="zailacBlogImage"
-              />
+              /> */}
             </div>
 
             <h3 dangerouslySetInnerHTML={{ __html: post.title }}></h3>
@@ -69,6 +75,14 @@ export const pageQuery = graphql`
       }
       featured_media {
         source_url
+        localFile {
+          childImageSharp {
+            fluid(maxWidth: 750, quality: 90) {
+              srcSet
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
       date(formatString: "DD-MM-YYYY")
       categories {

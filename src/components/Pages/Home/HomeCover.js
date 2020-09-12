@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import styled from "styled-components"
+// import styled from "styled-components"
 import BackgroundImage from "gatsby-background-image"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -20,7 +20,7 @@ const HomeCover = props => {
       }
       desktop: file(relativePath: { eq: "background-cover.jpg" }) {
         childImageSharp {
-          fluid(quality: 100, maxWidth: 1920) {
+          fluid(quality: 90, maxWidth: 1920) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
@@ -30,14 +30,14 @@ const HomeCover = props => {
 
   const imageData = data.desktop.childImageSharp.fluid
   return (
-    <BackgroundImage
-      Tag="section"
-      className={props.className}
-      fluid={imageData}
-      backgroundColor={`#040e18`}
-    >
-      <div className={styles.cover} id="HomeCover">
-        <SocialLinks />
+    <div className={styles.cover} id="HomeCover">
+      <SocialLinks />
+      <BackgroundImage
+        Tag="section"
+        className={styles.mybg}
+        fluid={imageData}
+        backgroundColor={`#040e18`}
+      >
         <div className={styles.main}>
           <div className={styles.title}>Inspiracija vašom kosom</div>
           <FadeLink to="/services/">
@@ -49,21 +49,31 @@ const HomeCover = props => {
             {removeHtml(data.telefon.content) || "+381 60 3230 250"}
           </div>
         </div>
-      </div>
-    </BackgroundImage>
+      </BackgroundImage>
+    </div>
   )
 }
 
-const StyledBackgroundSection = styled(HomeCover)`
-  width: 100vw;
-  height: 100vh;
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center top;
-  background-repeat: no-repeat;
-  @media only screen and (max-width: 992px) {
-    background-attachment: scroll;
-  }
-`
+// const StyledBackgroundSection = styled(HomeCover)`
+//   #mybg,
+//   #mybg::before,
+//   #mybg::after {
+//     width: 100%;
+//     height: 100%;
+//     background-attachment: fixed;
+//     background-size: cover;
+//     background-position: center top;
+//     background-repeat: no-repeat;
+//     z-index: 0;
+//   }
+//   @media only screen and (max-width: 992px) {
+//     #mybg,
+//     #mybg::before,
+//     #mybg::after {
+//       background-attachment: scroll;
+//       z-index: 0;
+//     }
+//   }
+// `
 
-export default StyledBackgroundSection
+export default HomeCover

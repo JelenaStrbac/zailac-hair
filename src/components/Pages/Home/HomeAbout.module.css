@@ -63,6 +63,12 @@ $greyDefault: #5e5e5e; */
   justify-content: flex-end;
   bottom: 0;
   right: 0;
+  width: 100%;
+}
+
+.innerTools {
+  width: 40%;
+  height: auto;
 }
 
 @media only screen and (max-width: 480px) {
@@ -82,7 +88,7 @@ $greyDefault: #5e5e5e; */
     padding: 10rem 3rem 6rem 3rem;
   }
 
-  .tools img {
+  .innerTools {
     width: 288px;
     height: 155px;
   }
@@ -100,15 +106,5 @@ $greyDefault: #5e5e5e; */
 
   .homeAboutMain {
     padding: 10rem 3rem 6rem 3rem;
-  }
-
-  .tools img {
-    width: 60%;
-  }
-}
-
-@media only screen and (min-width: 993px) and (max-width: 1200px) {
-  .tools img {
-    width: 70%;
   }
 }

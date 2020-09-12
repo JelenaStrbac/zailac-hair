@@ -9,11 +9,6 @@ $greyDefault: #5e5e5e; */
   display: flex;
   width: 100vw;
   height: 100vh;
-  /* background-image: url("../../../images/background-cover.jpg");
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center top;
-  background-repeat: no-repeat; */
 }
 
 .main {
@@ -78,9 +73,24 @@ $greyDefault: #5e5e5e; */
   fill: white;
 }
 
+.mybg,
+.mybg::before,
+.mybg::after {
+  width: 100%;
+  height: 100%;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
 @media only screen and (max-width: 992px) {
-  .cover {
+  .mybg,
+  .mybg::before,
+  .mybg::after {
     background-attachment: scroll;
+    z-index: 0;
   }
   .burger {
     display: none;

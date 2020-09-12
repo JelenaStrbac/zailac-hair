@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import Img from "gatsby-image"
 
 import styles from "./Card.module.css"
 
@@ -7,7 +8,8 @@ const Card = props => {
   return (
     <div className={styles.card}>
       <div className={styles.cardImage}>
-        <img src={props.image} alt="zailacBlogImage" />
+        <Img style={{ width: "100%", height: "100%" }} fluid={props.image} />
+        {/* <img src={props.image} alt="zailacBlogImage" /> */}
       </div>
       <div className={styles.cardText}>
         <div>

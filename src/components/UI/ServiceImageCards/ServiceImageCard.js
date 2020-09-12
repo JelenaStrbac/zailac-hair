@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import Img from "gatsby-image"
 
 import styles from "./ServiceImageCard.module.css"
 
@@ -8,10 +9,9 @@ const ServiceImageCard = props => {
     <>
       {props.left ? <div className={styles.leftText}>{props.title}</div> : null}
       <div className={styles.container}>
-        <img src={props.image} alt="zailac-services" />
+        <Img fluid={props.fluid} style={{ width: "290px", height: "auto" }} />
         <div className={styles.overlay}>
           <div className={styles.text}>{props.text}</div>
-          {/* <div className={styles.text}>&#10024; Popularno: {props.price}</div> */}
           <Link to="/services/">
             <div className={styles.textPricelist}>Vidi cenovnik</div>
           </Link>

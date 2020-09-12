@@ -19,6 +19,14 @@ const HomeBlog = props => {
             title
             featured_media {
               source_url
+              localFile {
+                childImageSharp {
+                  fluid(maxWidth: 300, quality: 90) {
+                    srcSet
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
             }
             excerpt
           }
@@ -65,7 +73,8 @@ const HomeBlog = props => {
       <Card
         key={idx}
         title={el.node.title}
-        image={el.node.featured_media.source_url}
+        image={el.node.featured_media.localFile.childImageSharp.fluid}
+        // image={el.node.featured_media.source_url}
         text={el.node.excerpt}
         slug={el.node.slug}
       />

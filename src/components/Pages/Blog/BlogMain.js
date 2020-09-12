@@ -3,6 +3,7 @@ import { graphql, useStaticQuery, Link } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faUser, faClock } from "@fortawesome/free-solid-svg-icons"
 import Fade from "react-reveal/Fade"
+import Img from "gatsby-image"
 
 import styles from "./BlogMain.module.css"
 import Headings from "../../UI/Headings/Headings"
@@ -23,6 +24,14 @@ const BlogMain = props => {
             }
             featured_media {
               source_url
+              localFile {
+                childImageSharp {
+                  fluid(maxWidth: 300, quality: 90) {
+                    srcSet
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
             }
             date(formatString: "DD-MM-YYYY")
             excerpt
@@ -70,11 +79,16 @@ const BlogMain = props => {
       return (
         <div key={i} className={styles.postsLeftBorder}>
           <div className={styles.blogImageOutter}>
-            <img
+            <Img
+              style={{ width: "100%", height: "100%" }}
+              fluid={el.node.featured_media.localFile.childImageSharp.fluid}
+              imgStyle={{ objectFit: "cover" }}
+            />
+            {/* <img
               className={styles.blogImage}
               src={el.node.featured_media.source_url}
               alt="zailacBlogImage"
-            />
+            /> */}
           </div>
           <div className={styles.blogTextOutter}>
             <h3 dangerouslySetInnerHTML={{ __html: el.node.title }}></h3>

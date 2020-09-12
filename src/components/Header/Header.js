@@ -26,18 +26,6 @@ const Header = props => {
     }
   }, [])
 
-  // const height = path === "/" ? window.innerHeight : window.innerHeight * 0.4
-
-  // const listenScrollEvent = () => {
-  //   window.scrollY > height ? setIsHeaderSticky(true) : setIsHeaderSticky(false)
-  // }
-  // useEffect(() => {
-  //   window.addEventListener("scroll", listenScrollEvent)
-  //   return () => {
-  //     window.removeEventListener("scroll", listenScrollEvent)
-  //   }
-  // }, [])
-
   return (
     <header
       className={classNames(styles.header, {
