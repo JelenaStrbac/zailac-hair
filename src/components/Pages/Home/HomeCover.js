@@ -1,6 +1,5 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-// import styled from "styled-components"
 import BackgroundImage from "gatsby-background-image"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -25,17 +24,32 @@ const HomeCover = props => {
           }
         }
       }
+      mobile: file(relativePath: { eq: "background-cover-min.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 480, quality: 100) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
     }
   `)
 
-  const imageData = data.desktop.childImageSharp.fluid
+  // const imageData = data.desktop.childImageSharp.fluid
+  const sources = [
+    data.desktop.childImageSharp.fluid,
+    {
+      ...data.mobile.childImageSharp.fluid,
+      media: `(max-width: 480px)`,
+    },
+  ]
+  console.log(sources)
   return (
     <div className={styles.cover} id="HomeCover">
       <SocialLinks />
       <BackgroundImage
         Tag="section"
         className={styles.mybg}
-        fluid={imageData}
+        fluid={sources}
         backgroundColor={`#040e18`}
       >
         <div className={styles.main}>
@@ -53,27 +67,5 @@ const HomeCover = props => {
     </div>
   )
 }
-
-// const StyledBackgroundSection = styled(HomeCover)`
-//   #mybg,
-//   #mybg::before,
-//   #mybg::after {
-//     width: 100%;
-//     height: 100%;
-//     background-attachment: fixed;
-//     background-size: cover;
-//     background-position: center top;
-//     background-repeat: no-repeat;
-//     z-index: 0;
-//   }
-//   @media only screen and (max-width: 992px) {
-//     #mybg,
-//     #mybg::before,
-//     #mybg::after {
-//       background-attachment: scroll;
-//       z-index: 0;
-//     }
-//   }
-// `
 
 export default HomeCover
