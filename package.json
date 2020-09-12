@@ -10,6 +10,7 @@
     "@fortawesome/free-regular-svg-icons": "^5.14.0",
     "@fortawesome/free-solid-svg-icons": "^5.14.0",
     "@fortawesome/react-fontawesome": "^0.1.11",
+    "@loadable/component": "^5.13.1",
     "@types/postcss-preset-env": "^6.7.0",
     "babel-plugin-styled-components": "^1.11.1",
     "browserslist": "^4.14.1",

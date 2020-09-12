@@ -1,23 +1,18 @@
+// import React from "react"
 import React from "react"
-// import React, { useEffect, useState } from "react"
-// import ImageSlider from "react-image-comparison-slider"
 import Fade from "react-reveal/Fade"
+import loadable from "@loadable/component"
 
 import styles from "./HomeGallery.module.css"
 import Button from "../../UI/Button/Button"
-// import Before from "../../../images/before.jpeg"
-// import After from "../../../images/after.jpeg"
+import Before from "../../../images/before.jpeg"
+import After from "../../../images/after.jpeg"
 import Headings from "../../UI/Headings/Headings"
 import FadeLink from "../../UI/FadeLink/FadeLink"
 
-const HomeGallery = props => {
-  // const [hasDocument, setHasDocument] = useState(false)
-  // useEffect(() => {
-  //   if (typeof window !== "undefined" && window.document) {
-  //     setHasDocument(true)
-  //   }
-  // }, [])
+const ImageSlider = loadable(() => import("react-image-comparison-slider"))
 
+const HomeGallery = props => {
   return (
     <div className={styles.homeGallery}>
       <Fade up>
@@ -45,21 +40,17 @@ const HomeGallery = props => {
         <div className={styles.imageSliderOutter}>
           <div className={styles.imageSlider}>
             <div className={styles.lace}></div>
-            {/* {typeof window !== "undefined" && hasDocument ? (
-              <ImageSlider
-                image1={After}
-                image2={Before}
-                sliderColor="#dcc29c"
-                handleColor="#dcc29c"
-                leftLabelText="Pre"
-                rightLabelText="Posle"
-                onSlide={() => {
-                  console.log("sliding")
-                }}
-              />
-            ) : (
-              <div>Loading</div>
-            )} */}
+            <ImageSlider
+              image1={After}
+              image2={Before}
+              sliderColor="#dcc29c"
+              handleColor="#dcc29c"
+              leftLabelText="Pre"
+              rightLabelText="Posle"
+              onSlide={() => {
+                console.log("sliding")
+              }}
+            />
           </div>
           <div className={styles.scrollText}>scroll levo / desno</div>
         </div>
