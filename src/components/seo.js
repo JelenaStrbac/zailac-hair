@@ -9,8 +9,9 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
+import { useLocation } from "@reach/router"
 
-function SEO({ description, lang, meta, image: metaImage, title, pathname }) {
+function SEO({ description, lang, meta, image: metaImage, title }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -21,18 +22,21 @@ function SEO({ description, lang, meta, image: metaImage, title, pathname }) {
             author
             keywords
             siteUrl
+            image
           }
         }
       }
     `
   )
 
+  const { pathname } = useLocation()
   const metaDescription = description || site.siteMetadata.description
   const image =
     metaImage && metaImage.src
       ? `${site.siteMetadata.siteUrl}${metaImage.src}`
-      : null
+      : `${site.siteMetadata.siteUrl}${site.siteMetadata.image}`
   const canonical = pathname ? `${site.siteMetadata.siteUrl}${pathname}` : null
+  const url = `${site.siteMetadata.siteUrl}${pathname}`
 
   return (
     <Helmet
@@ -74,6 +78,10 @@ function SEO({ description, lang, meta, image: metaImage, title, pathname }) {
           content: site.siteMetadata.keywords.join(","),
         },
         {
+          property: "og:image",
+          content: image,
+        },
+        {
           name: `twitter:creator`,
           content: site.siteMetadata.author,
         },
@@ -85,13 +93,21 @@ function SEO({ description, lang, meta, image: metaImage, title, pathname }) {
           name: `twitter:description`,
           content: metaDescription,
         },
+        {
+          name: `twitter:image`,
+          content: image,
+        },
+        {
+          name: `twitter:site`,
+          content: url,
+        },
       ]
         .concat(
           metaImage
             ? [
                 {
                   property: "og:image",
-                  content: image,
+                  content: metaImage,
                 },
                 {
                   property: "og:image:width",
@@ -119,7 +135,7 @@ function SEO({ description, lang, meta, image: metaImage, title, pathname }) {
 }
 
 SEO.defaultProps = {
-  lang: `en`,
+  lang: `sr`,
   meta: [],
   description: ``,
 }

@@ -42,7 +42,6 @@ const HomeCover = props => {
       media: `(max-width: 480px)`,
     },
   ]
-  console.log(sources)
   return (
     <div className={styles.cover} id="HomeCover">
       <SocialLinks />

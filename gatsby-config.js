@@ -6,7 +6,7 @@ const browserslist = require("browserslist")
 
 const {
   NODE_ENV,
-  URL: NETLIFY_SITE_URL = "https://www.zailachair.com",
+  URL: NETLIFY_SITE_URL = "https://elastic-hypatia-cd6307.netlify.app",
   DEPLOY_PRIME_URL: NETLIFY_DEPLOY_URL = NETLIFY_SITE_URL,
   CONTEXT: NETLIFY_ENV = NODE_ENV,
 } = process.env
@@ -30,8 +30,9 @@ module.exports = {
       `nadogradnja`,
       `beograd`,
     ],
-    image: `/static/Logo.jpg`,
-    siteUrl: `https://www.zailachair.com`,
+    image: `/images/Logo.jpg`,
+    siteUrl: siteUrl,
+    // siteUrl: `https://elastic-hypatia-cd6307.netlify.app`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -135,6 +136,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-transition-link`,
+    `gatsby-plugin-advanced-sitemap`,
     // {
     //   resolve: `gatsby-plugin-advanced-sitemap`,
     //   options: {
@@ -179,27 +181,27 @@ module.exports = {
     //     addUncaughtPages: true, // optional: will fill up pages that are not caught by queries and mapping and list them under `sitemap-pages.xml`
     //   },
     // },
-    // {
-    //   resolve: "gatsby-plugin-robots-txt",
-    //   options: {
-    //     resolveEnv: () => NETLIFY_ENV,
-    //     env: {
-    //       production: {
-    //         policy: [{ userAgent: "*" }],
-    //       },
-    //       "branch-deploy": {
-    //         policy: [{ userAgent: "*", disallow: ["/"] }],
-    //         sitemap: null,
-    //         host: null,
-    //       },
-    //       "deploy-preview": {
-    //         policy: [{ userAgent: "*", disallow: ["/"] }],
-    //         sitemap: null,
-    //         host: null,
-    //       },
-    //     },
-    //   },
-    // },
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        resolveEnv: () => NETLIFY_ENV,
+        env: {
+          production: {
+            policy: [{ userAgent: "*" }],
+          },
+          "branch-deploy": {
+            policy: [{ userAgent: "*", disallow: ["/"] }],
+            sitemap: null,
+            host: null,
+          },
+          "deploy-preview": {
+            policy: [{ userAgent: "*", disallow: ["/"] }],
+            sitemap: null,
+            host: null,
+          },
+        },
+      },
+    },
 
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
