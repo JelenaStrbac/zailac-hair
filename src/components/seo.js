@@ -107,7 +107,7 @@ function SEO({ description, lang, meta, image: metaImage, title }) {
             ? [
                 {
                   property: "og:image",
-                  content: metaImage,
+                  content: image,
                 },
                 {
                   property: "og:image:width",
