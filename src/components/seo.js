@@ -37,6 +37,7 @@ function SEO({ description, lang, meta, image: metaImage, title }) {
       : `${site.siteMetadata.siteUrl}${site.siteMetadata.image}`
   const canonical = pathname ? `${site.siteMetadata.siteUrl}${pathname}` : null
   const url = `${site.siteMetadata.siteUrl}${pathname}`
+  console.log(image)
 
   return (
     <Helmet
@@ -80,6 +81,10 @@ function SEO({ description, lang, meta, image: metaImage, title }) {
         {
           property: "og:image",
           content: image,
+        },
+        {
+          property: "og:url",
+          content: url,
         },
         {
           name: `twitter:creator`,

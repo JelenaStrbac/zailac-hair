@@ -30,7 +30,7 @@ module.exports = {
       `nadogradnja`,
       `beograd`,
     ],
-    image: `/static/Logo.jpg`,
+    image: `/Logo.jpg`,
     siteUrl: siteUrl,
     socialLinks: {
       instagram: `https://www.instagram.com/zailachair/?hl=en`,
