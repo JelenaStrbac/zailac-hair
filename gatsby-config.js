@@ -17,7 +17,7 @@ module.exports = {
   siteMetadata: {
     title: `Zailac Hair`,
     description: `Dobrodošli u Zailac hair - frizerski salon u Beogradu koji se bavi koloringom i nadogradnjom kose.`,
-    author: `@JelenaStrbac`,
+    author: `@MladenZailac`,
     keywords: [
       `frizer`,
       `salon`,
@@ -30,7 +30,7 @@ module.exports = {
       `nadogradnja`,
       `beograd`,
     ],
-    image: `/images/Logo.jpg`,
+    image: `/static/Logo.jpg`,
     siteUrl: siteUrl,
     // siteUrl: `https://elastic-hypatia-cd6307.netlify.app`,
   },
@@ -52,8 +52,8 @@ module.exports = {
         name: `gatsby-starter-default`,
         short_name: `starter`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#f2efeb`,
+        theme_color: `#dcc29c`,
         display: `minimal-ui`,
         icon: `src/images/Logo.jpg`, // This path is relative to the root of the site.
       },
@@ -137,50 +137,6 @@ module.exports = {
     },
     `gatsby-plugin-transition-link`,
     `gatsby-plugin-advanced-sitemap`,
-    // {
-    //   resolve: `gatsby-plugin-advanced-sitemap`,
-    //   options: {
-    //     query: `
-    //       {
-    //         allWordpressPost {
-    //               edges {
-    //                   node {
-    //                       id
-    //                       slug
-    //                       updated_at
-    //                       feature_image
-    //                   }
-    //               }
-    //           }
-    //           allSitePage {
-    //               edges {
-    //                   node {
-    //                       id
-    //                       slug
-    //                       updated_at
-    //                       feature_image
-    //                   }
-    //               }
-    //           }
-    //       }`,
-    //     mapping: {
-    //       allGhostPost: {
-    //         sitemap: `posts`,
-    //       },
-    //       allGhostPage: {
-    //         sitemap: `pages`,
-    //       },
-    //     },
-    //     exclude: [
-    //       `/dev-404-page`,
-    //       `/404`,
-    //       `/404.html`,
-    //       `/offline-plugin-app-shell-fallback`,
-    //     ],
-    //     createLinkInHead: true, // optional: create a link in the `<head>` of your site
-    //     addUncaughtPages: true, // optional: will fill up pages that are not caught by queries and mapping and list them under `sitemap-pages.xml`
-    //   },
-    // },
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
@@ -200,6 +156,12 @@ module.exports = {
             host: null,
           },
         },
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-177913871-1",
       },
     },
 
