@@ -34,7 +34,6 @@ const HomeCover = props => {
     }
   `)
 
-  // const imageData = data.desktop.childImageSharp.fluid
   const sources = [
     data.desktop.childImageSharp.fluid,
     {

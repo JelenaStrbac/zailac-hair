@@ -74,7 +74,6 @@ const HomeBlog = props => {
         key={idx}
         title={el.node.title}
         image={el.node.featured_media.localFile.childImageSharp.fluid}
-        // image={el.node.featured_media.source_url}
         text={el.node.excerpt}
         slug={el.node.slug}
       />

@@ -9,7 +9,6 @@ const Card = props => {
     <div className={styles.card}>
       <div className={styles.cardImage}>
         <Img style={{ width: "100%", height: "100%" }} fluid={props.image} />
-        {/* <img src={props.image} alt="zailacBlogImage" /> */}
       </div>
       <div className={styles.cardText}>
         <div>

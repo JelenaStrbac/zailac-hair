@@ -35,9 +35,14 @@ body {
   background-repeat: repeat;
 }
 
+h1,
+h2,
+h3,
+h4 {
+  font-weight: bold;
+}
+
 h1 {
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
   font-size: 5rem;
   opacity: 0.09;
   text-transform: uppercase;
@@ -46,8 +51,6 @@ h1 {
 }
 
 h2 {
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
   font-size: 1.5rem;
   text-transform: uppercase;
   margin-bottom: 1rem;
@@ -55,15 +58,11 @@ h2 {
 }
 
 h3 {
-  font-family: "Roboto", sans-serif;
-  font-weight: bold;
   font-size: 1.4rem;
   margin: 1rem 0;
 }
 
 h4 {
-  font-family: "Roboto", sans-serif;
-  font-weight: bold;
   font-size: 1.1rem;
   margin: 1rem 0;
 }
@@ -89,6 +88,7 @@ figcaption {
 .sidebarSocialLinks {
   display: none;
 }
+
 .burgerSocialLinks {
   display: block;
 }

@@ -8,7 +8,6 @@ import styles from "./BlogPost.module.css"
 import Layout from "../../layout"
 import Cover from "../Cover/Cover"
 import SEO from "../../seo"
-// import FadeLink from "../FadeLink/FadeLink"
 
 const BlogPost = ({ data }) => {
   const post = data.wordpressPost
@@ -30,11 +29,6 @@ const BlogPost = ({ data }) => {
                 fluid={post.featured_media.localFile.childImageSharp.fluid}
                 imgStyle={{ objectFit: "cover" }}
               />
-              {/* <img
-                className={styles.blogImage}
-                src={post.featured_media.source_url}
-                alt="zailacBlogImage"
-              /> */}
             </div>
 
             <h3 dangerouslySetInnerHTML={{ __html: post.title }}></h3>

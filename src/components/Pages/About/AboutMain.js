@@ -7,10 +7,6 @@ import Img from "gatsby-image"
 
 import styles from "./AboutMain.module.css"
 import Headings from "../../UI/Headings/Headings"
-// import Cadiveu from "../../../images/brands-cadiveu.jpg"
-// import Echosline from "../../../images/brands-echosline.jpg"
-// import Loreal from "../../../images/brands-loreal.jpg"
-// import Olaplex from "../../../images/brands-olaplex.jpg"
 
 const AboutMain = props => {
   const data = useStaticQuery(graphql`
@@ -46,21 +42,6 @@ const AboutMain = props => {
       }
     }
   `)
-  // const data = useStaticQuery(graphql`
-  //   query MyQuery {
-  //     allFile(filter: { relativeDirectory: { eq: "brands" } }) {
-  //       edges {
-  //         node {
-  //           childImageSharp {
-  //             fluid(maxWidth: 150) {
-  //               ...GatsbyImageSharpFluid
-  //             }
-  //           }
-  //         }
-  //       }
-  //     }
-  //   }
-  // `)
   return (
     <div className={styles.aboutMain}>
       <Fade>
@@ -75,11 +56,6 @@ const AboutMain = props => {
           <div className={styles.aboutHairDresserImgContainer}>
             <div className={styles.aboutHairDresserImageOutterLarge}>
               <div className={styles.aboutHairDresserImageOutter}>
-                {/* <img
-                  className={styles.aboutHairDresserImageInner}
-                  src={data.mladenImg.source_url}
-                  alt="Mladen Zailac"
-                /> */}
                 <Img
                   style={{ width: "100%", height: "100%", borderRadius: "50%" }}
                   fluid={data.mladenImg.localFile.childImageSharp.fluid}
@@ -114,10 +90,6 @@ const AboutMain = props => {
                 imgStyle={{ objectFit: "contain" }}
               />
             ))}
-            {/* <img src={Cadiveu} alt="Cadiveu" />
-            <img src={Echosline} alt="Echosline" />
-            <img src={Loreal} alt="Loreal" />
-            <img src={Olaplex} alt="Olaplex" /> */}
           </div>
         </div>
       </Fade>

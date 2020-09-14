@@ -8,7 +8,6 @@ import Img from "gatsby-image"
 import styles from "./BlogMain.module.css"
 import Headings from "../../UI/Headings/Headings"
 import Pagination from "../../UI/Pagination/Pagination"
-// import FadeLink from "../../UI/FadeLink/FadeLink"
 
 const BlogMain = props => {
   const data = useStaticQuery(graphql`
@@ -84,11 +83,6 @@ const BlogMain = props => {
               fluid={el.node.featured_media.localFile.childImageSharp.fluid}
               imgStyle={{ objectFit: "cover" }}
             />
-            {/* <img
-              className={styles.blogImage}
-              src={el.node.featured_media.source_url}
-              alt="zailacBlogImage"
-            /> */}
           </div>
           <div className={styles.blogTextOutter}>
             <h3 dangerouslySetInnerHTML={{ __html: el.node.title }}></h3>
