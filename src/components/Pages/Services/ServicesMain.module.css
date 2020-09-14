@@ -31,6 +31,7 @@ table tr:first-child {
 
 strong {
   font-weight: bold;
+  color: black;
 }
 
 thead th:first-child {
@@ -65,6 +66,17 @@ tr td:nth-child(2) {
 }
 tr td:nth-child(3) {
   width: 10%;
+}
+
+td img {
+  height: 1rem;
+  width: auto;
+}
+
+td span {
+  color: #ff0000;
+  text-transform: uppercase;
+  background-color: #ff000026;
 }
 
 @media only screen and (max-width: 480px) {

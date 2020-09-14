@@ -13,7 +13,7 @@ const Card = props => {
       </div>
       <div className={styles.cardText}>
         <div>
-          <h4 dangerouslySetInnerHTML={{ __html: props.title }}></h4>
+          <h3 dangerouslySetInnerHTML={{ __html: props.title }}></h3>
           <div dangerouslySetInnerHTML={{ __html: props.text }} />
         </div>
         <Link className={styles.cardLinkStyle} to={`/blog/${props.slug}/`}>

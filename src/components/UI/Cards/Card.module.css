@@ -36,6 +36,10 @@ $greyDefault: #5e5e5e; */
   justify-content: space-between;
 }
 
+.cardText h3 {
+  font-size: 1.1rem;
+}
+
 .cardLinkStyle {
   display: flex;
   flex-direction: row;

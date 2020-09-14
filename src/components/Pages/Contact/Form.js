@@ -24,6 +24,7 @@ export default class MyForm extends React.Component {
           name="name"
           id="name"
           placeholder="Ime i prezime"
+          aria-label="name"
           required
         />
         <input
@@ -32,8 +33,14 @@ export default class MyForm extends React.Component {
           placeholder="Email"
           required
           name="email"
+          aria-label="email"
         />
-        <textarea name="message" placeholder="Vaša poruka" required></textarea>
+        <textarea
+          name="message"
+          placeholder="Vaša poruka"
+          aria-label="message"
+          required
+        ></textarea>
         {status === "SUCCESS" ? (
           <p style={{ color: "green" }}>
             Hvala! Vaša poruka je uspešno poslata.

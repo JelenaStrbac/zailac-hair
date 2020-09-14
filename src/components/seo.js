@@ -37,7 +37,6 @@ function SEO({ description, lang, meta, image: metaImage, title }) {
       : `${site.siteMetadata.siteUrl}${site.siteMetadata.image}`
   const canonical = pathname ? `${site.siteMetadata.siteUrl}${pathname}` : null
   const url = `${site.siteMetadata.siteUrl}${pathname}`
-  console.log(image)
 
   return (
     <Helmet

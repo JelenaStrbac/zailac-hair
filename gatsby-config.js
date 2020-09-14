@@ -106,8 +106,7 @@ module.exports = {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          `Roboto\:100,200,300,400,500,700`,
-          `roboto\:100,200,300,400,500,700`,
+          `roboto\:300,400,700`,
           `Kaushan Script`,
           `source sans pro\:100,200,300,400,500,700`, // you can also specify font weights and styles
         ],

@@ -13,10 +13,18 @@ const Pagination = props => {
     <div className={styles.Pagination}>
       <ReactPaginate
         previousLabel={
-          <FontAwesomeIcon icon={faAngleDoubleLeft} className={styles.icon} />
+          <FontAwesomeIcon
+            icon={faAngleDoubleLeft}
+            className={styles.icon}
+            aria-label="prevous"
+          />
         }
         nextLabel={
-          <FontAwesomeIcon icon={faAngleDoubleRight} className={styles.icon} />
+          <FontAwesomeIcon
+            icon={faAngleDoubleRight}
+            className={styles.icon}
+            aria-label="next"
+          />
         }
         breakLabel={"..."}
         pageCount={props.pageCount}

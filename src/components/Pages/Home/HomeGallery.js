@@ -47,6 +47,8 @@ const HomeGallery = props => {
               handleColor="#dcc29c"
               leftLabelText="Pre"
               rightLabelText="Posle"
+              alt1="pre"
+              alt2="posle"
               onSlide={() => {
                 console.log("sliding")
               }}

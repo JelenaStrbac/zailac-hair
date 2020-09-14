@@ -11,6 +11,10 @@ $greyDefault: #5e5e5e; */
   background-color: white;
 }
 
+.card h3 {
+  font-size: 1.1rem;
+}
+
 .card__side__front {
   height: 26rem;
   overflow: auto;

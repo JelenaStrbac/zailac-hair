@@ -29,16 +29,16 @@ const ContactMain = props => {
         <div className={styles.contactContainerLeft}>
           <div className={styles.contactData}>
             <div className={styles.contactDataItem}>
-              <h4>Adresa</h4>
+              <h3>Adresa</h3>
               <div dangerouslySetInnerHTML={{ __html: data.adresa.content }} />
             </div>
             <div className={styles.contactDataItem}>
-              <h4>Kontakt podaci</h4>
+              <h3>Kontakt podaci</h3>
               <div dangerouslySetInnerHTML={{ __html: data.email.content }} />
               <div dangerouslySetInnerHTML={{ __html: data.telefon.content }} />
             </div>
             <div className={styles.contactDataItem}>
-              <h4>Radno vreme</h4>
+              <h3>Radno vreme</h3>
               <div
                 dangerouslySetInnerHTML={{ __html: data.radnoVreme.content }}
               />
