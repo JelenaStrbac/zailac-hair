@@ -6,7 +6,7 @@ const browserslist = require("browserslist")
 
 const {
   NODE_ENV,
-  URL: NETLIFY_SITE_URL = "https://elastic-hypatia-cd6307.netlify.app",
+  URL: NETLIFY_SITE_URL = "https://www.zailachair.com",
   DEPLOY_PRIME_URL: NETLIFY_DEPLOY_URL = NETLIFY_SITE_URL,
   CONTEXT: NETLIFY_ENV = NODE_ENV,
 } = process.env

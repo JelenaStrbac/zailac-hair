@@ -66,7 +66,6 @@ const GalleryMain = props => {
   )
 
   const galleryHandler = e => {
-    console.log(photos.indexOf(e.target.src))
     setCurrImg(photos.indexOf(e.target.src))
     setIsOpen(true)
   }
