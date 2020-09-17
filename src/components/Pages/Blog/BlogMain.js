@@ -88,8 +88,10 @@ const BlogMain = props => {
             <h3 dangerouslySetInnerHTML={{ __html: el.node.title }}></h3>
             <div className={styles.authorAndName}>
               <FontAwesomeIcon icon={faUser} className={styles.icon} />{" "}
-              {el.node.author.name} |{" "}
-              <FontAwesomeIcon icon={faClock} className={styles.icon} />{" "}
+              {el.node.author.name === "mladen7777"
+                ? "Mladen Zailac"
+                : el.node.author.name}{" "}
+              | <FontAwesomeIcon icon={faClock} className={styles.icon} />{" "}
               {el.node.date}
             </div>
             <div dangerouslySetInnerHTML={{ __html: el.node.excerpt }} />
