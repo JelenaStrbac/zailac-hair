@@ -34,8 +34,10 @@ const BlogPost = ({ data }) => {
             <h3 dangerouslySetInnerHTML={{ __html: post.title }}></h3>
             <div className={styles.authorAndName}>
               <FontAwesomeIcon icon={faUser} className={styles.icon} />{" "}
-              {post.author.name} |{" "}
-              <FontAwesomeIcon icon={faClock} className={styles.icon} />{" "}
+              {post.author.name === "mladen7777"
+                ? "Mladen Zailac"
+                : post.author.name}{" "}
+              | <FontAwesomeIcon icon={faClock} className={styles.icon} />{" "}
               {post.date}
             </div>
             <div dangerouslySetInnerHTML={{ __html: post.content }} />
