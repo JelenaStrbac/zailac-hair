@@ -36,7 +36,7 @@ const BlogPost = ({ data }) => {
               <FontAwesomeIcon icon={faUser} className={styles.icon} />{" "}
               {post.author.name === "mladen7777"
                 ? "Mladen Zailac"
-                : post.author.name}{" "}
+                : "Mladen Zailac"}{" "}
               | <FontAwesomeIcon icon={faClock} className={styles.icon} />{" "}
               {post.date}
             </div>
