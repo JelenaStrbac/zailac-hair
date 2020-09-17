@@ -30,6 +30,7 @@ function SEO({ description, lang, meta, image: metaImage, title }) {
       : `${site.siteMetadata.siteUrl}${site.siteMetadata.image}`
   const canonical = pathname ? `${site.siteMetadata.siteUrl}${pathname}` : null
   const url = `${site.siteMetadata.siteUrl}${pathname}`
+  const verifyContent = "Mv0HqI6WEb1lMe4ASpwg9Qf5YA9Z9qO1DafrQAHVYhI"
 
   return (
     <Helmet
@@ -77,6 +78,10 @@ function SEO({ description, lang, meta, image: metaImage, title }) {
         {
           property: "og:url",
           content: url,
+        },
+        {
+          name: "google-site-verification",
+          content: verifyContent,
         },
         {
           name: `twitter:creator`,
