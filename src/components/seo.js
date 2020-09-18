@@ -32,6 +32,27 @@ function SEO({ description, lang, meta, image: metaImage, title }) {
   const url = `${site.siteMetadata.siteUrl}${pathname}`
   const verifyContent = "Mv0HqI6WEb1lMe4ASpwg9Qf5YA9Z9qO1DafrQAHVYhI"
 
+  const schemaOrgWebPage = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    url: "https://www.zailachair.com",
+    name: "Zailac Hair",
+    sameAs: [
+      "https://www.instagram.com/zailachair/?hl=en",
+      "https://www.facebook.com/pages/category/Hair-Salon/Zailac-Hair-823673054501131/",
+    ],
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Bulevar Kralja Aleksandra 171",
+      postalCode: "11000",
+      addressCountry: "Srbija",
+    },
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: "+381 60 3230 250",
+    },
+  }
+
   return (
     <Helmet
       defer={false}
@@ -132,7 +153,11 @@ function SEO({ description, lang, meta, image: metaImage, title }) {
               ]
         )
         .concat(meta)}
-    />
+    >
+      <script type="application/ld+json">
+        {JSON.stringify(schemaOrgWebPage)}
+      </script>
+    </Helmet>
   )
 }
 

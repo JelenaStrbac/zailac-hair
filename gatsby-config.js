@@ -36,7 +36,6 @@ module.exports = {
       instagram: `https://www.instagram.com/zailachair/?hl=en`,
       facebook: `https://www.facebook.com/pages/category/Hair-Salon/Zailac-Hair-823673054501131/`,
     },
-    // siteUrl: `https://elastic-hypatia-cd6307.netlify.app`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
