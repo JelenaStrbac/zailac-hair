@@ -15,8 +15,8 @@ const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL
 
 module.exports = {
   siteMetadata: {
-    title: `Zailac Hair | Frizerski salon | Beograd`,
-    description: `Dobrodošli u Zailac Hair - frizerski salon u Beogradu koji se bavi koloringom i nadogradnjom kose. Savršena nega i tretman za vašu kosu uz upotrebu profesionalnih preparata. Pogledajte kompletan cenovnik.`,
+    title: `Zailac Hair | Coloring & styling`,
+    description: `Dobrodošli u Zailac Hair - frizerski salon u Beogradu koji se bavi koloringom i nadogradnjom kose. Savršen tretman za vašu kosu uz upotrebu profesionalnih preparata.`,
     author: `@MladenZailac`,
     keywords: [
       `frizer`,
