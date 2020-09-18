@@ -34,23 +34,42 @@ function SEO({ description, lang, meta, image: metaImage, title }) {
 
   const schemaOrgWebPage = {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    url: "https://www.zailachair.com",
+    "@type": "HairSalon",
     name: "Zailac Hair",
-    sameAs: [
-      "https://www.instagram.com/zailachair/?hl=en",
-      "https://www.facebook.com/pages/category/Hair-Salon/Zailac-Hair-823673054501131/",
-    ],
+    image: "",
+    "@id": "",
+    url: "https://www.zailachair.com",
+    telephone: "+381 60 3230 250",
     address: {
       "@type": "PostalAddress",
       streetAddress: "Bulevar Kralja Aleksandra 171",
+      addressLocality: "Beograd",
       postalCode: "11000",
-      addressCountry: "Srbija",
+      addressCountry: "RS",
     },
-    contactPoint: {
-      "@type": "ContactPoint",
-      telephone: "+381 60 3230 250",
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: 44.798914,
+      longitude: 20.4914937,
     },
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        opens: "12:00",
+        closes: "20:00",
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: "Saturday",
+        opens: "11:00",
+        closes: "18:00",
+      },
+    ],
+    sameAs: [
+      "https://www.facebook.com/pages/category/Hair-Salon/Zailac-Hair-823673054501131/",
+      "https://www.instagram.com/zailachair/?hl=en",
+    ],
   }
 
   return (
