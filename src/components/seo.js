@@ -36,7 +36,7 @@ function SEO({ description, lang, meta, image: metaImage, title }) {
     "@context": "https://schema.org",
     "@type": "HairSalon",
     name: "Zailac Hair",
-    image: "",
+    image: "https://www.zailachair.com/Logo.jpg",
     "@id": "",
     url: "https://www.zailachair.com",
     telephone: "+381 60 3230 250",
