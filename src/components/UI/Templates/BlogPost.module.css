@@ -60,6 +60,20 @@
   padding-bottom: 1rem;
 }
 
+.socialShareButtons {
+  margin-top: 3rem;
+}
+
+.tags {
+  margin-top: 3rem;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+.tags .icon {
+  margin-right: 0.5rem;
+}
+
 @media only screen and (max-width: 480px) {
   .blogMain {
     padding: 6rem 1rem;

@@ -1,8 +1,20 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faUser, faClock } from "@fortawesome/free-solid-svg-icons"
+import { faUser, faClock, faTag } from "@fortawesome/free-solid-svg-icons"
 import Img from "gatsby-image"
+import {
+  FacebookShareButton,
+  FacebookIcon,
+  TwitterShareButton,
+  TwitterIcon,
+  PinterestShareButton,
+  PinterestIcon,
+  TumblrShareButton,
+  TumblrIcon,
+} from "react-share"
+import { globalHistory as history } from "@reach/router"
+import innertext from "innertext"
 
 import styles from "./BlogPost.module.css"
 import Layout from "../../layout"
@@ -11,10 +23,20 @@ import SEO from "../../seo"
 
 const BlogPost = ({ data }) => {
   const post = data.wordpressPost
+
+  const { location } = history
+  const path = location.pathname
+  const urlForSharing = `https://www.zailachair.com${path}`
+  // console.log(urlForSharing)
+  // console.log(post)
+  // console.log(post.title)
+  // console.log(innertext(post.title))
+  const tags = [...post.categories.map(res => res.name).join(", ")]
+  // console.log(post.categories.map(res => res.name).join(", "))
   return (
     <Layout>
       <SEO
-        title={post.title}
+        title={innertext(post.title)}
         description={post.excerpt}
         image={{ src: post.featured_media.source_url, width: 300, height: 300 }}
         keywords={post.categories.map(res => res.name).join(", ")}
@@ -41,6 +63,41 @@ const BlogPost = ({ data }) => {
               {post.date}
             </div>
             <div dangerouslySetInnerHTML={{ __html: post.content }} />
+            <div className={styles.tags}>
+              <FontAwesomeIcon icon={faTag} className={styles.icon} />
+              {post.categories.map(res => res.name).join(", ")}
+            </div>
+            <div className={styles.socialShareButtons}>
+              <FacebookShareButton
+                url={urlForSharing}
+                quote={innertext(post.title)}
+              >
+                <FacebookIcon size={36} />
+              </FacebookShareButton>
+
+              <TwitterShareButton
+                url={urlForSharing}
+                title={innertext(post.title)}
+              >
+                <TwitterIcon size={36} />
+              </TwitterShareButton>
+
+              <PinterestShareButton
+                url={urlForSharing}
+                description={innertext(post.title)}
+                media={post.featured_media.source_url}
+              >
+                <PinterestIcon size={36} />
+              </PinterestShareButton>
+
+              <TumblrShareButton
+                url={urlForSharing}
+                title={innertext(post.title)}
+                tags={tags}
+              >
+                <TumblrIcon size={36} />
+              </TumblrShareButton>
+            </div>
           </div>
 
           <div className={styles.postsRight}>
