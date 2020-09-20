@@ -31,7 +31,13 @@ const BlogPost = ({ data }) => {
   // console.log(post)
   // console.log(post.title)
   // console.log(innertext(post.title))
-  const tags = [...post.categories.map(res => res.name).join(", ")]
+  const tags = [...post.categories.map(res => res.name)]
+  // console.log(
+  //   post.categories
+  //     .filter(res => res.name !== "Некатегоризовано")
+  //     .map(e => e.name)
+  // )
+  // console.log(tags)
   // console.log(post.categories.map(res => res.name).join(", "))
   return (
     <Layout>
@@ -63,10 +69,15 @@ const BlogPost = ({ data }) => {
               {post.date}
             </div>
             <div dangerouslySetInnerHTML={{ __html: post.content }} />
+
             <div className={styles.tags}>
               <FontAwesomeIcon icon={faTag} className={styles.icon} />
-              {post.categories.map(res => res.name).join(", ")}
+              {post.categories
+                .filter(res => res.name !== "Некатегоризовано")
+                .map(e => e.name)
+                .join(", ")}
             </div>
+
             <div className={styles.socialShareButtons}>
               <FacebookShareButton
                 url={urlForSharing}
