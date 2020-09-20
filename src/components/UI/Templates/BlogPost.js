@@ -27,25 +27,16 @@ const BlogPost = ({ data }) => {
   const { location } = history
   const path = location.pathname
   const urlForSharing = `https://www.zailachair.com${path}`
-  // console.log(urlForSharing)
-  // console.log(post)
-  // console.log(post.title)
-  // console.log(innertext(post.title))
   const tags = [...post.categories.map(res => res.name)]
-  // console.log(
-  //   post.categories
-  //     .filter(res => res.name !== "Некатегоризовано")
-  //     .map(e => e.name)
-  // )
-  // console.log(tags)
-  // console.log(post.categories.map(res => res.name).join(", "))
+  console.log(post)
+  // console.log(post.featured_media.source_url)
   return (
     <Layout>
       <SEO
         title={innertext(post.title)}
-        description={post.excerpt}
+        description={innertext(post.title)}
         image={{ src: post.featured_media.source_url, width: 300, height: 300 }}
-        keywords={post.categories.map(res => res.name).join(", ")}
+        keywords={post.categories.map(res => res.name)}
       />
       <Cover imageName="blog_cover.jpg" />
       <div className={styles.blogMain}>
