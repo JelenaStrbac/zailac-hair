@@ -12,7 +12,7 @@ import { FadeWrapper } from "../components/UI/FadeLink/FadeWrapper"
 const IndexPage = () => (
   <FadeWrapper>
     <Layout>
-      <SEO title="Home" />
+      <SEO title="Frizerski salon" />
       <HomeCover />
       <HomeAbout />
       <HomeServices />

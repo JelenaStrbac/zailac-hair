@@ -9,7 +9,7 @@ import { FadeWrapper } from "../components/UI/FadeLink/FadeWrapper"
 const ThirdPage = () => (
   <FadeWrapper>
     <Layout>
-      <SEO title="Usluge" />
+      <SEO title="Usluge & cenovnik" />
       <Cover imageName="services_cover.jpg" />
       <ServicesMain />
     </Layout>

@@ -34,9 +34,16 @@
     padding: 2rem 1rem;
   }
 
-  .homeBlogTitle {
+  .homeBlogTitle,
+  .homeBlogTitlePaginationAndButton {
     flex-direction: column;
   }
+
+  .homeBlogpagination {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
   .homeBlogCards {
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 1rem;
