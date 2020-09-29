@@ -81,7 +81,7 @@ function SEO({ description, lang, meta, image: metaImage, title, keywords }) {
         lang,
       }}
       title={title}
-      titleTemplate={`%s | Zailac Hair`}
+      titleTemplate={`%s | Zailac Hair | Coloring & styling`}
       link={
         canonical
           ? [
