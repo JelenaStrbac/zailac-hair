@@ -1,8 +1,11 @@
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
+
 const autoprefixer = require(`autoprefixer`)
 const browserslist = require("browserslist")
+
+console.log(process.env)
 
 const {
   NODE_ENV,
