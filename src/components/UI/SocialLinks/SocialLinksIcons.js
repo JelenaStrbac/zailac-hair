@@ -20,7 +20,6 @@ const SocialLinksIcons = props => {
       }
     }
   `)
-  console.log(data.fb.content)
   const name = props.name
   return (
     <div className={name}>
