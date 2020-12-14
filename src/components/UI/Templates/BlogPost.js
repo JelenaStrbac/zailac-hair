@@ -52,11 +52,9 @@ const BlogPost = ({ data }) => {
 
             <h3 dangerouslySetInnerHTML={{ __html: post.title }}></h3>
             <div className={styles.authorAndName}>
-              <FontAwesomeIcon icon={faUser} className={styles.icon} />{" "}
-              {post.author.name === "mladen7777"
-                ? "Mladen Zailac"
-                : "Mladen Zailac"}{" "}
-              | <FontAwesomeIcon icon={faClock} className={styles.icon} />{" "}
+              <FontAwesomeIcon icon={faUser} className={styles.icon} /> Mladen
+              Zailac |{" "}
+              <FontAwesomeIcon icon={faClock} className={styles.icon} />{" "}
               {post.date}
             </div>
             <div dangerouslySetInnerHTML={{ __html: post.content }} />
@@ -125,9 +123,6 @@ export const pageQuery = graphql`
     wordpressPost(slug: { eq: $slug }) {
       title
       content
-      author {
-        name
-      }
       featured_media {
         source_url
         localFile {

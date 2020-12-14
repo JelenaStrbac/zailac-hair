@@ -18,9 +18,6 @@ const BlogMain = props => {
             content
             slug
             title
-            author {
-              name
-            }
             featured_media {
               source_url
               localFile {
@@ -87,11 +84,9 @@ const BlogMain = props => {
           <div className={styles.blogTextOutter}>
             <h3 dangerouslySetInnerHTML={{ __html: el.node.title }}></h3>
             <div className={styles.authorAndName}>
-              <FontAwesomeIcon icon={faUser} className={styles.icon} />{" "}
-              {el.node.author.name === "mladen7777"
-                ? "Mladen Zailac"
-                : el.node.author.name}{" "}
-              | <FontAwesomeIcon icon={faClock} className={styles.icon} />{" "}
+              <FontAwesomeIcon icon={faUser} className={styles.icon} /> Mladen
+              Zailac |{" "}
+              <FontAwesomeIcon icon={faClock} className={styles.icon} />{" "}
               {el.node.date}
             </div>
             <div dangerouslySetInnerHTML={{ __html: el.node.excerpt }} />
