@@ -20,6 +20,7 @@ const SocialLinksIcons = props => {
       }
     }
   `)
+  console.log(data.fb.content)
   const name = props.name
   return (
     <div className={name}>
@@ -27,7 +28,10 @@ const SocialLinksIcons = props => {
       <a
         target="_blank"
         rel="noopener noreferrer"
-        href={getAnchroFromParsedDOM(data.fb.content)}
+        href={
+          getAnchroFromParsedDOM(data.fb.content) ||
+          `https://www.facebook.com/pages/category/Hair-Salon/Zailac-Hair-823673054501131/`
+        }
         className={styles.socialNetworks}
       >
         <FontAwesomeIcon icon={faFacebookSquare} className={styles.icons} />
@@ -37,7 +41,10 @@ const SocialLinksIcons = props => {
       <a
         target="_blank"
         rel="noopener noreferrer"
-        href={getAnchroFromParsedDOM(data.ig.content)}
+        href={
+          getAnchroFromParsedDOM(data.ig.content) ||
+          `https://www.instagram.com/zailachair/?hl=en`
+        }
         className={styles.socialNetworks}
       >
         <FontAwesomeIcon icon={faInstagramSquare} className={styles.icons} />
