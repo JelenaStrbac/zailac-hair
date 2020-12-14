@@ -25,7 +25,6 @@ function SEO({ description, lang, meta, image: metaImage, title, keywords }) {
   const { pathname } = useLocation()
   const metaDescription = description || site.siteMetadata.description
   const metaKeywords = keywords || site.siteMetadata.keywords
-  console.log(metaKeywords)
   const image =
     metaImage && metaImage.src
       ? metaImage.src
