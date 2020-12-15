@@ -1,11 +1,7 @@
-# 💇‍♀️ ZAILAC HAIR - website for hair salon in Belgrade
+# 💇‍♀️ ZAILAC HAIR
 
-![Zailac Hair](/static/Logo.jpg "Zailac Hair")
+Official website for hair salon in Belgrade - available on 💫💫💫 <https://www.zailachair.com/> 💫💫💫
 
-## Gatsby + Headless WordPress + Netlify
+## How it is built? ➡️ Gatsby + Headless WordPress CMS + Netlify
 
-[![Gatsby](https://www.gatsbyjs.com/Gatsby-Logo.svg)
-[![Wordpress](https://s.w.org/style/images/about/WordPress-logotype-wmark-white.png)
-[![Netlify](https://www.netlify.com/img/deploy/button.svg)
-
-Available on 💫💫💫 <https://www.zailachair.com/> 💫💫💫
+![Gatsby Wordpress Netlify](/static/how-its-made.png "Gatsby Wordpress Netlify")
