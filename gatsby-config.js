@@ -4,13 +4,7 @@ require("dotenv").config({
 
 const autoprefixer = require(`autoprefixer`)
 
-console.log(
-  "WORDPRESS_CLIENT_SECRET",
-  `This is top ${process.env.WORDPRESS_CLIENT_SECRET}`
-)
-console.log("WORDPRESS_CLIENT_ID", process.env.WORDPRESS_CLIENT_ID)
-console.log("WORDPRESS_USER", process.env.WORDPRESS_USER)
-console.log("WORDPRESS_PASSWORD", process.env.WORDPRESS_PASSWORD)
+console.log(process.env)
 
 const {
   NODE_ENV,
