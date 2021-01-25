@@ -5,6 +5,8 @@ require("dotenv").config({
 const autoprefixer = require(`autoprefixer`)
 const browserslist = require("browserslist")
 
+console.log(process.env)
+
 const {
   NODE_ENV,
   URL: NETLIFY_SITE_URL = "https://www.zailachair.com",
