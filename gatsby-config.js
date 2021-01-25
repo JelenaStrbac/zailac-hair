@@ -1,14 +1,13 @@
-// require("dotenv").config({
-//   path: `.env.${process.env.NODE_ENV}`,
-// })
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
 
 const autoprefixer = require(`autoprefixer`)
-const browserslist = require("browserslist")
 
-console.log(process.env.WORDPRESS_CLIENT_SECRET)
-console.log(process.env.WORDPRESS_CLIENT_ID)
-console.log(process.env.WORDPRESS_USER)
-console.log(process.env.WORDPRESS_PASSWORD)
+console.log("WORDPRESS_CLIENT_SECRET", process.env.WORDPRESS_CLIENT_SECRET)
+console.log("WORDPRESS_CLIENT_ID", process.env.WORDPRESS_CLIENT_ID)
+console.log("WORDPRESS_USER", process.env.WORDPRESS_USER)
+console.log("WORDPRESS_PASSWORD", process.env.WORDPRESS_PASSWORD)
 
 const {
   NODE_ENV,
