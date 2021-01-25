@@ -1,11 +1,14 @@
-require("dotenv").config({
-  path: `.env.${process.env.NODE_ENV}`,
-})
+// require("dotenv").config({
+//   path: `.env.${process.env.NODE_ENV}`,
+// })
 
 const autoprefixer = require(`autoprefixer`)
 const browserslist = require("browserslist")
 
-console.log(process.env)
+console.log(process.env.WORDPRESS_CLIENT_SECRET)
+console.log(process.env.WORDPRESS_CLIENT_ID)
+console.log(process.env.WORDPRESS_USER)
+console.log(process.env.WORDPRESS_PASSWORD)
 
 const {
   NODE_ENV,
@@ -73,10 +76,10 @@ module.exports = {
         restApiRoutePrefix: "wp-json",
         hostingWPCOM: true,
         auth: {
-          wpcom_app_clientSecret: process.env.GATSBY_WORDPRESS_CLIENT_S,
-          wpcom_app_clientId: process.env.GATSBY_CLIENT_ID,
-          wpcom_user: process.env.GATSBY_USER,
-          wpcom_pass: process.env.GATSBY_WORDPRESS_PASSWORD,
+          wpcom_app_clientSecret: process.env.WORDPRESS_CLIENT_SECRET,
+          wpcom_app_clientId: process.env.WORDPRESS_CLIENT_ID,
+          wpcom_user: process.env.WORDPRESS_USER,
+          wpcom_pass: process.env.WORDPRESS_PASSWORD,
         },
         includedRoutes: [
           "**/categories",
