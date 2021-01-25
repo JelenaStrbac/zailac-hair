@@ -73,7 +73,7 @@ module.exports = {
         restApiRoutePrefix: "wp-json",
         hostingWPCOM: true,
         auth: {
-          wpcom_app_clientSecret: process.env.GATSBY_WORDPRESS_CLIENT_SECRET,
+          wpcom_app_clientSecret: process.env.GATSBY_WORDPRESS_CLIENT_S,
           wpcom_app_clientId: process.env.GATSBY_CLIENT_ID,
           wpcom_user: process.env.GATSBY_USER,
           wpcom_pass: process.env.GATSBY_WORDPRESS_PASSWORD,
