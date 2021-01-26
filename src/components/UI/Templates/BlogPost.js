@@ -28,8 +28,7 @@ const BlogPost = ({ data }) => {
   const path = location.pathname
   const urlForSharing = `https://www.zailachair.com${path}`
   const tags = [...post.categories.map(res => res.name)]
-  console.log(post)
-  // console.log(post.featured_media.source_url)
+
   return (
     <Layout>
       <SEO
