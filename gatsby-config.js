@@ -4,7 +4,14 @@ require("dotenv").config({
 
 const autoprefixer = require(`autoprefixer`)
 
-console.log(process.env)
+const {
+  NODE_ENV,
+  URL: NETLIFY_SITE_URL = "https://www.zailachair.com",
+  DEPLOY_PRIME_URL: NETLIFY_DEPLOY_URL = NETLIFY_SITE_URL,
+  CONTEXT: NETLIFY_ENV = NODE_ENV,
+} = process.env
+const isNetlifyProduction = NETLIFY_ENV === "production"
+const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL
 
 module.exports = {
   siteMetadata: {
@@ -24,7 +31,7 @@ module.exports = {
       `beograd`,
     ],
     image: `/Logo.jpg`,
-    siteUrl: "https://www.zailachair.com",
+    siteUrl: siteUrl,
     socialLinks: {
       instagram: `https://www.instagram.com/zailachair/?hl=en`,
       facebook: `https://www.facebook.com/pages/category/Hair-Salon/Zailac-Hair-823673054501131/`,
