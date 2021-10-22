@@ -10,7 +10,7 @@ const SecondPage = () => (
   <FadeWrapper>
     <Layout>
       <SEO title="O nama" />
-      <Cover imageName="salon_01.jpg" />
+      <Cover imageName="salon-ogledalo.jpeg" />
       <AboutMain />
     </Layout>
   </FadeWrapper>

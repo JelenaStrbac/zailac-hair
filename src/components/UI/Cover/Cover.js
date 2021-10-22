@@ -9,7 +9,7 @@ const Cover = props => {
       className={styles.cover}
       style={{
         backgroundImage: `linear-gradient(to left bottom, #2c2c2cf3, #2c2c2cec),
-        url("/${props.imageName}")`,
+        url("/${props.imageNameCover ? props.imageNameCover : props.imageName}")`,
       }}
     >
       <SocialLinks />

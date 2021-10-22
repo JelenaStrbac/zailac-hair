@@ -43,7 +43,7 @@ function SEO({ description, lang, meta, image: metaImage, title, keywords }) {
     telephone: "+381 60 3230 250",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Bulevar Kralja Aleksandra 171",
+      streetAddress: "Mlatisumina 25",
       addressLocality: "Beograd",
       postalCode: "11000",
       addressCountry: "RS",

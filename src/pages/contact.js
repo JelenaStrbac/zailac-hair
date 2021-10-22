@@ -10,7 +10,7 @@ const ContactPage = () => (
   <FadeWrapper>
     <Layout>
       <SEO title="Kontakt" />
-      <Cover imageName="salon_02.jpg" />
+      <Cover imageName="salon-enterijer.jpeg" />
       <ContactMain />
     </Layout>
   </FadeWrapper>

@@ -10,7 +10,7 @@ const ThirdPage = () => (
   <FadeWrapper>
     <Layout>
       <SEO title="Usluge & cenovnik" />
-      <Cover imageName="services_cover.jpg" />
+      <Cover imageName="services_cover.jpg" imageNameCover="salon-aparati.jpeg" />
       <ServicesMain />
     </Layout>
   </FadeWrapper>
