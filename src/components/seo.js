@@ -40,7 +40,7 @@ function SEO({ description, lang, meta, image: metaImage, title, keywords }) {
     image: "https://www.zailachair.com/Logo.jpg",
     "@id": "",
     url: "https://www.zailachair.com",
-    telephone: "+381 60 3230 250",
+    telephone: "+381 60 4532133",
     address: {
       "@type": "PostalAddress",
       streetAddress: "Mlatisumina 25",

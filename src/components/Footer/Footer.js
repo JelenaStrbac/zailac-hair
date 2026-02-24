@@ -76,7 +76,7 @@ const Footer = props => {
                   {removeHtml(data.email.content)}
                 </a>
                 <br></br>
-                tel: {removeHtml(data.telefon.content) || "+381 60 3230 250"}
+                tel: {removeHtml(data.telefon.content) || "+381 60 4532133"}
               </div>
             </div>
           </div>
