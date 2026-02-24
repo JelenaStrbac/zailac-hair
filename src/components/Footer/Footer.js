@@ -5,6 +5,7 @@ import styles from "./Footer.module.css"
 import Logo from "../../images/logo_white.png"
 import zailacFB from "../../images/social-facebook-icon.svg"
 import zailacIG from "../../images/social-instagram-icon.svg"
+import { getAnchroFromParsedDOM } from "../../helper/helper"
 import FadeLink from "../UI/FadeLink/FadeLink"
 
 const Footer = props => {
