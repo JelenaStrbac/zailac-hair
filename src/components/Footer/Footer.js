@@ -5,7 +5,6 @@ import styles from "./Footer.module.css"
 import Logo from "../../images/logo_white.png"
 import zailacFB from "../../images/social-facebook-icon.svg"
 import zailacIG from "../../images/social-instagram-icon.svg"
-import { getAnchroFromParsedDOM, removeHtml } from "../../helper/helper"
 import FadeLink from "../UI/FadeLink/FadeLink"
 
 const Footer = props => {
@@ -71,11 +70,9 @@ const Footer = props => {
             <div className={styles.footerContactDataInner}>
               <div className={styles.footerContactDataTitle}>KONTAKT</div>
               <div>
-                email:{" "}
-                <div dangerouslySetInnerHTML={{ __html: data.email.content }} />
+                email:{" "}<div dangerouslySetInnerHTML={{ __html: data.email.content }} />
                 <br></br>
-                tel: {" "}
-                <div dangerouslySetInnerHTML={{ __html: data.telefon.content }} />
+                tel: {" "}<div dangerouslySetInnerHTML={{ __html: data.telefon.content }} />
               </div>
             </div>
           </div>

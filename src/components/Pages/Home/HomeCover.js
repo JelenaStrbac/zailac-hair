@@ -8,7 +8,6 @@ import { faPhone } from "@fortawesome/free-solid-svg-icons"
 import styles from "./HomeCover.module.css"
 import Button from "../../UI/Button/Button"
 import SocialLinks from "../../UI/SocialLinks/SocialLinks"
-import { removeHtml } from "../../../helper/helper"
 import FadeLink from "../../UI/FadeLink/FadeLink"
 
 const HomeCover = props => {
@@ -57,8 +56,7 @@ const HomeCover = props => {
           </FadeLink>
           <div className={styles.reservation}>
             <FontAwesomeIcon icon={faPhone} className={styles.icons} />{" "}
-            Rezervacije na{" "}
-            {<div dangerouslySetInnerHTML={{ __html: data.telefon.content }} /> || "+381 60 4532133"}
+            Rezervacije na{" "}<div className={styles.reservation} dangerouslySetInnerHTML={{ __html: data.telefon.content }} />
           </div>
         </div>
       </BackgroundImage>
