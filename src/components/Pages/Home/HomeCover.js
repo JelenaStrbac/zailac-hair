@@ -56,7 +56,7 @@ const HomeCover = props => {
           </FadeLink>
           <div className={styles.reservation}>
             <FontAwesomeIcon icon={faPhone} className={styles.icons} />{" "}
-            Rezervacije na{" "}<div className={styles.reservation} dangerouslySetInnerHTML={{ __html: data.telefon.content }} />
+            Rezervacije na{" "}<div dangerouslySetInnerHTML={{ __html: data.telefon.content }} />
           </div>
         </div>
       </BackgroundImage>

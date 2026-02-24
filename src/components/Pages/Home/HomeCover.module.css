@@ -61,6 +61,7 @@ $greyDefault: #5e5e5e; */
 }
 
 .reservation {
+  display: flex;
   color: white;
   position: absolute;
   bottom: 0;
