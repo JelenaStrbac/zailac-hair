@@ -72,11 +72,10 @@ const Footer = props => {
               <div className={styles.footerContactDataTitle}>KONTAKT</div>
               <div>
                 email:{" "}
-                <a href={`mailto:${removeHtml(data.email.content)}`}>
-                  {removeHtml(data.email.content)}
-                </a>
+                <div dangerouslySetInnerHTML={{ __html: data.email.content }} />
                 <br></br>
-                tel: {removeHtml(data.telefon.content) || "+381 60 4532133"}
+                tel: {" "}
+                <div dangerouslySetInnerHTML={{ __html: data.telefon.content }} />
               </div>
             </div>
           </div>

@@ -58,7 +58,7 @@ const HomeCover = props => {
           <div className={styles.reservation}>
             <FontAwesomeIcon icon={faPhone} className={styles.icons} />{" "}
             Rezervacije na{" "}
-            {removeHtml(data.telefon.content) || "+381 60 4532133"}
+            {<div dangerouslySetInnerHTML={{ __html: data.telefon.content }} /> || "+381 60 4532133"}
           </div>
         </div>
       </BackgroundImage>
