@@ -71,9 +71,9 @@ const Footer = props => {
             <div className={styles.footerContactDataInner}>
               <div className={styles.footerContactDataTitle}>KONTAKT</div>
               <div>
-                email:{" "}<div dangerouslySetInnerHTML={{ __html: data.email.content }} />
+                <div className={styles.footerContactEmailAndPhone}>email:{" "}<div dangerouslySetInnerHTML={{ __html: data.email.content }} /></div>
                 <br></br>
-                tel: {" "}<div dangerouslySetInnerHTML={{ __html: data.telefon.content }} />
+                <div className={styles.footerContactEmailAndPhone}>tel: {" "}<div dangerouslySetInnerHTML={{ __html: data.telefon.content }} /></div>
               </div>
             </div>
           </div>

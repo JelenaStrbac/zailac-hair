@@ -118,6 +118,10 @@
   color: #dcc29c;
 }
 
+.footerContactEmailAndPhone {
+  display: flex;
+}
+
 .copyrights {
   font-size: 0.7rem;
   padding: 1rem;
